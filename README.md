@@ -108,6 +108,13 @@ Users will be able to list dog walking jobs. Walkers will be able to list themse
  * Like the bartending idea there already exists applications and sites which allow for the listing of jobs like this. Although these services aren't specifically for dog-walking and people requiring dog-walking services, users would still be able to utilise these applications in order to list the jobs that could be listed on the Dog-walking site
  
  
+## Project Plan and Timeline
 
+### DAY 1
+ * Create Trello board and add all members to trello board
+ * Create Github repository
+ * Create Nuclino board detailing git flow and agile methodology
+ * Commence documentation
+ 
   
   
