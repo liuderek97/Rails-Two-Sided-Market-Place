@@ -160,3 +160,11 @@ Moodboard Link: https://pin.it/pueppn6udwyluk
 <img src="images/Pinterest Moodboard1.png">
 <br>
 <img src="images/Pinterest Moodboard2.png">
+
+### Khroma
+
+Khroma is an online color pallete picker that allows for users to view a number of color palletes and gradients based on the user color preferences. Khroma was the main color picking pallete tool that was utilised in the design process, in order to come up with an aesthetic color scheme that fitted the desired theme. After using Khroma the following colours were selected to be used in the website:
+
+<img src="images/Khroma1.png">
+<br>
+<img src="images/Khroma2.png">
