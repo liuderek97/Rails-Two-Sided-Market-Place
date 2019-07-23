@@ -229,7 +229,7 @@ Khroma is an online color pallete picker that allows for users to view a number 
 
 ### Trello Board Day 1
 
-<img src="/Users/derekliu/Desktop/Rails-Assignment1/images/Screen%20Shot%202019-07-22%20at%209.51.51%20pm.png" >
+<img src="/images/Trello1.png" >
 
 
 
