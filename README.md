@@ -141,7 +141,9 @@ In order to come up with a design scheme for the site the following resources we
 * Google Fonts
 * trello
 * Sketch
+* DB Designer
 * GitHub
+
 
 
 ### Pinterest
