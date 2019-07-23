@@ -137,3 +137,25 @@ Users will be able to list dog walking jobs. Walkers will be able to list themse
  
 ### Trello Board Day 1
 <img src="images/Screen Shot 2019-07-22 at 9.51.51 pm.png" >
+
+
+
+## Design Process
+In order to come up with a design scheme for the site the following resources were used:
+
+* Pinterest
+* Khroma color picker
+* Google Fonts
+* trello
+* Sketch
+* GitHub
+
+
+### Pinterest
+
+Pinterest is an social media application that allows users to upload and view images, as well as create a collection of images called "Pinterest Boards". Pinterest was employed to create a moodboard in order to gain inspiration for a web layout theme, as well as colour theme. A moodboard was created and a number of thematically similar websites were added to the moodboard to help narrow down the design scheme. The theme that was decided upon was a simplistic and clean theme with cool light colours.
+
+Moodboard Link: https://pin.it/pueppn6udwyluk
+
+<img src="images/Pinterest Moodboard1">
+<img src="images/Pinterest Moodboard2">
