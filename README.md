@@ -17,7 +17,7 @@ Things you may want to cover:
 - Deployment instructions
 - ...
 
-# Two Way Marketplace Ideas/Feasibility Assessment
+# Two Way Marketplace Ideas/SWOT Analysis
 
 ## Bike/Scooter Rental
 
@@ -122,21 +122,41 @@ Users will be able to list dog walking jobs. Walkers will be able to list themse
 
 ### Nuclino Workspace Screenshots
 <img src="images/Nuclino Screenshot1.png" >
+
 <img src="images/Nuclino Screenshot2.png" >
 
 
-### DAY 1 Schedule
+
+### Trello Board and Schedule
+
+### Day 1 Schedule
 
 - Create Trello board and add all members to trello board
 - Create Github repository
 - Create Nuclino board detailing git flow and agile methodology
 - Commence documentation
 
-  
-## Trello Screenshots
+
 
 ### Trello Board Day 1
+
 <img src="images/Screen Shot 2019-07-22 at 9.51.51 pm.png" >
+
+
+
+### Day 2 Schedule
+
+- Design ERD and plan models and associations
+- Create user stories and use cases
+- Create flow diagram
+- Update README
+- Implement required gems to start project
+
+### Trello Board Day 2
+
+<img src="images/Trello Screenshot2.png">
+
+
 
 
 
@@ -146,27 +166,51 @@ In order to come up with a design scheme for the site the following resources we
 * Pinterest
 * Khroma color picker
 * Google Fonts
-* trello
+* Trello
 * Sketch
+* Slack
 * GitHub
 
-
-### Pinterest
+## Pinterest
 
 Pinterest is an social media application that allows users to upload and view images, as well as create a collection of images called "Pinterest Boards". Pinterest was employed to create a moodboard in order to gain inspiration for a web layout theme, as well as colour theme. A moodboard was created and a number of thematically similar websites were added to the moodboard to help narrow down the design scheme. The theme that was decided upon was a simplistic and clean theme with cool light colours.
 
-Moodboard Link: https://pin.it/pueppn6udwyluk
+<b> Moodboard Link: </b> https://pin.it/pueppn6udwyluk
 
 <img src="images/Pinterest Moodboard1.png">
-<br>
+
 <img src="images/Pinterest Moodboard2.png">
 
-### Khroma
+## Khroma
 
 Khroma is an online color pallete picker that allows for users to view a number of color palletes and gradients based on the user color preferences. Khroma was the main color picking pallete tool that was utilised in the design process, in order to come up with an aesthetic color scheme that fitted the desired theme. After using Khroma the following colours were selected to be used in the website:
 
 <img src="images/Khroma1.png">
-<br>
+
 <img src="images/Khroma2.png">
 
+## Sketch
 
+Sketch is a wireframing tool that was employed during the plannnig stages of the project in order to create rough and schematic layout of how the website would look. Several wireframes were created using sketch and the wireframes created were representative of how the site would look. Wireframes were created for different devices such as desktop mobile and different mobile phone models. Sketch and the creation of wireframes was imperative to the design process as it provided a scheme to follow and a reference point for the styling of the site on different devices. After the creation of the wireframes for all devices the development of the site was then commenced.
+
+### Mobile Wireframe
+
+<img src="images/Mobile Wireframe.png">
+
+
+
+### Desktop Wireframes
+
+<img src="images/Desktop Wireframe-1.png">
+
+
+
+<img src="images/Desktop Wireframe 2.png">
+
+
+
+<img src="images/Desktop Wireframe 3.png">
+
+
+
+<img src="images/Desktop Wireframe 4.png">
