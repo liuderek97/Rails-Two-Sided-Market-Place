@@ -132,13 +132,6 @@ Users will be able to list dog walking jobs. Walkers will be able to list themse
 - Create Nuclino board detailing git flow and agile methodology
 - Commence documentation
 
-  
-## Trello Screenshots
- 
-### Trello Board Day 1
-<img src="images/Screen Shot 2019-07-22 at 9.51.51 pm.png" >
-
-
 
 ## Design Process
 In order to come up with a design scheme for the site the following resources were used:
@@ -168,3 +161,13 @@ Khroma is an online color pallete picker that allows for users to view a number 
 <img src="images/Khroma1.png">
 <br>
 <img src="images/Khroma2.png">
+
+
+## Trello Screenshots
+ 
+### Trello Board Day 1
+<img src="images/Screen Shot 2019-07-22 at 9.51.51 pm.png" >
+
+
+
+
