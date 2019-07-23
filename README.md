@@ -158,6 +158,5 @@ Pinterest is an social media application that allows users to upload and view im
 Moodboard Link: https://pin.it/pueppn6udwyluk
 
 <img src="images/Pinterest Moodboard1.png">
-
-
+<br>
 <img src="images/Pinterest Moodboard2.png">
