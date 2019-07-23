@@ -116,9 +116,12 @@ Users will be able to list dog walking jobs. Walkers will be able to list themse
 
 - Like the bartending idea there already exists applications and sites which allow for the listing of jobs like this. Although these services aren't specifically for dog-walking and people requiring dog-walking services, users would still be able to utilise these applications in order to list the jobs that could be listed on the Dog-walking site
 
-## Project Plan and Timeline
+
+
+# Project Plan
+
 ### Nuclino
-  In order to establish an agile methodolgy and establish a git workflow that all team members adhere to  a nuclino workspace was created. The nuclino workspace detailed what agile methodolgy was and described the sprint planning sessions that would take place at the beginnig of each day when the team was face to face. The Nuclino board also went into details about daily standups, presenting and showcasing features and the git workflow that would be used during the project duration.
+In order to establish an agile methodolgy and establish a git workflow that all team members adhere to  a nuclino workspace was created. The nuclino workspace detailed what agile methodolgy was and described the sprint planning sessions that would take place at the beginnig of each day when the team was face to face. The Nuclino board also went into details about daily standups, presenting and showcasing features and the git workflow that would be used during the project duration.
 
 ### Nuclino Workspace Screenshots
 <img src="images/Nuclino Screenshot1.png" >
@@ -127,40 +130,60 @@ Users will be able to list dog walking jobs. Walkers will be able to list themse
 
 
 
-### Trello Board and Schedule
+## User Stories
 
-### Day 1 Schedule
+* **As a bartender, I want to create an account, so that I can find paid contracting work.**
 
-- Create Trello board and add all members to trello board
-- Create Github repository
-- Create Nuclino board detailing git flow and agile methodology
-- Commence documentation
+* **As a bartender, I want to show my personality through my profile details, so that I can get suitable work.**
 
+* **As a bartender, I want to be able to show my portfolio, by adding previous work experience, skills that I’ve acquired, and certifications.**
 
+* **As a bartender, I want to be able to expand my portfolio, by getting short term work from real businesses and private employers.**
 
-### Trello Board Day 1
+* **As an Event planner, I want to create an account, so that I can create an advertisement to find an exceptional Bartender for my event.**
 
-<img src="images/Screen Shot 2019-07-22 at 9.51.51 pm.png" >
+* **As a business in need of extra staff for a big event, I want the ability to hire bartenders in the area.**
 
+* **As a business I want the ability to view and employ bartenders,  based on their reliability, capability, and skillset.**
 
-
-### Day 2 Schedule
-
-- Design ERD and plan models and associations
-- Create user stories and use cases
-- Create flow diagram
-- Update README
-- Implement required gems to start project
-
-### Trello Board Day 2
-
-<img src="images/Trello Screenshot2.png">
+* **As a business I want to leave a review on the bartenders that I have employed, recommending or warning other potential employers.**
 
 
 
+## Use Case
 
+### **Use case name:** Sign in
 
-## Design Process
+**Actors:** Registered but not signed in userUser Sign In system
+
+**Triggers:** User selects Sign Up button
+
+**Preconditions:** User is registered and is attempting to Sign In
+
+**Post-conditions:** User is signed inUser can either hire or find bartender work
+
+### Use case name: Create Post
+
+**Actors:** Registered, signed in User.Post Creation Form
+
+**Triggers:** Signed in User selects a button looking to create a job listing.
+
+**Preconditions:** User is signed inUser decides to create a job listing
+
+**Post-conditions**: Post can be commented on with offers OP can select an offer and/or interact with offer’s Author.Post can be editedPost is shown in the listings section/page
+
+### Use case name: Create Offer
+
+**Actors:** Registered, signed in User, who is posting a listing.Registered, signed in User, who is making an offer on a listing.Offer creation form.
+
+**Triggers:** User who wishes to create an offer on a job listing.
+
+**Preconditions:** Job listing was postedJob listing hasn’t yet been fullfilled
+
+**Post-conditions** Offer is made on job listingOffer is either left, declined, or accepted by employer.Offer can be deleted, or updated.
+
+# Design Process
+
 In order to come up with a design scheme for the site the following resources were used:
 
 * Pinterest
@@ -189,6 +212,41 @@ Khroma is an online color pallete picker that allows for users to view a number 
 
 <img src="images/Khroma2.png">
 
+
+
+
+
+### Trello Board and Schedule
+
+### Day 1 Schedule
+
+- Create Trello board and add all members to trello board
+- Create Github repository
+- Create Nuclino board detailing git flow and agile methodology
+- Commence documentation
+
+
+
+### Trello Board Day 1
+
+<img src="/Users/derekliu/Desktop/Rails-Assignment1/images/Screen%20Shot%202019-07-22%20at%209.51.51%20pm.png" >
+
+
+
+### Day 2 Schedule
+
+- Design ERD and plan models and associations
+- Create user stories and use cases
+- Create flow diagram
+- Update README
+- Implement required gems to start project
+
+### Trello Board Day 2
+
+<img src="images/Trello Screenshot2.png">
+
+
+
 ## Sketch
 
 Sketch is a wireframing tool that was employed during the plannnig stages of the project in order to create rough and schematic layout of how the website would look. Several wireframes were created using sketch and the wireframes created were representative of how the site would look. Wireframes were created for different devices such as desktop mobile and different mobile phone models. Sketch and the creation of wireframes was imperative to the design process as it provided a scheme to follow and a reference point for the styling of the site on different devices. After the creation of the wireframes for all devices the development of the site was then commenced.
@@ -214,3 +272,29 @@ Sketch is a wireframing tool that was employed during the plannnig stages of the
 
 
 <img src="images/Desktop Wireframe 4.png">
+
+
+
+### Slack
+
+Slack was the main communication platform employed by all members when discussing the project outside of contact hours. Slack was the chosen platform for communication as all users were familiar with the platform. Using a communication platform that all users were comfortable with would allow for unhindered communication channels, and allow effective and efficient communication. Slack played a pivotal role in the completion of the project as it allowed for all team members to communicate outside of contact hours, and allowed for members to raise any issues they had found in the sites code or tp notify team mates of a pull request that needed to be reviewed. Slack was also used to share any necessary files that were used in the project.
+
+<img src="images/Slack1.png">
+
+<img src="images/Slack2.png">
+
+<img src="images/Slack3.png">
+
+
+
+### GitHub
+
+Github was the chosen platform for application version control. Github was chosen due to the fact that it would allow for the code to be available on multiple devices. Any changes made to the code would be documented during the committing stage. This allowed anyone working on the project to constantly be aware of any major changes to the code and keep up to date with the latest revisions of the project. In order to ensure there were no breakdowns cause by the merging of new code into the etablished code base a git work flow was established at the beginning of the project, and each team member would adhere closely to the git work flow. The GitHub repository was setup with a master branch where the final product would be pushed after rigorous testing and ensuring that the site is working as intended with no bugs. A staging branch which was the main branch where testing would take place before pushiung the final product to master, and individual branches created by each team member when adding a feature of fixing an issue. Whenever a team member would want to work on the project, they would pull from the staging branch and checkout into a new branch with the branch name describing the function they were adding, or the issue that they would be resolving. Upon completion of their individual task the team member would then push their code to GitHub on their individual branch and create a pull request on GitHub to merge the feature branch into the staging branch. Each time a pull request would be created the team member repsonsible for the creation of the branch would be required to request reviewers by the other team members to ensure that all team members were kept up to date with new features and to ensure working and quality code was being merged into the testing/staging branch.
+
+
+
+<img src="images/GitHub Screenshot.png">
+
+
+
+<img src="images/GitHub 2.png">
