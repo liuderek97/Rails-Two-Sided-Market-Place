@@ -172,4 +172,6 @@ Khroma is an online color pallete picker that allows for users to view a number 
 
 
 
+## DB Designer 
 
+DB designer is an online database entity relationship diagram designer which allows for users to visually design databases online.
