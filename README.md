@@ -119,7 +119,7 @@ Users will be able to list dog walking jobs. Walkers will be able to list themse
 ## Project Plan and Timeline
 ### Nuclino
   In order to establish an agile methodolgy and establish a git workflow that all team members adhere to  a nuclino workspace was created. The nuclino workspace detailed what agile methodolgy was and described the sprint planning sessions that would take place at the beginnig of each day when the team was face to face. The Nuclino board also went into details about daily standups, presenting and showcasing features and the git workflow that would be used during the project duration.
-  
+
 ### Nuclino Workspace Screenshots
 <img src="images/Nuclino Screenshot1.png" >
 <img src="images/Nuclino Screenshot2.png" >
@@ -134,7 +134,7 @@ Users will be able to list dog walking jobs. Walkers will be able to list themse
 
   
 ## Trello Screenshots
- 
+
 ### Trello Board Day 1
 <img src="images/Screen Shot 2019-07-22 at 9.51.51 pm.png" >
 
@@ -168,5 +168,5 @@ Khroma is an online color pallete picker that allows for users to view a number 
 <img src="images/Khroma1.png">
 <br>
 <img src="images/Khroma2.png">
-123
+
 
