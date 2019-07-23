@@ -168,3 +168,4 @@ Khroma is an online color pallete picker that allows for users to view a number 
 <img src="images/Khroma1.png">
 <br>
 <img src="images/Khroma2.png">
+1
