@@ -117,8 +117,15 @@ Users will be able to list dog walking jobs. Walkers will be able to list themse
 - Like the bartending idea there already exists applications and sites which allow for the listing of jobs like this. Although these services aren't specifically for dog-walking and people requiring dog-walking services, users would still be able to utilise these applications in order to list the jobs that could be listed on the Dog-walking site
 
 ## Project Plan and Timeline
+### Nuclino
+  In order to establish an agile methodolgy and establish a git workflow that all team members adhere to  a nuclino workspace was created. The nuclino workspace detailed what agile methodolgy was and described the sprint planning sessions that would take place at the beginnig of each day when the team was face to face. The Nuclino board also went into details about daily standups, presenting and showcasing features and the git workflow that would be used during the project duration.
+  
+### Nuclino Workspace Screenshots
+<img src="images/Nuclino Screenshot1.png" >
+<img src="images/Nuclino Screenshot2.png" >
 
-### DAY 1
+
+### DAY 1 Schedule
 
 - Create Trello board and add all members to trello board
 - Create Github repository
@@ -126,3 +133,38 @@ Users will be able to list dog walking jobs. Walkers will be able to list themse
 - Commence documentation
 
   
+## Trello Screenshots
+ 
+### Trello Board Day 1
+<img src="images/Screen Shot 2019-07-22 at 9.51.51 pm.png" >
+
+
+
+## Design Process
+In order to come up with a design scheme for the site the following resources were used:
+
+* Pinterest
+* Khroma color picker
+* Google Fonts
+* trello
+* Sketch
+* GitHub
+
+
+### Pinterest
+
+Pinterest is an social media application that allows users to upload and view images, as well as create a collection of images called "Pinterest Boards". Pinterest was employed to create a moodboard in order to gain inspiration for a web layout theme, as well as colour theme. A moodboard was created and a number of thematically similar websites were added to the moodboard to help narrow down the design scheme. The theme that was decided upon was a simplistic and clean theme with cool light colours.
+
+Moodboard Link: https://pin.it/pueppn6udwyluk
+
+<img src="images/Pinterest Moodboard1.png">
+<br>
+<img src="images/Pinterest Moodboard2.png">
+
+### Khroma
+
+Khroma is an online color pallete picker that allows for users to view a number of color palletes and gradients based on the user color preferences. Khroma was the main color picking pallete tool that was utilised in the design process, in order to come up with an aesthetic color scheme that fitted the desired theme. After using Khroma the following colours were selected to be used in the website:
+
+<img src="images/Khroma1.png">
+<br>
+<img src="images/Khroma2.png">
