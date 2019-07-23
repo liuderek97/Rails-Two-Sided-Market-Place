@@ -117,8 +117,15 @@ Users will be able to list dog walking jobs. Walkers will be able to list themse
 - Like the bartending idea there already exists applications and sites which allow for the listing of jobs like this. Although these services aren't specifically for dog-walking and people requiring dog-walking services, users would still be able to utilise these applications in order to list the jobs that could be listed on the Dog-walking site
 
 ## Project Plan and Timeline
+### Nuclino
+  In order to establish an agile methodolgy and establish a git workflow that all team members adhere to  a nuclino workspace was created. The nuclino workspace detailed what agile methodolgy was and described the sprint planning sessions that would take place at the beginnig of each day when the team was face to face. The Nuclino board also went into details about daily standups, presenting and showcasing features and the git workflow that would be used during the project duration.
+  
+### Nuclino Workspace Screenshots
+<img src="images/Nuclino Screenshot1.png" >
+<img src="images/Nuclino Screenshot2.png" >
 
-### DAY 1
+
+### DAY 1 Schedule
 
 - Create Trello board and add all members to trello board
 - Create Github repository
@@ -127,5 +134,6 @@ Users will be able to list dog walking jobs. Walkers will be able to list themse
 
   
 ## Trello Screenshots
-
+ 
+### Trello Board Day 1
 <img src="images/Screen Shot 2019-07-22 at 9.51.51 pm.png" >
