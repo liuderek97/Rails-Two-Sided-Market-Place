@@ -18,20 +18,34 @@
     $secondary-color: #d7dee1 !default;
     @import 'materialize';
 
+
 #login-margin {
-    margin-right: 35px;
+    margin-right: 2vw;
     a {
     color: #d7dee1;
     }
+    a:hover {
+        color:black;
+    }
 }
 #nav-mobile{
-    margin-left: 53em;
+    margin-left: 39vw;
     a{
     color: #d7dee1;
     }
+    a:hover {
+        color:black;
+    }
 }
 #post-jobs {
-    margin-right: 48em;
+    margin-right: 35vw;
     color: #d7dee1;
 }
+    
+
+nav a:hover {
+    color: black;
+   }
+   
+   
    //  @import "https://fonts.googleapis.com/icon?family=Material+Icons";
