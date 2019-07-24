@@ -14,7 +14,23 @@
  *= require_self
  */
     @import "materialize/components/color-variables";
-    $primary-color: color("blue", "lighten-2") !default;
-    $secondary-color: color("yellow", "base") !default;
+    $primary-color: #6b5b94 !default;
+    $secondary-color: #d7dee1 !default;
     @import 'materialize';
-    @import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+#login-margin {
+    margin-right: 35px;
+    a {
+    color: #d7dee1;
+    }
+}
+#nav-mobile{
+    margin-left: 53em;
+    a{
+    color: #d7dee1;
+    }
+}
+#post-jobs {
+    margin-right: 48em;
+    color: #d7dee1;
+}
