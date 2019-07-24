@@ -1,6 +1,6 @@
 # Rails-Two-Sided-Market-Place
 
-# README
+README
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
@@ -17,7 +17,26 @@ Things you may want to cover:
 - Deployment instructions
 - ...
 
-# Two Way Marketplace Ideas/SWOT Analysis
+# Grapevine 
+
+**GitHub repository link:** https://github.com/liuderek97/Rails-Two-Sided-Market-Place
+
+## Project Description 
+
+This project is a two sided marketplace which allows individuals or businesses to hire bartenders for private functions or different types of employment. There is a growing market of individuals who are looking to hire bartenders, and this web application will assist in providing a platform for Bartenders to be able to advertise themselves, and allow individuals or business to find bartenders that are looking for work.
+
+## Features
+
+- Users will be able to login into an account and list a job that they want to be done.
+- Users who are bartenders will be able to view the jobs posted by normal non bartender user and comment on the job offering their services, bidding to win the job.
+- Users will be able to view the bartenders who have bided for the job and will be able to choose the bartender that they like.
+- After the job has been completed users will be able to review the bartender that they employed.
+- Bartenders will be able to create an account and list all the skills they have 
+- Users will be able to view a bartenders profile and direct message them offering them jobs for various events
+
+### 
+
+## Two Way Marketplace Proposed Ideas/SWOT Analysis
 
 ## Bike/Scooter Rental
 
@@ -182,6 +201,10 @@ In order to establish an agile methodolgy and establish a git workflow that all 
 
 **Post-conditions** Offer is made on job listingOffer is either left, declined, or accepted by employer.Offer can be deleted, or updated.
 
+## Flow Diagram
+
+<img src="screenshots/flow.png">
+
 # Design Process
 
 In order to come up with a design scheme for the site the following resources were used:
@@ -229,7 +252,7 @@ Khroma is an online color pallete picker that allows for users to view a number 
 
 ### Trello Board Day 1
 
-<img src="/screenshots/Trello1.png" >
+<img src="screenshots/Trello-1.png">
 
 
 
@@ -246,6 +269,17 @@ Khroma is an online color pallete picker that allows for users to view a number 
 <img src="screenshots/Trello Screenshot2.png">
 
 
+
+### Day 3 Schedule
+
+* Laydown the base scaffolds and models
+* Setup the home-page and nav-bar using Materializecss 
+* Setup self-joins for models
+* Laydown the foundation for the basic functions of the site
+
+### Trello Board Day 3
+
+<img src="screenshots/Trello Day 3.png">
 
 ## Sketch
 
@@ -277,13 +311,17 @@ Sketch is a wireframing tool that was employed during the plannnig stages of the
 
 ### Slack
 
-Slack was the main communication platform employed by all members when discussing the project outside of contact hours. Slack was the chosen platform for communication as all users were familiar with the platform. Using a communication platform that all users were comfortable with would allow for unhindered communication channels, and allow effective and efficient communication. Slack played a pivotal role in the completion of the project as it allowed for all team members to communicate outside of contact hours, and allowed for members to raise any issues they had found in the sites code or tp notify team mates of a pull request that needed to be reviewed. Slack was also used to share any necessary files that were used in the project.
+Slack was the main communication platform employed by all members when discussing the project outside of contact hours. Slack was the chosen platform for communication as all users were familiar with the platform. Using a communication platform that all users were comfortable with would allow for unhindered communication channels, and allow effective and efficient communication. Slack played a pivotal role in the completion of the project as it allowed for all team members to communicate outside of contact hours, and allowed for members to raise any issues they had found in the sites code or tp notify team mates of a pull request that needed to be reviewed. Slack was also used to share any necessary files that were used in the project. Two Slack channels were created for team members on the project. The first channel the Rails-Assignment channel was the main channel used to communicate outside of contact hours, and the second channel established was the GitHub-Updates channel. The GitHub update channel had the GitHub application added to the channel and allowed team members to receive automatic notifications of pull requests that needed to be reviewed and merged.
 
 <img src="screenshots/Slack1.png">
 
 <img src="screenshots/Slack2.png">
 
 <img src="screenshots/Slack3.png">
+
+<img src="screenshots/Github Updates.png">
+
+<img src="screenshots/Githup-Update 2.png">
 
 
 
