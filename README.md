@@ -321,7 +321,7 @@ Slack was the main communication platform employed by all members when discussin
 
 <img src="screenshots/GitHub Updates.png">
 
-<img src="screenshots/GitHup-Update 2.png">
+<img src="screenshots/Githup-Update 2.png">
 
 
 
