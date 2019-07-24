@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   resources :bids
   resources :jobs
+=======
+  root 'home#index'
+>>>>>>> 774a8eab661fa3544eea51c171590f3cff17024c
   resources :reviews
   resources :profiles
   devise_for :users
