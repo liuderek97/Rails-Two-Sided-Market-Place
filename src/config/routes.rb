@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   root 'home#index'
-  get 'home/index'
   resources :reviews
   resources :profiles
   devise_for :users
