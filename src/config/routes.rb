@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :bids
+  resources :jobs
   root 'home#index'
   resources :reviews
   resources :profiles
