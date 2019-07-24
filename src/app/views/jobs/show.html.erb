@@ -1,34 +1,38 @@
-<p id="notice"><%= notice %></p>
+  <div class="container">
 
-<p>
-  <strong>Title:</strong>
-  <%= @job.title %>
-</p>
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Amount:</strong>
-  <%= @job.amount %>
-</p>
+    <p>
+      <strong>Title:</strong>
+      <%= @job.title %>
+    </p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @job.content %>
-</p>
+    <p>
+      <strong>Amount:</strong>
+      <%= @job.amount %>
+    </p>
 
-<p>
-  <strong>Urgency:</strong>
-  <%= @job.urgency %>
-</p>
+    <p>
+      <strong>Content:</strong>
+      <%= @job.content %>
+    </p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @job.address %>
-</p>
+    <p>
+      <strong>Urgency:</strong>
+      <%= @job.urgency %>
+    </p>
 
-<p>
-  <strong>Employer:</strong>
-  <%= @job.employer_id %>
-</p>
+    <p>
+      <strong>Address:</strong>
+      <%= @job.address %>
+    </p>
 
-<%= link_to 'Edit', edit_job_path(@job) %> |
-<%= link_to 'Back', jobs_path %>
+    <p>
+      <strong>Employer:</strong>
+      <%= @job.employer_id %>
+    </p>
+
+    <%= link_to 'Edit', edit_job_path(@job) %> |
+    <%= link_to 'Back', jobs_path %>
+
+</div>
