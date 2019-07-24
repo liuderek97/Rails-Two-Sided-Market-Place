@@ -297,4 +297,4 @@ Github was the chosen platform for application version control. Github was chose
 
 
 
-<img src="images/GitHub 2.png">
+<img src="images/Github 2.png">
