@@ -124,9 +124,9 @@ Users will be able to list dog walking jobs. Walkers will be able to list themse
 In order to establish an agile methodolgy and establish a git workflow that all team members adhere to  a nuclino workspace was created. The nuclino workspace detailed what agile methodolgy was and described the sprint planning sessions that would take place at the beginnig of each day when the team was face to face. The Nuclino board also went into details about daily standups, presenting and showcasing features and the git workflow that would be used during the project duration.
 
 ### Nuclino Workspace Screenshots
-<img src="images/Nuclino Screenshot1.png" >
+<img src="screenshots/Nuclino Screenshot1.png" >
 
-<img src="images/Nuclino Screenshot2.png" >
+<img src="screenshots/Nuclino Screenshot2.png" >
 
 
 
@@ -200,17 +200,17 @@ Pinterest is an social media application that allows users to upload and view im
 
 <b> Moodboard Link: </b> https://pin.it/pueppn6udwyluk
 
-<img src="images/Pinterest Moodboard1.png">
+<img src="screenshots/Pinterest Moodboard1.png">
 
-<img src="images/Pinterest Moodboard2.png">
+<img src="screenshots/Pinterest Moodboard2.png">
 
 ## Khroma
 
 Khroma is an online color pallete picker that allows for users to view a number of color palletes and gradients based on the user color preferences. Khroma was the main color picking pallete tool that was utilised in the design process, in order to come up with an aesthetic color scheme that fitted the desired theme. After using Khroma the following colours were selected to be used in the website:
 
-<img src="images/Khroma1.png">
+<img src="screenshots/Khroma1.png">
 
-<img src="images/Khroma2.png">
+<img src="screenshots/Khroma2.png">
 
 
 
@@ -229,7 +229,7 @@ Khroma is an online color pallete picker that allows for users to view a number 
 
 ### Trello Board Day 1
 
-<img src="/images/Trello1.png" >
+<img src="/screenshots/Trello1.png" >
 
 
 
@@ -243,7 +243,7 @@ Khroma is an online color pallete picker that allows for users to view a number 
 
 ### Trello Board Day 2
 
-<img src="images/Trello Screenshot2.png">
+<img src="screenshots/Trello Screenshot2.png">
 
 
 
@@ -253,25 +253,25 @@ Sketch is a wireframing tool that was employed during the plannnig stages of the
 
 ### Mobile Wireframe
 
-<img src="images/Mobile Wireframe.png">
+<img src="screenshots/Mobile Wireframe.png">
 
 
 
 ### Desktop Wireframes
 
-<img src="images/Desktop Wireframe-1.png">
+<img src="screenshots/Desktop Wireframe-1.png">
 
 
 
-<img src="images/Desktop Wireframe 2.png">
+<img src="screenshots/Desktop Wireframe 2.png">
 
 
 
-<img src="images/Desktop Wireframe 3.png">
+<img src="screenshots/Desktop Wireframe 3.png">
 
 
 
-<img src="images/Desktop Wireframe 4.png">
+<img src="screenshots/Desktop Wireframe 4.png">
 
 
 
@@ -279,11 +279,11 @@ Sketch is a wireframing tool that was employed during the plannnig stages of the
 
 Slack was the main communication platform employed by all members when discussing the project outside of contact hours. Slack was the chosen platform for communication as all users were familiar with the platform. Using a communication platform that all users were comfortable with would allow for unhindered communication channels, and allow effective and efficient communication. Slack played a pivotal role in the completion of the project as it allowed for all team members to communicate outside of contact hours, and allowed for members to raise any issues they had found in the sites code or tp notify team mates of a pull request that needed to be reviewed. Slack was also used to share any necessary files that were used in the project.
 
-<img src="images/Slack1.png">
+<img src="screenshots/Slack1.png">
 
-<img src="images/Slack2.png">
+<img src="screenshots/Slack2.png">
 
-<img src="images/Slack3.png">
+<img src="screenshots/Slack3.png">
 
 
 
@@ -293,8 +293,8 @@ Github was the chosen platform for application version control. Github was chose
 
 
 
-<img src="images/GitHub Screenshot.png">
+<img src="screenshots/GitHub Screenshot.png">
 
 
 
-<img src="images/Github 2.png">
+<img src="screenshots/Github 2.png">
