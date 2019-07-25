@@ -1,32 +1,16 @@
-<%= form_with(model: review, local: true) do |form| %>
-  <% if review.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(review.errors.count, "error") %> prohibited this review from being saved:</h2>
+<%= simple_form_for @review do |f| %>
+<%= f.error_notification %>
+<%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-      <ul>
-      <% review.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<div class="form-inputs">
+  <%= f.input :star_rating %>
+  <%= f.input :title %>
+  <%= f.input :content %>
+	<%= f.hidden_field :reviewed_id, value: @review.reviewed_id %>
+	<%= f.hidden_field :reviewer_id, value: @review.reviewer_id %>
+</div>
 
-  <div class="field">
-    <%= form.label :star_rating %>
-    <%= form.number_field :star_rating %>
-  </div>
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+<div class="form-actions">
+  <%= f.button :submit %>
+</div>
 <% end %>
