@@ -15,6 +15,8 @@ class ReviewsController < ApplicationController
   # GET /reviews/new
   def new
     @review = Review.new
+    @review.reviewed_id = params[:profile_id]
+    @review.reviewer_id = current_profile.id
   end
 
   # GET /reviews/1/edit
@@ -25,7 +27,7 @@ class ReviewsController < ApplicationController
   # POST /reviews.json
   def create
     @review = Review.new(review_params)
-
+    
     respond_to do |format|
       if @review.save
         format.html { redirect_to @review, notice: 'Review was successfully created.' }
@@ -69,6 +71,6 @@ class ReviewsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def review_params
-      params.require(:review).permit(:star_rating, :title, :content)
+      params.require(:review).permit(:star_rating, :title, :content, :reviewed_id, :reviewer_id)
     end
 end

@@ -11,12 +11,35 @@
   <%= @profile.bio %>
 </p>
 
-<% @reviews.each do |review| %>
-<ul>
-	<li><%= review.star_rating %></li>
-	<li><%= review.title %></li>
-	<li><%= review.content %></li>
-</ul>
+<% if @reviews.exists? %>
+<h5><%= @profile.name %>'s reviews:</h5>
+	<% @reviews.each do |review| %>
+  <div class="row">
+    <div class="col s12 m3">
+      <div class="card-panel purple">
+			<span class="white-text">
+			<ul>
+			  <li>
+					<h4><%= review.title %></h4>
+				</li>
+				<li>
+					<h6><%= review.star_rating %>/5</h6>
+				</li>
+				<li>
+					<%= review.content %>
+				</li>
+				<li>
+					- <%= review.reviewer.name %>					
+				</li>
+			</ul>
+	    </span>
+	    </div>
+	  </div>
+	</div>
+	<% end %>
+<% else %>
+  <p> No reviews yet! </p>
+	<%= link_to 'Leave a review', new_review_path(:profile_id => @profile.id) %> | 
 <% end %>
 
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
