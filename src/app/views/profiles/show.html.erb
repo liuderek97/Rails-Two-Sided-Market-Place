@@ -37,9 +37,14 @@
 	  </div>
 	</div>
 	<% end %>
+	<% if @profile.id != current_user.id %> 
+	<%= link_to 'Leave a review', new_review_path(:profile_id => @profile.id) %> | 
+	<% end %>
 <% else %>
   <p> No reviews yet! </p>
+	<% if @profile.id != current_user.id %> 
 	<%= link_to 'Leave a review', new_review_path(:profile_id => @profile.id) %> | 
+	<% end %>
 <% end %>
 
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
