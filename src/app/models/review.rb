@@ -5,8 +5,8 @@ class Review < ApplicationRecord
   validates :star_rating, numericality: { only_integer: true, 
                                           greater_than_or_equal_to: 1, 
                                           less_than_or_equal_to:    5 }
-  validates :title,       presence: true
-  validates :content,     presence: true
+  validates :title,       presence: true, length: { maximum: 40 }
+  validates :content,     presence: true, length: { maximum: 300 }
   validates :reviewer_id, presence: true
   validates :reviewed_id, presence: true
 end
