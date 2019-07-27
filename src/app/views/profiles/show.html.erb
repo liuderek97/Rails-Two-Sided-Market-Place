@@ -1,52 +1,91 @@
 <div class="container">
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @profile.name %>
-</p>
+<div class="row">
+  <div class="col s4 m8 l12">
+    <div class="card blue-grey darken-1">
+      <div class="card-content white-text center-align">
+        <span class="card-title">
+<!-- bio place holder for designing views -->
+        <%= @profile.name %>
+			 </span>
+			 <% if @profile.bio %>
+			 <p><%= @profile.bio %></p>
+			 <% else %>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+				<% end %>
+				<br>
+      </div>
+<!-- Specialties idea -->
+			<div class="card-content white-text">
+			<span class="card-title">My specialties</span>
+			<blockquote>
+				this is a skill of mine.
+			</blockquote>
+			<blockquote>
+				So is this.
+			</blockquote>
+		</div>
+      <div class="card-action">
+        <a href="#">Resume</a>
+      </div>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Bio:</strong>
-  <%= @profile.bio %>
-</p>
+<div class="row">
+	<div class="col s4 m6 l6">
+		<% if @reviews.exists? %>
+		<h5><%= @profile.name %>'s reviews:</h5>
+			<% @reviews.each do |review| %>
+	    <div class="col s12 m5">
+	      <div class="card-panel grey">
+				<span class="white-text">
+				<ul>
+				  <li>
+						<h4><%= review.title %></h4>
+					</li>
+					<li>
+						<h6><%= review.star_rating %>/5</h6>
+					</li>
+					<li>
+						<%= review.content %>
+					</li>
+					<li>
+						- <%= review.reviewer.name %>					
+					</li>
+				</ul>
+		    </span>
+		    </div>
+			</div>
+			<% end %>
+		<% else %>
+		  <p> No reviews yet! </p>
+		<% end %>
+	</div>
 
-<% if @reviews.exists? %>
-<h5><%= @profile.name %>'s reviews:</h5>
-	<% @reviews.each do |review| %>
-  <div class="row">
-    <div class="col s12 m5">
-      <div class="card-panel grey">
-			<span class="white-text">
-			<ul>
-			  <li>
-					<h4><%= review.title %></h4>
-				</li>
+<!--possible bartenders view section -->
+<!--	<div class="col s4 m6 l6">
+		<h1>other bartenders<h1>
+		<% if @bartenders %>
+		<% @bartenders.each do |bartender| %>
+	  	<ul>
 				<li>
-					<h6><%= review.star_rating %>/5</h6>
-				</li>
-				<li>
-					<%= review.content %>
-				</li>
-				<li>
-					- <%= review.reviewer.name %>					
+			<%= bartender.name %>
+		<!--Bartender picture -->
 				</li>
 			</ul>
-	    </span>
-	    </div>
-	  </div>
-	</div>
-	<% end %>
-	<% if @profile.id != current_user.id %> 
-	<%= link_to 'Leave a review', new_review_path(:profile_id => @profile.id) %> | 
-	<% end %>
-<% else %>
-  <p> No reviews yet! </p>
-	<% if @profile.id != current_user.id %> 
-	<%= link_to 'Leave a review', new_review_path(:profile_id => @profile.id) %> | 
-	<% end %>
-<% end %>
+			<% end %>
+	 	<% else %>
+		<p> no bartenders found </p>
+		<% end %>
+	</div> -->
+</div>
 
+<% if @profile.id != current_user.id %> 
+  <%= link_to 'Leave a review', new_review_path(:profile_id => @profile.id) %> | 
+<% end %>
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
 <%= link_to 'Back', profiles_path %>
-</div>
+

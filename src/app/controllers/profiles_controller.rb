@@ -1,4 +1,5 @@
 class ProfilesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
 
   # GET /profiles
@@ -10,7 +11,9 @@ class ProfilesController < ApplicationController
   # GET /profiles/1
   # GET /profiles/1.json
   def show
-    @reviews = @profile.reviewed
+    @profiles   = Profile.all
+    @reviews    = @profile.reviewed
+    # @bartenders = @profiles.bartender
   end
 
   # GET /profiles/new
