@@ -1,3 +1,19 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.home-body{
+  background-image: url(/assets/alcohol-bar-beverage-4784.jpg);
+  background-size: cover;
+}
+
+.home-container{
+  width: 700px;
+  color: #f7f7f7;
+  float: right; 
+  padding-right: 100px;
+  padding-top: 10%;
+}
+
+.home-container p{
+  font-size: 20px;
+}
