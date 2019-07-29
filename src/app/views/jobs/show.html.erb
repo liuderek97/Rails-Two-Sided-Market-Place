@@ -24,6 +24,34 @@
     <%= @job.employer_id %>
   </p>
 
+<div class="row">
+	<div class="col s4 m6 l6">
+		<% if @bids.exists? %>
+			<% @bids.each do |bid| %>
+	    <div class="col s12 m5">
+	      <div class="card-panel grey">
+				<span class="white-text">
+				<ul>
+				  <li>
+						<h4><%= bid.amount %></h4>
+					</li>
+					<li>
+						<h6><%= bid.content %>/5</h6>
+					</li>
+				</ul>
+		    </span>
+		    </div>
+			</div>
+			<% end %>
+		<% else %>
+		  <p> No bids yet! </p>
+		<% end %>
+	</div>
+
+<% if @job.employer_id != current_user.id %> 
+  <%= link_to 'Leave a bid', new_bid_path(:profile_id => @profile.id) %> | 
+<% end %>
+
   <%= link_to 'Edit', edit_job_path(@job) %> |
   <%= link_to 'Back', jobs_path %>
 </div>
