@@ -13,7 +13,7 @@ class ProfilesController < ApplicationController
   def show
     @profiles   = Profile.all
     @reviews    = @profile.reviewed
-    # @bartenders = @profiles.bartender
+    @bartenders = @profiles
   end
 
   # GET /profiles/new
