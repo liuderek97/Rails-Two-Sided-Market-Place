@@ -49,7 +49,6 @@
 	</div>
 
 <% if @job.employer_id != current_user.id %>
-<%="ALALAL#{@job.inspect}"%> 
   <%= link_to 'Leave a bid', new_bid_path(:job_id => @job.id) %> | 
 <% end %>
 
