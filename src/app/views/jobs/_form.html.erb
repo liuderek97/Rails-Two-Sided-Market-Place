@@ -7,9 +7,8 @@
     <%= f.input :title %>
     <%= f.input :amount %>
     <%= f.input :content %>
-    <%= f.input :urgency %>
     <%= f.input :address %>
-    <%= f.input :employer_id %>
+    <%= f.hidden_field :employer_id, value: current_profile.id %>
   </div>
 
   <div class="form-actions">
