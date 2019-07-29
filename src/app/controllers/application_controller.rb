@@ -11,5 +11,4 @@ class ApplicationController < ActionController::Base
       new_profile_path
     end
   end
- end
- 
+end
