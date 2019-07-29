@@ -25,9 +25,9 @@
         <td><%= job.address %></td>
         <td><%= job.employer_id %></td>
         <td><%= link_to 'Show', job %></td>
-        <% if current_profile.id == @profile.employer_id%>
+        <% if current_profile.id == job.employer_id %>
         <td><%= link_to 'Edit', edit_job_path(job) %></td>
-        <%end%>
+        <% end %>
         <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
