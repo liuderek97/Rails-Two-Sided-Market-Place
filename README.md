@@ -337,6 +337,6 @@ Github was the chosen platform for application version control. Github was chose
 
 <img src="screenshots/Github 2.png">
 
-###RSpec & Factory Bot
+### RSpec & Factory Bot
 RSpec gives us an API to write assertions for tests, while Factory Bot gives us the ability to create data necessary for for these tests.
 While RSpec is a gem focused for Test Driven Development(TDD), it's a nice implementation for testing basic validations and eventually more complex functions.
