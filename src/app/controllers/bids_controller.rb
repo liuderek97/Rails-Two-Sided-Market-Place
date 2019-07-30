@@ -1,5 +1,5 @@
 class BidsController < ApplicationController
-  before_action :set_bid, only: [:show, :edit, :update, :destroy]
+  before_action :set_bid, only: [:show, :edit, :update, :destroy, :approve]
 
   # GET /bids
   # GET /bids.json
@@ -62,13 +62,19 @@ class BidsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+  
+  def approve
+    @bid.approved = 1
+    @bid.save
+    redirect_to root_path, notice: 'Bid approved'
+  end
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_bid
       @bid = Bid.find(params[:id])
     end
-
+  
     # Never trust parameters from the scary internet, only allow the white list through.
     def bid_params
       params.require(:bid).permit(:job_id, :bartender_id, :amount, :approved, :content)
