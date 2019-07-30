@@ -11,9 +11,12 @@
 
       <% if user_signed_in?%>
         <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "nav-link"%>
-          <% else %>
-             <%= link_to "Log In", new_user_session_path, class: "nav-link"%>
-    <% end %>
+      <% else %>
+        <%= link_to "Log In", new_user_session_path, class: "nav-link"%>
+      <% end %>
+      <% if current_profile %>
+        <%= link_to "My Profile", profile_path(current_profile), method: :get, class: "nav-link"%>
+      <%end%>
      </div>
     </div>
   </nav>
