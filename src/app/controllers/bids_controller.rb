@@ -16,6 +16,7 @@ class BidsController < ApplicationController
   def new
     @bid = Bid.new
     @bid.job_id       = params[:job_id]
+    puts "ALALAL JOBID #{@bid.job_id}"
     @bid.bartender_id = current_profile.id 
   end
 
@@ -30,7 +31,7 @@ class BidsController < ApplicationController
     
     respond_to do |format|
       if @bid.save
-        format.html { redirect_to @bid, notice: 'Bid was successfully created.' }
+        format.html { redirect_to jobs_path, notice: 'Bid was successfully created.' }
         format.json { render :show, status: :created, location: @bid }
       else
         format.html { render :new }
@@ -66,7 +67,7 @@ class BidsController < ApplicationController
   def approve
     @bid.approved = 1
     @bid.save
-    redirect_to root_path, notice: 'Bid approved'
+    redirect_to job_path
   end
   
   private
