@@ -47,6 +47,23 @@ nav a:hover {
     color: black;
    }
 
+.card{
+    width: 325px;
+    text-decoration: none;
+    text-align: center;
+}
 
+.jobs-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.main h1{
+    text-align: center;
+}
+
+.card-action{
+    color: hotpink;
+}
    
    //  @import "https://fonts.googleapis.com/icon?family=Material+Icons";
