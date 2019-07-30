@@ -16,7 +16,6 @@ class BidsController < ApplicationController
   def new
     @bid = Bid.new
     @bid.job_id       = params[:job_id]
-    puts "ALALAL JOBID #{@bid.job_id}"
     @bid.bartender_id = current_profile.id 
   end
 
