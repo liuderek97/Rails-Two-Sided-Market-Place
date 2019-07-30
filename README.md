@@ -216,6 +216,7 @@ In order to come up with a design scheme for the site the following resources we
 * Sketch
 * Slack
 * GitHub
+* DB Designer
 
 ## Pinterest
 
@@ -226,6 +227,8 @@ Pinterest is an social media application that allows users to upload and view im
 <img src="screenshots/Pinterest Moodboard1.png">
 
 <img src="screenshots/Pinterest Moodboard2.png">
+
+
 
 ## Khroma
 
@@ -263,6 +266,9 @@ Khroma is an online color pallete picker that allows for users to view a number 
 - Create flow diagram
 - Update README
 - Implement required gems to start project
+- Update README
+
+
 
 ### Trello Board Day 2
 
@@ -276,10 +282,86 @@ Khroma is an online color pallete picker that allows for users to view a number 
 * Setup the home-page and nav-bar using Materializecss 
 * Setup self-joins for models
 * Laydown the foundation for the basic functions of the site
+* Deployment to heroku
+* Update README
+
+
 
 ### Trello Board Day 3
 
 <img src="screenshots/Trello Day 3.png">
+
+### Day 4 Schedule 
+
+	* Create review basic review system allowing for users to bid on a job
+	* Stylistic improvements for navbar and pages present on the site
+	* Deployment to heroku
+	* Updating README
+
+### Day 5 Schedule
+
+* Implement Rspec tests for reviews and profiles model validations
+* Improve validations for reviews 	
+* Set up routing for Reviews method
+* General styling of materialise display cards
+* Updating README
+* Deployment to heroku
+
+### Day 6 Schedule
+
+* Aesthetic improvements to the show profile page
+* Update README 
+
+### Day 7 Schedule
+
+* Allow users to view other recommended bartenders when viewing a single bartender
+* Update README
+* Deploy to Heroku
+
+### Day 8 Schedule
+
+* Create function to allow user to create and post jobs
+
+* Create function user to create a bid for a job
+
+* Modify simples forms to allow for better user experience 
+
+* Conditional routing checking if the user is logged in when trying to access certain functions
+
+* UI improvements for job show and view page
+
+* Model update adding field to allow for input of bid details
+
+* Modifying jobs table removing urgency field
+
+* Update README
+
+* Deploy to Heroku
+
+  
+
+### Trello Board Day 8
+
+<img src="screenshots/Trello Day7.png">
+
+
+
+### Day 9 Schedule
+
+* AWS bucket set up
+* Better user authentication
+* Add profile to top nav
+* Fix routing for creating profile(IMPLEMENT MODAL)
+* Update readme
+* Deploy to Heroku
+
+### Day 9 Trello board
+
+<img src="screenshots/Trello day9.png">
+
+
+
+
 
 ## Sketch
 
@@ -309,7 +391,7 @@ Sketch is a wireframing tool that was employed during the plannnig stages of the
 
 
 
-### Slack
+## Slack
 
 Slack was the main communication platform employed by all members when discussing the project outside of contact hours. Slack was the chosen platform for communication as all users were familiar with the platform. Using a communication platform that all users were comfortable with would allow for unhindered communication channels, and allow effective and efficient communication. Slack played a pivotal role in the completion of the project as it allowed for all team members to communicate outside of contact hours, and allowed for members to raise any issues they had found in the sites code or tp notify team mates of a pull request that needed to be reviewed. Slack was also used to share any necessary files that were used in the project. Two Slack channels were created for team members on the project. The first channel the Rails-Assignment channel was the main channel used to communicate outside of contact hours, and the second channel established was the GitHub-Updates channel. The GitHub update channel had the GitHub application added to the channel and allowed team members to receive automatic notifications of pull requests that needed to be reviewed and merged.
 
@@ -325,7 +407,7 @@ Slack was the main communication platform employed by all members when discussin
 
 
 
-### GitHub
+## GitHub
 
 Github was the chosen platform for application version control. Github was chosen due to the fact that it would allow for the code to be available on multiple devices. Any changes made to the code would be documented during the committing stage. This allowed anyone working on the project to constantly be aware of any major changes to the code and keep up to date with the latest revisions of the project. In order to ensure there were no breakdowns cause by the merging of new code into the etablished code base a git work flow was established at the beginning of the project, and each team member would adhere closely to the git work flow. The GitHub repository was setup with a master branch where the final product would be pushed after rigorous testing and ensuring that the site is working as intended with no bugs. A staging branch which was the main branch where testing would take place before pushing the final product to master, and individual branches created by each team member when adding a feature of fixing an issue. Whenever a team member would want to work on the project, they would pull from the staging branch and checkout into a new branch with the branch name describing the function they were adding, or the issue that they would be resolving. Upon completion of their individual task the team member would then push their code to GitHub on their individual branch and create a pull request on GitHub to merge the feature branch into the staging branch. Each time a pull request would be created the team member responsible for the creation of the branch would be required to request reviewers by the other team members to ensure that all team members were kept up to date with new features and to ensure working and quality code was being merged into the testing/staging branch.
 
@@ -337,6 +419,30 @@ Github was the chosen platform for application version control. Github was chose
 
 <img src="screenshots/Github 2.png">
 
-### RSpec & Factory Bot
-RSpec gives us an API to write assertions for tests, while Factory Bot gives us the ability to create data necessary for for these tests.
-While RSpec is a gem focused for Test Driven Development(TDD), it's a nice implementation for testing basic validations and eventually more complex functions.
+## RSpec & FactoryBot
+
+RSpec gives us an API to write assertions for tests, while Factory Bot gives us the ability to create data necessary for for these tests, while RSpec is a gem focused for Test Driven Development(TDD), it's a convenient and practical implementation allowing for testing basic validations and more complex functions.
+
+
+
+## DB Designer 
+
+DB designer is an online database entity relationship diagram designer which allows for users to visually design databases online. DB Designer was used to create a visualisation of the models and associations that would be created and used for the project. There were several versions of the ERD created in order to reflect the changes that were made when creating the application.
+
+### ERD  Design 1
+
+<img src="screenshots/First ERD.png">
+
+
+
+### ERD Design 2
+
+<img src="screenshots/updated ERD.png">
+
+
+
+# Short Answer Questions
+
+`` What is the need (i.e. challenge) that you will be addressing in your project? ``
+
+The need that will be addressed in the project is providing a platform to allow for people to hire bartenders for private functions or for short terms of employment. There is a growing market of individuals who are looking to hire bartenders, and this web application will assist in providing a platform for Bartenders to be able to advertise themselves, and allow individuals or business to find bartenders that are looking for work.
