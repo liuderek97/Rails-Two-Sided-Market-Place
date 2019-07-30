@@ -1,28 +1,29 @@
-<h3 style="text-align: center;">Job Listings</h3>
 
+<p id="notice"><%= notice %></p>
+<div class="main">
+<h1>Jobs</h1>
+
+<div class="jobs-container">
 <% @jobs.each do |job| %>
-	<div class="row">
-	  <div class="col s12 m6">
-	    <div class="card">
-	      <div class="card-content">
-				  <tr>
-				    <td><%= job.title %></td>
-				    <td><%= job.amount %></td>
-				    <td><%= job.content %></td>
-				    <td><%= job.address %></td>
-				    <td><%= job.employer_id %></td>
-					</tr>
-	      </div>
-	      <div class="card-action">
-				  <%= link_to 'Show', job %>
-				  <% if current_profile.id == job.employer_id %>
-				    <%= link_to 'Edit', edit_job_path(job) %>
-				  <% end %>
-				  <%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %>
-	      </div>
-	    </div>
-	  </div>
-	</div>
+  <div class="row">
+    <div class="col s6 ">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+            <span class="card-title"><%= job.title %></span>
+            <%= job.amount %>
+            <%= job.content %>
+        </div>
+        <div class="card-action">
+          <%= link_to 'Show', job,  class:"waves-effect waves-light btn"%>
+        </div>
+      </div>
+    </div>
+  </div>
 <% end %>
+</div>
 
+<br>
 
+<%= link_to 'New Job', new_job_path %>
+
+</div>
