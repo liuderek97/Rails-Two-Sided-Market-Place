@@ -47,9 +47,9 @@
 		  <p> No bids yet! </p>
 		<% end %>
 	</div>
-
-<% if @job.employer_id != current_user.id %>
-  <%= link_to 'Leave a bid', new_bid_path(:job_id => @job.id) %> | 
+	
+<% if current_user && @job.employer_id != current_user.id %>
+	 <%= link_to 'Leave a bid', new_bid_path(:job_id => @job.id) %> | 
 <% end %>
 
 <%= link_to 'Edit', edit_job_path(@job) %> |
