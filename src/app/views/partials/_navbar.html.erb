@@ -15,7 +15,7 @@
         <%= link_to "Log In", new_user_session_path, class: "nav-link"%>
       <% end %>
       <% if current_profile %>
-        <%= link_to "My Profile", profile_path(current_profile), method: :get, class: "nav-link"%>
+        <%= link_to "My Profile", profile_path(current_profile), method: :get, class: "nav-link", id:"profile" %>
       <%end%>
      </div>
     </div>
