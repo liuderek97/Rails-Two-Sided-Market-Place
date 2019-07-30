@@ -36,7 +36,7 @@
 						<h4><%= bid.amount %></h4>
 					</li>
 					<li>
-						<h6><%= bid.content %>/5</h6>
+						<h6><%= bid.content %></h6>
 					</li>
 				</ul>
 		    </span>
@@ -48,10 +48,10 @@
 		<% end %>
 	</div>
 
-<% if @job.employer_id != current_user.id %> 
-  <%= link_to 'Leave a bid', new_bid_path(:profile_id => @profile.id) %> | 
+<% if @job.employer_id != current_user.id %>
+  <%= link_to 'Leave a bid', new_bid_path(:job_id => @job.id) %> | 
 <% end %>
 
-  <%= link_to 'Edit', edit_job_path(@job) %> |
-  <%= link_to 'Back', jobs_path %>
+<%= link_to 'Edit', edit_job_path(@job) %> |
+<%= link_to 'Back', jobs_path %>
 </div>
