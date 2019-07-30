@@ -6,6 +6,7 @@
    <%= f.input :name %>
    <%= f.input :bio %>
    <%= f.input :bartender, wrapper_html: { class: 'm6 s12' } %>
+   <%= f.file_field :pictures, multiple: true %>
    <%= f.hidden_field :user_id, value: @user_id %>
 	</div>
 

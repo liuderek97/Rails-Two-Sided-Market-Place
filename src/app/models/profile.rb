@@ -4,6 +4,8 @@ class Profile < ApplicationRecord
   has_many :bids, class_name: "Bid", foreign_key: "bartender_id"
   has_many :reviews,  class_name: "Review", foreign_key: "reviewer_id"
   has_many :reviewed, class_name: "Review", foreign_key: "reviewed_id"
+  has_many_attached :pictures
+
   
   validates :name, presence: true
 end
