@@ -28,30 +28,34 @@
 	<div class="col s4 m6 l6">
 		<% if @bids.exists? %>
 			<% @bids.each do |bid| %>
-	    <div class="col s12 m5">
-	      <div class="card-panel grey">
-				<span class="white-text">
-				<ul>
-				  <li>
-						<h4><%= bid.amount %></h4>
-					</li>
-					<li>
-						<h6><%= bid.content %></h6>
-					</li>
-				</ul>
-		    </span>
-		    </div>
-			</div>
-			<% end %>
-		<% else %>
-		  <p> No bids yet! </p>
+				<% if bid.approved == false %>
+			    <div class="col s12 m5">
+			      <div class="card-panel grey">
+						<span class="white-text">
+						<ul>
+						  <li>
+								<h4><%= bid.amount %></h4>
+							</li>
+							<li>
+								<h6><%= bid.content %></h6>
+							</li>
+						</ul>
+				    </span>
+					  <% if current_user && current_profile.id == @job.employer_id %>
+		          <a class="waves-effect waves-light btn"><%= link_to "Approve Bid", approve_bid_path %></a>
+		        <% end %>
+				    </div>
+					</div>
+					<% end %>
+				<% end %>
+			<% else %>
+			  <p> No bids yet! </p>
 		<% end %>
 	</div>
-	
-<% if current_user && @job.employer_id != current_user.id %>
-	 <%= link_to 'Leave a bid', new_bid_path(:job_id => @job.id) %> | 
-<% elsif current_user && @job.employer_id == current_user.id %>
-   <%= link_to 'Edit', edit_job_path(@job) %> |
-<% end %>
-<%= link_to 'Back', jobs_path %>
+	<% if current_user && @job.employer_id != current_user.id %>
+		 <%= link_to 'Leave a bid', new_bid_path(:job_id => @job.id) %> | 
+	<% elsif current_user && @job.employer_id == current_user.id %>
+	   <%= link_to 'Edit', edit_job_path(@job) %> |
+	<% end %>
+	<%= link_to 'Back', jobs_path %>
 </div>
