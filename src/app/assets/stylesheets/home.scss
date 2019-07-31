@@ -16,11 +16,15 @@
   position: relative;
 }
 
+#job-section {
+  min-height: calc(100vh - 60px);
+  position: relative;
+}
+
 .home-body {
 	border: 2px solid grey;
   max-width: 1240px;
 	width: auto;
-	padding: 0px 20px;
 	margin: auto
 }
 
@@ -28,5 +32,13 @@
   max-width: 1240px;
 	width: auto;
 	padding: 0px 20px;
+	margin: auto
+}
+
+.job-body {
+	border: 2px solid grey;
+  max-width: 1240px;
+	width: auto;
+	padding: 0px 10px;
 	margin: auto
 }
