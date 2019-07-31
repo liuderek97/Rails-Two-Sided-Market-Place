@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>RailsAssignment</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
   <%= stylesheet_link_tag 'https://fonts.googleapis.com/icon?family=Material+Icons' %>
   <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -12,9 +14,7 @@
   </head>
 
   <body>
-    <%= render 'partials/navbar'%> 
-      <p class="alert"><%= alert %></p>
-
+    <%= render 'partials/navbar'%>
     <%= yield %>
   </body>
 </html>

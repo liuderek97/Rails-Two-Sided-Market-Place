@@ -1,19 +1,45 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.home-body{
+
+.valign-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+#home-section {
+  min-height: calc(100vh - 60px);
+	position: relative;
+}
+
+#about-section {
+  min-height: calc(100vh - 60px);
+  position: relative;
+}
+
+#job-section {
+  min-height: calc(100vh - 60px);
+  position: relative;
+}
+
+.home-body {
   background-image: asset_url("alcohol-bar-bartender-274194.jpg");
-  background-size: cover;
+	background-size:cover;
+	width: auto;
+	margin: auto;
 }
 
-.home-container{
-  width: 700px;
-  color: #f7f7f7;
-  float: right; 
-  padding-right: 100px;
-  padding-top: 10%;
+.about-body {
+  max-width: 1240px;
+	padding: 0px 20px;
+	margin: auto;
+	width: auto;
 }
 
-.home-container p{
-  font-size: 20px;
+.job-body {
+	border: 2px solid grey;
+  max-width: 1240px;
+	width: auto;
+	padding: 0px 10px;
+	margin: auto;
 }
