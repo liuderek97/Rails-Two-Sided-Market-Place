@@ -19,13 +19,8 @@
     $secondary-color: #d7dee1 !default;
     @import 'materialize';
 
-
-nav li {
-    margin-top:2.4vmin;
-}
-
-.login {
-    margin-top:2.4vmin;
+nav ul li:hover {
+    background-color: white;
 }
 
 .card{

@@ -1,6 +1,8 @@
 <nav>
-    <div class="nav-wrapper">
+    <div class="nav-wrapper grey darken-2">
+    <div id="gv">
       <%= link_to "GV", root_path, class:"brand-logo center" %>
+      </div>
         <ul id="nav-mobile" class="left hide-on-med-and-down">
           <li> <%=  link_to "Browse Jobs", jobs_path, class:"black-text "%></li>
            <li><%= link_to "Post Jobs", new_job_path, class:"black-text"%></li>
@@ -10,16 +12,13 @@
             <li> <%= link_to "My Profile", profile_path(current_profile), method: :get, class: "nav-link black-text",        id:"profile" %></li>
                 <%end%>
               <% if user_signed_in?%>
-            <li><%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "nav-link black-text"%> <% else %> <div class=login> <%= link_to "Log In", new_user_session_path, class: "nav-link black-text"%> </li>
-            </div>
+            <li><%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "nav-link black-text"%> <% else %> <%= link_to "Log In", new_user_session_path, class: "nav-link black-text"%> </li>
           <%end%>
         </ul>
       </div>
     </nav>
    
 
- 
- 
  
  
  
