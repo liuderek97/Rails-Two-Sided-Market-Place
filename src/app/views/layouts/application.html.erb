@@ -6,13 +6,17 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+          <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
 
   <body>
     <%= render 'partials/navbar'%> 
-    <p class="alert"><%= alert %></p>
+      <p class="alert"><%= alert %></p>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+
     <%= yield %>
   </body>
 </html>
