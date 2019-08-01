@@ -93,7 +93,7 @@
 
 <% if current_user && @profile.id != current_user.id %>
   <%= link_to 'Leave a review', new_review_path(:profile_id => @profile.id) %> | 
-<% elsif current_user && @profile.id == current_user.id %>
+<% elsif current_user && @profile.id == current_profile.id %>
   <%= link_to 'Edit', edit_profile_path(@profile) %> |
 <% end %>
 <%= link_to 'Back', profiles_path %>
