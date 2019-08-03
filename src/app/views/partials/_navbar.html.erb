@@ -1,3 +1,39 @@
+  <nav>
+    <div class="nav-wrapper">
+         <div id="gv">
+        <%= link_to "GV", root_path, class:"brand-logo center" %>
+      </div>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="left hide-on-med-and-down">
+         <li> <%=  link_to "Browse Jobs", jobs_path, class:"black-text "%></li>
+          <li><%= link_to "Post Jobs", new_job_path, class:"black-text"%></li>
+            </ul>
+            <ul class="right hide-on-med-and-down">
+                 <% if current_profile %>
+          <li> <%= link_to "My Profile", profile_path(current_profile), method: :get, class: "nav-link black-text",        id:"profile" %></li>
+            <%end%>
+              <% if user_signed_in?%>
+              <li><%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "nav-link black-text"%> <% else %> <%= link_to "Log In", new_user_session_path, class: "nav-link black-text"%> </li>
+            <%end%>
+
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+          <li> <%= link_to "Browse Jobs", jobs_path, class:"black-text "%></li>
+          <li><%= link_to "Post Jobs", new_job_path, class:"black-text"%></li>
+           <% if current_profile %>
+          <li> <%= link_to "My Profile", profile_path(current_profile), method: :get, class: "nav-link black-text",        id:"profile" %></li>
+            <%end%>
+              <% if user_signed_in?%>
+              <li><%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "nav-link black-text"%> <% else %> <%= link_to "Log In", new_user_session_path, class: "nav-link black-text"%> </li>
+            <%end%>
+
+  </ul>
+ 
+ 
+  <%
+=begin%>
  <div class="navbar-fixed">
   <nav>
     <div class="nav-wrapper grey darken-2">
@@ -19,10 +55,9 @@
         </div>
       </nav>
     </div>
-   
-
- 
- 
+    
+<%
+=end%>
  
  
  
