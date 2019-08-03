@@ -19,12 +19,16 @@
     $secondary-color: #d7dee1 !default;
     @import 'materialize';
 
+html {
+  scroll-behavior: smooth;
+}
+		
 nav ul li:hover {
     background-color: white;
 }
 
-.card{
-    width: 325px;
+.card{   
+
     text-decoration: none;
     text-align: center;
     padding: 0px;
