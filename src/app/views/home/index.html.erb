@@ -29,7 +29,7 @@
 		</div>
 		<div class="divider"></div>
 		<div class="about-content center">
-	    <p>GrapeVine allows bartenders to connect with employers and vice versa via:</p>	
+	    <p>GrapeVine allows bartenders to connect with employers and vice versa via:</p>
 			<div class="row">
 				<div class="col s12 m4">
 				  <div class="card">
@@ -47,7 +47,6 @@
 						</div>
 					</div>
 				</div>
-			
 
 				<div class="col s12 m4">
 				  <div class="card">
@@ -65,8 +64,7 @@
 						</div>
 				  </div>
 				</div>
-			
-			
+
 				<div class="col s12 m4">
 				  <div class="card">
 					  <div class="card-image waves-effect waves-block waves-light">
@@ -85,19 +83,42 @@
 			  </div>
 			</div>
 		</div>
-	</div>		
+	</div>
 </div>
 
 <div class="row">
 	<div class="col s12">
 		<div class="container vlaign-wrapper" id="job-section">
 		  <div class="job-body">
+			  <a name="jobs"></a>
 			  <div class="home-title center">
-				  <h4>Jobs</h4>
+				  <h4>Preview Some Jobs</h4>
 				</div>
 			</div>
-		</div>
-		<div class="job-content">
+			<div class="divider"></div>
+				<div class="job-content center">
+					<div class="col s12 m12 l12">
+			  		<% @jobs.each do |job| %>
+	          <div class="card">
+	            <div class="card-content">
+					  	<ul>
+								<li>
+                  <%= job.content %>
+								</li>
+								<li>
+                  <p>$<%= job.amount %>/hr</p>
+								</li>
+							</ul>
+	            </div>
+	            <div class="card-action">
+	              <a href="#">apply</a>
+	            </div>
+	          </div>
+						<% end %>
+					</div>
+				</div> 
+			</div>
 		</div>
 	</div>
 </div>
+
