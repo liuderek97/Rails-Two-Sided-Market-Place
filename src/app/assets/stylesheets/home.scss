@@ -1,11 +1,10 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// Media Query Ranges
 
-.home-container {
-  .card {
-		width: 500px;
-	}
+.row {
+	height: 100%
 }
 
 .valign-wrapper {
@@ -21,6 +20,30 @@
 #about-section {
   min-height: calc(100vh - 60px);
   position: relative;
+	display: flex;
+	flex-direction: row;
+}
+
+// Iphone X portrait and landscape. 
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+  .about-content {
+		
+		.row {
+		  min-height: calc(100vh - 60px);
+		  position: relative;
+			display: flex;
+			flex-direction: column;
+
+			.card {
+			  width: 100% !important;
+				display: block;
+      }
+    }
+  }
 }
 
 #job-section {
@@ -44,8 +67,5 @@
 
 .job-body {
 	border: 2px solid grey;
-  max-width: 1240px;
-	width: auto;
-	padding: 0px 10px;
-	margin: auto;
+	margin: 0px 10px;
 }
