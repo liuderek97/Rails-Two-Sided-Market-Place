@@ -361,6 +361,21 @@ Khroma is an online color pallete picker that allows for users to view a number 
 
 
 
+### Day 10 Schedule 
+
+* Add styling and cards to the home page
+* Change colour scheme
+* Change background url to asset url so it's readable by Heroku
+* Add pictures to profile cards
+* Modify navbar to be sticky
+* Fix issues related to placing a bid
+
+### Day 10 Trello Board
+
+<img src="screenshots/Trello Schedule10.png">
+
+
+
 
 
 ## Sketch
@@ -443,6 +458,9 @@ DB designer is an online database entity relationship diagram designer which all
 
 # Short Answer Questions
 
-`` What is the need (i.e. challenge) that you will be addressing in your project? ``
+`` 1. What is the need (i.e. challenge) that you will be addressing in your project? ``
 
 The need that will be addressed in the project is providing a platform to allow for people to hire bartenders for private functions or for short terms of employment. There is a growing market of individuals who are looking to hire bartenders, and this web application will assist in providing a platform for Bartenders to be able to advertise themselves, and allow individuals or business to find bartenders that are looking for work.
+
+`` 2. Identify the problem you’re trying to solve by building this particular marketplace *App*? Why is it a problem that needs solving? ``
+
