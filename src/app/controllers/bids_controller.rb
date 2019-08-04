@@ -27,10 +27,11 @@ class BidsController < ApplicationController
   # POST /bids.json
   def create
     @bid = Bid.new(bid_params)
+    @job = bid_params[:job_id]
     
     respond_to do |format|
       if @bid.save
-        format.html { redirect_to jobs_path, notice: 'Bid was successfully created.' }
+        format.html { redirect_to job_path(@job), notice: 'Bid was successfully created.' }
         format.json { render :show, status: :created, location: @bid }
       else
         format.html { render :new }
