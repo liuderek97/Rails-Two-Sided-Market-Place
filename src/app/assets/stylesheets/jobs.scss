@@ -176,3 +176,44 @@
 		border-radius: 20px;
 	}
 }
+
+// jobs index styling
+
+nav ul li:hover {
+  background-color: white;
+}
+	
+.card {   
+  text-decoration: none;
+  text-align: center;
+  padding: 0px;
+}
+
+.card .card-content {
+  padding:40px;
+}
+
+.jobs-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.card-action {
+  color: hotpink;
+}
+
+.card {
+  height:290px;
+	width:290px;
+}
+
+#card-container {
+  width: 300px;
+  padding-left:10px;
+  padding-right:10px;
+}
+
+#card-content p {
+  color: black;
+}
