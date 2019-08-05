@@ -3,7 +3,7 @@
 	<div class="home-container">
 		<div class="container">
 		  <div class="col">
-		    <!-- <div class="card horizontal">
+		    <div class="card horizontal">
 		      <div class="card-stacked">
 		        <div class="card-content">
 							<h1>GrapeVine</h1>
@@ -15,7 +15,7 @@
 		          <a href="#about">Learn More</a>
 		        </div>
 		      </div>
-		    </div> -->
+		    </div>
 		  </div>
 		</div>
 	</div>
@@ -29,7 +29,7 @@
 		</div>
 		<div class="divider"></div>
 		<div class="about-content center">
-	    <p>GrapeVine allows bartenders to connect with employers and vice versa via:</p>	
+	    <p>GrapeVine allows bartenders to connect with employers and vice versa via:</p>
 			<div class="row">
 				<div class="col s12 m4">
 				  <div class="card">
@@ -38,7 +38,7 @@
 					  </div>
 					  <div class="card-content">
 					    <span class="card-title activator grey-text text-darken-4">Post a job<i class="material-icons right">more_vert</i></span>
-					    <p><a href="#">Click Me</a></p>
+					    <p> <%= link_to "Click Me", new_job_path %> </p>
 					  </div>
 					  <div class="card-reveal">
 					    <span class="card-title grey-text text-darken-4">Post a job.<i class="material-icons right">close</i></span>
@@ -47,7 +47,6 @@
 						</div>
 					</div>
 				</div>
-			
 
 				<div class="col s12 m4">
 				  <div class="card">
@@ -56,7 +55,7 @@
 					  </div>
 					  <div class="card-content">
 					    <span class="card-title activator grey-text text-darken-4">Bid on jobs<i class="material-icons right">more_vert</i></span>
-					    <p><a href="#">Click Me</a></p>
+					    <p> <%= link_to "Click Me", jobs_path %></p>
 					  </div>
 					  <div class="card-reveal">
 					    <span class="card-title grey-text text-darken-4">Post a job.<i class="material-icons right">close</i></span>
@@ -65,8 +64,7 @@
 						</div>
 				  </div>
 				</div>
-			
-			
+
 				<div class="col s12 m4">
 				  <div class="card">
 					  <div class="card-image waves-effect waves-block waves-light">
@@ -74,7 +72,7 @@
 					  </div>
 					  <div class="card-content">
 					    <span class="card-title activator grey-text text-darken-4">Expand your portfolio<i class="material-icons right">more_vert</i></span>
-					    <p><a href="#">Click Me</a></p>
+					    <p><%= link_to "Click Me", new_profile_path %></p>
 					  </div>
 					  <div class="card-reveal">
 					    <span class="card-title grey-text text-darken-4">Post a job.<i class="material-icons right">close</i></span>
@@ -85,19 +83,77 @@
 			  </div>
 			</div>
 		</div>
-	</div>		
+	</div>
 </div>
 
 <div class="row">
 	<div class="col s12">
 		<div class="container vlaign-wrapper" id="job-section">
 		  <div class="job-body">
+			  <a name="jobs"></a>
 			  <div class="home-title center">
-				  <h4>Jobs</h4>
+				  <h4>Preview Some Jobs</h4>
 				</div>
 			</div>
+			<div class="divider"></div>
+				<div class="job-content center">
+					<div class="col s12 m12 l12">
+			  		<% @jobs.each do |job| %>
+	          <div class="card">
+	            <div class="card-content">
+					  	<ul>
+								<li>
+                  <%= job.content %>
+								</li>
+								<li>
+                  <p>$<%= job.amount %>/hr</p>
+								</li>
+							</ul>
+	            </div>
+	            <div class="card-action">
+	              <a href="#">apply</a>
+	            </div>
+	          </div>
+						<% end %>
+					</div>
+				</div> 
+			</div>
 		</div>
-		<div class="job-content">
+	</div>
+</div>
+
+<div class="row">
+	<div class="col s12">
+		<div class="container vlaign-wrapper" id="job-section">
+		  <div class="job-body">
+			  <a name="jobs"></a>
+			  <div class="home-title center">
+				  <h4>Meet some of our bartenders</h4>
+				</div>
+			</div>
+			<div class="divider"></div>
+				<div class="job-content center">
+					<div class="col s12 m12 l12">
+			  		<% @bartenders.each do |bartender| %>
+	          <div class="card">
+	            <div class="card-content">
+					  	<ul>
+								<li>
+                  <%= bartender.name %>
+								</li>
+								<li>
+                  <%= bartender.bio %>
+								</li>
+							</ul>
+	            </div>
+	            <div class="card-action">
+	              <a href="#">offer</a>
+	            </div>
+	          </div>
+						<% end %>
+					</div>
+				</div> 
+			</div>
 		</div>
 	</div>
 </div>

@@ -1,4 +1,5 @@
 class BidsController < ApplicationController
+  before_action :authenticate_current_profile
   before_action :set_bid, only: [:show, :edit, :update, :destroy, :approve]
 
   # GET /bids
@@ -27,10 +28,11 @@ class BidsController < ApplicationController
   # POST /bids.json
   def create
     @bid = Bid.new(bid_params)
+    @job = bid_params[:job_id]
     
     respond_to do |format|
       if @bid.save
-        format.html { redirect_to jobs_path, notice: 'Bid was successfully created.' }
+        format.html { redirect_to job_path(@job), notice: 'Bid was successfully created.' }
         format.json { render :show, status: :created, location: @bid }
       else
         format.html { render :new }

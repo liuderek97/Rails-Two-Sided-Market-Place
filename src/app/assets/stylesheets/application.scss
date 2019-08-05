@@ -13,12 +13,13 @@
  *= require_tree .
  *= require_self
  */
- 
-    @import "https://fonts.googleapis.com/icon?family=Material+Icons";
-    @import "materialize/components/color-variables";
-    $primary-color: #6b5b94 !default;
-    $secondary-color: #d7dee1 !default;
-    @import 'materialize';
+
+
+@import 'materialize';
+@import "materialize/components/color-variables";
+$primary-color: #6b5b94 !default;
+$secondary-color: #d7dee1 !default;
+
 
 html {
   scroll-behavior: smooth;
@@ -26,30 +27,54 @@ html {
 		
 nav ul li:hover {
     background-color: white;
-}
 
 .card{   
-
     text-decoration: none;
     text-align: center;
     padding: 0px;
 }
 
-.card .card-content{
+.card .card-content {
     padding:0px;
 }
 
-.jobs-container{
+.jobs-container {
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
 }
 
-.main h1{
-    text-align: center;
-}
-
-.card-action{
+.card-action {
     color: hotpink;
 }
+
+.row{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+.card{
+    height:200px;
+}
+
+#card-container{
+    width: 300px;
+    padding-left:10px;
+    padding-right:10px;
+}
+
+#card-content p{
+    color: black;
+   
+}
+
+.btn{
+    background-color: hotpink;
+}
+
+
+
    
    //  @import "https://fonts.googleapis.com/icon?family=Material+Icons";
