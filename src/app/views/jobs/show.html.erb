@@ -34,7 +34,7 @@
 							<div class="amount-text center">
 		            <span class="black-text">$<%= @job.amount %></span>
 					  	</div>
-							<%= link_to 'Leave a bid', new_bid_path(@job), class:"btn-flat"%>
+							<%= link_to 'Leave a bid', new_bid_path(:job_id => @job.id), class:"btn-flat"%>
 		        </div>
 		      </div>
 		    </div>
