@@ -1,11 +1,10 @@
 <div class="container">
 	<div class="row">
-	
-	<div class="jobs-section">
+		<div class="jobs-section">
 			<div class="job-title center">
 			   <h5><%= @job.title %></h5>
 	    </div>
-			
+		
 	  	<div class="divider"></div>
 			<h6>Employer:</h5>
 			<%= link_to @job.employer.name, profile_path(@job.employer), class:"btn-flat" %>
@@ -13,13 +12,13 @@
 	  	<div class="divider"></div>
 			<h6>Location:</h5>
 	    <p><%= @job.address %></p>
-		
+	
 			<div class="detail-container">
 				<div class="divider"></div>
 				<h6>Details:</h5>
 		    <p><%= @job.content %></p>
 	  	</div>
-      
+    
 			<div class="divider"></div>
 			<div class="functionality">
 				<% if @job.employer_id == current_profile.id %>
@@ -30,7 +29,7 @@
 
 			<div class="amount-card">
 		    <div class="row">
-		      <div class="col s12 m5">
+		      <div class="col s12 m12 l12">
 		        <div class="card-panel white center">
 							<div class="amount-text">
 		            <span>$<%= @job.amount %></span>
@@ -40,8 +39,7 @@
 		      </div>
 		    </div>
 	  	</div>
-		</div>
-
+    </div>
 		<div class="bids-section">
 			<div class="bids-title center">
 			  <h5>Current Bids</h5>
@@ -50,7 +48,7 @@
 				<% if @bids.exists? %>
 					<% @bids.each do |bid| %>
 						<% if bid.approved == false && bid.job_id == @job.id %>
-					    <div class="col s12 m10 l10">
+					    <div class="col s12 m12 l12">
 					      <div class="card-panel white center">
 								<span class="black-text">
 								<ul>
@@ -74,15 +72,6 @@
 			  <p> No bids yet! </p>
 			<% end %>		
 	  </div>
-		<!-- <% if current_user && @job.employer_id != current_user.id %>
-			 <%= link_to 'Leave a bid', new_bid_path(:job_id => @job.id) %> |
-		<% elsif current_user && @job.employer_id == current_user.id %>
-		   <%= link_to 'Edit', edit_job_path(@job) %> |
-		<% end %> -->
-		<!-- <%= link_to 'Back', jobs_path %> -->
   </div>
 </div>
-	</div>
-		</div>
-</div>
-</div>
+

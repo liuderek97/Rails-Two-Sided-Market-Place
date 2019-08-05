@@ -4,13 +4,24 @@
 // desktops
 
 @media (min-width: 1025px) {
-  
+
+	/* Clear floats after the columns */
+	.row:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+	
 	.jobs-section {
 		width: 65%;
+	  float: left;
+	  padding: 15px;
 	}
 	
 	.bids-section {
 		width: 35%;
+	  float: right;
+	  padding: 15px;
 	}
 	
 	.card {
@@ -36,7 +47,6 @@
 			font-size: 30px;
 			color: #2bbbad;
 		}
-	
 	}
 
 	.detail-container {
@@ -57,8 +67,30 @@
 
 // tablets
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width:601px) and (max-width: 1024px) {
     
+	.container {
+		width: 100% !important;
+	}
+	
+	.row:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+	
+	.jobs-section {
+		width: 65%;
+	  float: left;
+	  padding: 15px;
+	}
+	
+	.bids-section {
+		width: 35%;
+	  float: right;
+	  padding: 15px;
+	}
+	
 	.card {
 		display: block;
 		width: 100%;
@@ -102,7 +134,7 @@
 
 // iphones
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 600px) {
   
 	.card {
 		display: block;
