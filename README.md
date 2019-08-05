@@ -294,10 +294,10 @@ Khroma is an online color pallete picker that allows for users to view a number 
 
 ### Day 4 Schedule 
 
-	* Create review basic review system allowing for users to bid on a job
-	* Stylistic improvements for navbar and pages present on the site
-	* Deployment to heroku
-	* Updating README
+* Create basic bidding system allowing users to bid on a particular job
+* Stylistic improvements fo rnavbar and pages present on the site
+* Deploy to Heroku
+* Update README.md
 
 ### Day 5 Schedule
 
