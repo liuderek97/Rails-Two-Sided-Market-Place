@@ -1,13 +1,178 @@
 // Place all the styles related to the Jobs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// desktops
 
-.card {
-	display: block;
-	width: 100%;
+@media (min-width: 1025px) {
+
+	/* Clear floats after the columns */
+	.row:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+	
+	.jobs-section {
+		width: 65%;
+	  float: left;
+	  padding: 15px;
+	}
+	
+	.bids-section {
+		width: 35%;
+	  float: right;
+	  padding: 15px;
+	}
+	
+	.card {
+		display: block;
+		width: 100%;
+	}
+
+	.jobs-container {
+	  min-height: calc(100vh - 60px);
+	  position: relative;
+	}
+
+	.amount-card {
+		.card-panel {
+		  border: 2px solid #2bbbad;
+			border-radius: 20px;
+		}
+	
+		.amount-text {
+		  border:  1px solid black;
+			border-radius: 5px;
+			height: 45px;
+			font-size: 30px;
+			color: #2bbbad;
+		}
+	}
+
+	.detail-container {
+		height: 70px;
+	}
+
+	.functionality { 
+	  padding-top: 10px;
+		padding-bottom: 5px;
+	}
+
+	.card-panel {
+	  border: 2px solid #2bbbad;
+		border-radius: 20px;
+	}
+  
 }
 
-.jobs-container {
-  min-height: calc(100vh - 60px);
-  position: relative;
+// tablets
+
+@media (min-width:601px) and (max-width: 1024px) {
+    
+	.container {
+		width: 100% !important;
+	}
+	
+	.row:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+	
+	.jobs-section {
+		width: 65%;
+	  float: left;
+	  padding: 15px;
+	}
+	
+	.bids-section {
+		width: 35%;
+	  float: right;
+	  padding: 15px;
+	}
+	
+	.card {
+		display: block;
+		width: 100%;
+	}
+
+	.jobs-container {
+	  min-height: calc(100vh - 60px);
+	  position: relative;
+	}
+
+	.amount-card {
+		.card-panel {
+		  border: 2px solid #2bbbad;
+			border-radius: 20px;
+		}
+
+		.amount-text {
+		  border:  1px solid black;
+			border-radius: 5px;
+			height: 45px;
+			font-size: 30px;
+			color: #2bbbad;
+		}
+
+	}
+
+	.detail-container {
+		height: 70px;
+	}
+
+	.functionality { 
+	  padding-top: 10px;
+		padding-bottom: 5px;
+	}
+
+	.card-panel {
+	  border: 2px solid #2bbbad;
+		border-radius: 20px;
+	}
+}
+
+// iphones
+
+@media (min-width: 320px) and (max-width: 600px) {
+  
+	.card {
+		display: block;
+		width: 100%;
+	}
+
+	.jobs-container {
+	  min-height: calc(100vh - 60px);
+	  position: relative;
+	}
+
+	.amount-card {
+		.card-panel {
+		  border: 2px solid #2bbbad;
+			border-radius: 20px;
+		}
+	
+		.amount-text {
+		  border:  1px solid black;
+			border-radius: 5px;
+			height: 45px;
+			font-size: 30px;
+			color: #2bbbad;
+		}
+	
+	}
+
+	.detail-container {
+		height: 70px;
+	}
+
+	.functionality { 
+	  padding-top: 10px;
+		padding-bottom: 5px;
+	}
+
+	.card-panel {
+	  border: 2px solid #2bbbad;
+		border-radius: 20px;
+	}
 }
