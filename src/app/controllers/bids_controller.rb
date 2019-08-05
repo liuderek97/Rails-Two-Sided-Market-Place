@@ -29,7 +29,6 @@ class BidsController < ApplicationController
   def create
     @bid = Bid.new(bid_params)
     @job = bid_params[:job_id]
-    puts "BIDPARAMS ALAL#{bid_params}"
     
     respond_to do |format|
       if @bid.save
