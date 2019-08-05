@@ -4,10 +4,18 @@
 
 .card {
 	display: block;
-	width: 100%;
+  width: 100%;
 }
 
 .jobs-container {
   min-height: calc(100vh - 60px);
   position: relative;
 }
+.centering, .card-title, .card-content, .card-action{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+ 
+}
+
