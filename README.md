@@ -264,9 +264,10 @@ Khroma is an online color pallete picker that allows for users to view a number 
 - Design ERD and plan models and associations
 - Create user stories and use cases
 - Create flow diagram
-- Update README
+- Update README.md
 - Implement required gems to start project
-- Update README
+
+  
 
 
 
@@ -283,7 +284,7 @@ Khroma is an online color pallete picker that allows for users to view a number 
 * Setup self-joins for models
 * Laydown the foundation for the basic functions of the site
 * Deployment to heroku
-* Update README
+* Update README.md
 
 
 
@@ -304,18 +305,18 @@ Khroma is an online color pallete picker that allows for users to view a number 
 * Improve validations for reviews 	
 * Set up routing for Reviews method
 * General styling of materialise display cards
-* Updating README
+* Update README.md
 * Deployment to heroku
 
 ### Day 6 Schedule
 
 * Aesthetic improvements to the show profile page
-* Update README 
+* Update README.md
 
 ### Day 7 Schedule
 
 * Allow users to view other recommended bartenders when viewing a single bartender
-* Update README
+* Update README.md
 * Deploy to Heroku
 
 ### Day 8 Schedule
@@ -334,7 +335,7 @@ Khroma is an online color pallete picker that allows for users to view a number 
 
 * Modifying jobs table removing urgency field
 
-* Update README
+* Update README.md
 
 * Deploy to Heroku
 
@@ -352,7 +353,7 @@ Khroma is an online color pallete picker that allows for users to view a number 
 * Better user authentication
 * Add profile to top nav
 * Fix routing for creating profile(IMPLEMENT MODAL)
-* Update readme
+* Update README.md
 * Deploy to Heroku
 
 ### Day 9 Trello board
@@ -369,6 +370,8 @@ Khroma is an online color pallete picker that allows for users to view a number 
 * Add pictures to profile cards
 * Modify navbar to be sticky
 * Fix issues related to placing a bid
+* Update README.md
+* Deploy to Heroku
 
 ### Day 10 Trello Board
 
@@ -376,7 +379,35 @@ Khroma is an online color pallete picker that allows for users to view a number 
 
 
 
+### Day 11 Schedule 
 
+- Start stack home cards when resizing for mobile
+- Fix edit profile system
+- Landing page button
+- Landing page header and paragraph styling
+- Update README.md
+- Deploy to Heroku
+
+### Day 12 Schedule 
+
+* Basic home display jobs section
+* Finish stack home cards when resizing for mobile
+* Update README.md
+* Deploy to Heroku
+
+### Day 13 Schedule
+
+* Add basic dispay of bartenders to home page
+* Implement more conditional routing and authentication
+* Update README.md
+* Deploy to heroku
+
+### Day 14 Schedule
+
+* Implement responsiveness for jobs index page
+* Further conditional routing
+* Update README.md
+* Deploy to Heroku
 
 ## Sketch
 
