@@ -406,6 +406,7 @@ Khroma is an online color pallete picker that allows for users to view a number 
 
 * Implement responsiveness for jobs index page
 * Further conditional routing
+* Profile creation authenitcation
 * Update README.md
 * Deploy to Heroku
 
