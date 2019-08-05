@@ -2,13 +2,18 @@
   <nav>
     <div class="nav-wrapper grey darken-2">
       <div id="gv">
+      <!-- center logo for nav, links to home-page -->
         <%= link_to "GV", root_path, class:"brand-logo center" %>
-      </div>
+         </div>
+         <!-- using materialize classes to make nav responsive on smaller screens
+         and to shift position of links.  -->
         <ul id="nav-mobile" class="left hide-on-med-and-down">
           <li> <%=  link_to "Browse Jobs", jobs_path, class:"black-text "%></li>
           <li><%= link_to "Post Jobs", new_job_path, class:"black-text"%></li>
         </ul>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <!-- checks if user is logged in, provides my profile and logout if user
+          is currently logged in. If not, provides default log in link-->
           <% if current_profile %>
           <li> <%= link_to "My Profile", profile_path(current_profile), method: :get, class: "nav-link black-text",        id:"profile" %></li>
             <%end%>
@@ -20,35 +25,3 @@
       </nav>
     </div>
    
-
- 
- 
- 
- 
- 
- <%
-=begin%>
- <nav>
-    <div class="nav-wrapper">
-        <%= link_to "GV", root_path, class:"brand-logo center" %>
-
-      <div id="nav-mobile" class="left hide-on-med-and-down">
-        <%= link_to "Browse Jobs", jobs_path%>
-      </div>
-
-    <div id="login-margin" class="right hide-on-med-and-down">
-       <%= link_to "Post Jobs", new_job_path, id:"post-jobs" %> 
-
-      <% if user_signed_in?%>
-        <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "nav-link"%>
-      <% else %>
-        <%= link_to "Log In", new_user_session_path, class: "nav-link"%>
-      <% end %>
-      <% if current_profile %>
-        <%= link_to "My Profile", profile_path(current_profile), method: :get, class: "nav-link", id:"profile" %>
-      <%end%>
-     </div>
-    </div>
-  </nav> 
-<%
-=end%>
