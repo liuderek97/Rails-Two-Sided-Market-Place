@@ -3,7 +3,7 @@
 	<div class="home-container">
 		<div class="container">
 		  <div class="col">
-		    <!-- <div class="card horizontal">
+		    <div class="card horizontal">
 		      <div class="card-stacked">
 		        <div class="card-content">
 							<h1>GrapeVine</h1>
@@ -15,7 +15,7 @@
 		          <a href="#about">Learn More</a>
 		        </div>
 		      </div>
-		    </div> -->
+		    </div>
 		  </div>
 		</div>
 	</div>
@@ -122,3 +122,38 @@
 	</div>
 </div>
 
+<div class="row">
+	<div class="col s12">
+		<div class="container vlaign-wrapper" id="job-section">
+		  <div class="job-body">
+			  <a name="jobs"></a>
+			  <div class="home-title center">
+				  <h4>Meet some of our bartenders</h4>
+				</div>
+			</div>
+			<div class="divider"></div>
+				<div class="job-content center">
+					<div class="col s12 m12 l12">
+			  		<% @bartenders.each do |bartender| %>
+	          <div class="card">
+	            <div class="card-content">
+					  	<ul>
+								<li>
+                  <%= bartender.name %>
+								</li>
+								<li>
+                  <%= bartender.bio %>
+								</li>
+							</ul>
+	            </div>
+	            <div class="card-action">
+	              <a href="#">offer</a>
+	            </div>
+	          </div>
+						<% end %>
+					</div>
+				</div> 
+			</div>
+		</div>
+	</div>
+</div>

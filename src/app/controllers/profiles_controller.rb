@@ -1,5 +1,6 @@
 class ProfilesController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
+  before_action :authenticate_current_profile, except: [:new, :create]
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
 
   # GET /profiles
@@ -65,7 +66,7 @@ class ProfilesController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_profile
