@@ -7,8 +7,8 @@
 			
 	  	<div class="divider"></div>
 			<h6>Employer:</h5>
-	  	<p><%= @job.employer.name %></p>
-			
+			<%= link_to @job.employer.name, profile_path(@job.employer), class:"btn-flat" %>
+
 	  	<div class="divider"></div>
 			<h6>Location:</h5>
 	    <p><%= @job.address %></p>
@@ -63,7 +63,7 @@
 							</ul>
 					    </span>
 						  <% if current_user && current_profile.id == @job.employer_id %>
-			          <a class="waves-effect waves-light btn"><%= link_to "Approve Bid", approve_bid_path(bid), method: :post %></a>
+			        <%= link_to "Approve Bid", approve_bid_path(bid), method: :post, class:"btn"%></a>
 			        <% end %>
 					  </div>
 					</div>

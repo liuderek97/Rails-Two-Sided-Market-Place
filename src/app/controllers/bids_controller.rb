@@ -18,6 +18,7 @@ class BidsController < ApplicationController
     @bid = Bid.new
     @bid.job_id       = params[:job_id]
     @bid.bartender_id = current_profile.id 
+    @job = params[:job_id]
   end
 
   # GET /bids/1/edit
