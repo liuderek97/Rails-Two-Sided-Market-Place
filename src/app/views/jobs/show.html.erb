@@ -1,6 +1,7 @@
 <div class="container">
-	<div class="col">
-		<div class="jobs-section">
+	<div class="row">
+	
+	<div class="jobs-section">
 			<div class="job-title center">
 			   <h5><%= @job.title %></h5>
 	    </div>
@@ -40,38 +41,38 @@
 		    </div>
 	  	</div>
 		</div>
-	</div>
 
-	<div class="row">
-		<div class="bids-title center">
-		<h5>Current Bids</h5>
-	  </div>
-		<div class="col s12 m6 l6">
-			<% if @bids.exists? %>
-				<% @bids.each do |bid| %>
-					<% if bid.approved == false && bid.job_id == @job.id %>
-				    <div class="col s12 m5">
-				      <div class="card-panel grey">
-							<span class="white-text">
-							<ul>
-							  <li>
-									<h4><%= bid.amount %></h4>
-								</li>
-								<li>
-									<h6><%= bid.content %></h6>
-								</li>
-							</ul>
-					    </span>
-						  <% if current_user && current_profile.id == @job.employer_id %>
-			        <%= link_to "Approve Bid", approve_bid_path(bid), method: :post, class:"btn"%></a>
-			        <% end %>
-					  </div>
-					</div>
-			  <% end %>
-			<% end %>
+		<div class="bids-section">
+			<div class="bids-title center">
+			  <h5>Current Bids</h5>
+		  </div>
+			<div class="col s12 m12 l12">
+				<% if @bids.exists? %>
+					<% @bids.each do |bid| %>
+						<% if bid.approved == false && bid.job_id == @job.id %>
+					    <div class="col s12 m10 l10">
+					      <div class="card-panel white center">
+								<span class="black-text">
+								<ul>
+								  <li>
+										<h4><%= bid.amount %></h4>
+									</li>
+									<li>
+										<h6><%= bid.content %></h6>
+									</li>
+								</ul>
+						    </span>
+							  <% if current_user && current_profile.id == @job.employer_id %>
+				          <%= link_to "Approve Bid", approve_bid_path(bid), method: :post, class:"btn"%></a>
+				        <% end %>
+						  </div>
+						</div>
+				  <% end %>
+				<% end %>
+			</div>
 			<% else %>
 			  <p> No bids yet! </p>
-		  <% end %>
+			<% end %>		
 	  </div>
 		<!-- <% if current_user && @job.employer_id != current_user.id %>
 			 <%= link_to 'Leave a bid', new_bid_path(:job_id => @job.id) %> |
@@ -80,4 +81,8 @@
 		<% end %> -->
 		<!-- <%= link_to 'Back', jobs_path %> -->
   </div>
+</div>
+	</div>
+		</div>
+</div>
 </div>

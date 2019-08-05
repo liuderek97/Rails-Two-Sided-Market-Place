@@ -1,38 +1,146 @@
 // Place all the styles related to the Jobs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// desktops
 
-.card {
-	display: block;
-	width: 100%;
-}
-
-.jobs-container {
-  min-height: calc(100vh - 60px);
-  position: relative;
-}
-
-.amount-card {
-  .card-panel {
-    border:  2px solid #2bbbad;
-		border-radius: 10px;
-  }
-	
-	.amount-text {
-	  border:  1px solid black;
-		border-radius: 5px;
-		height: 45px;
-		font-size: 30px;
-		color: #2bbbad;
+@media (min-width: 1025px) {
+  
+	.jobs-section {
+		width: 65%;
 	}
 	
+	.bids-section {
+		width: 35%;
+	}
+	
+	.card {
+		display: block;
+		width: 100%;
+	}
+
+	.jobs-container {
+	  min-height: calc(100vh - 60px);
+	  position: relative;
+	}
+
+	.amount-card {
+		.card-panel {
+		  border: 2px solid #2bbbad;
+			border-radius: 20px;
+		}
+	
+		.amount-text {
+		  border:  1px solid black;
+			border-radius: 5px;
+			height: 45px;
+			font-size: 30px;
+			color: #2bbbad;
+		}
+	
+	}
+
+	.detail-container {
+		height: 70px;
+	}
+
+	.functionality { 
+	  padding-top: 10px;
+		padding-bottom: 5px;
+	}
+
+	.card-panel {
+	  border: 2px solid #2bbbad;
+		border-radius: 20px;
+	}
+  
 }
 
-.detail-container {
-	height: 70px;
+// tablets
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    
+	.card {
+		display: block;
+		width: 100%;
+	}
+
+	.jobs-container {
+	  min-height: calc(100vh - 60px);
+	  position: relative;
+	}
+
+	.amount-card {
+		.card-panel {
+		  border: 2px solid #2bbbad;
+			border-radius: 20px;
+		}
+
+		.amount-text {
+		  border:  1px solid black;
+			border-radius: 5px;
+			height: 45px;
+			font-size: 30px;
+			color: #2bbbad;
+		}
+
+	}
+
+	.detail-container {
+		height: 70px;
+	}
+
+	.functionality { 
+	  padding-top: 10px;
+		padding-bottom: 5px;
+	}
+
+	.card-panel {
+	  border: 2px solid #2bbbad;
+		border-radius: 20px;
+	}
 }
 
-.functionality { 
-  padding-top: 10px;
-	padding-bottom: 5px;
+// iphones
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+	.card {
+		display: block;
+		width: 100%;
+	}
+
+	.jobs-container {
+	  min-height: calc(100vh - 60px);
+	  position: relative;
+	}
+
+	.amount-card {
+		.card-panel {
+		  border: 2px solid #2bbbad;
+			border-radius: 20px;
+		}
+	
+		.amount-text {
+		  border:  1px solid black;
+			border-radius: 5px;
+			height: 45px;
+			font-size: 30px;
+			color: #2bbbad;
+		}
+	
+	}
+
+	.detail-container {
+		height: 70px;
+	}
+
+	.functionality { 
+	  padding-top: 10px;
+		padding-bottom: 5px;
+	}
+
+	.card-panel {
+	  border: 2px solid #2bbbad;
+		border-radius: 20px;
+	}
 }
