@@ -28,7 +28,6 @@ nav ul li:hover {
 }
 
 .card{   
-
     text-decoration: none;
     text-align: center;
     padding: 0px;
@@ -40,6 +39,7 @@ nav ul li:hover {
 
 .jobs-container{
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
 }
 
@@ -50,5 +50,34 @@ nav ul li:hover {
 .card-action{
     color: hotpink;
 }
+
+.row{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+.card{
+    height:200px;
+}
+
+#card-container{
+    width: 300px;
+    padding-left:10px;
+    padding-right:10px;
+}
+
+#card-content p{
+    color: black;
+   
+}
+
+.btn{
+    background-color: hotpink;
+}
+
+
+
    
    //  @import "https://fonts.googleapis.com/icon?family=Material+Icons";
