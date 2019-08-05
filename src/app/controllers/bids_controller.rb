@@ -1,4 +1,5 @@
 class BidsController < ApplicationController
+  before_action :authenticate_current_profile
   before_action :set_bid, only: [:show, :edit, :update, :destroy, :approve]
 
   # GET /bids

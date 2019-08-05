@@ -13,11 +13,11 @@
  *= require_tree .
  *= require_self
  */
- 
+
+@import 'materialize';
 @import "materialize/components/color-variables";
 $primary-color: #6b5b94 !default;
 $secondary-color: #d7dee1 !default;
-@import 'materialize';
 
 html {
   scroll-behavior: smooth;
@@ -27,23 +27,23 @@ nav ul li:hover {
     background-color: white;
 }
 
-.card{   
+.card {   
  
     text-decoration: none;
     text-align: center;
     padding: 0px;
 }
 
-.card .card-content{
+.card .card-content {
     padding:0px;
 }
 
-.jobs-container{
+.jobs-container {
     display: flex;
     justify-content: space-around;
 }
 
-.card-action{
+.card-action {
     color: hotpink;
 }
    
