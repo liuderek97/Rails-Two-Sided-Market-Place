@@ -11,3 +11,26 @@
   min-height: calc(100vh - 60px);
   position: relative;
 }
+
+.amount-card {
+  .card-panel {
+    border:  2px solid #2bbbad;
+		border-radius: 10px;
+  }
+	
+	.amount-text {
+	  border:  1px solid black;
+		border-radius: 5px;
+		height: 45px;
+		font-size: 30px;
+	}
+}
+
+.detail-container {
+	height: 70px;
+}
+
+.functionality { 
+  padding-top: 10px;
+	padding-bottom: 10px;
+}
