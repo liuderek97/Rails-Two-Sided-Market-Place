@@ -24,13 +24,13 @@
     <%= @job.employer_id %>
   </p>
 
-	<div class="row">
+	<div class="row center">
 		<div class="col s4 m6 l6">
 			<% if @bids.exists? %>
 				<% @bids.each do |bid| %>
 					<% if bid.approved == false && bid.job_id == @job.id %>
 				    <div class="col s12 m5">
-				      <div class="card-panel grey">
+				      <div class="card-panel center grey">
 							<span class="white-text">
 							<ul>
 							  <li>

@@ -5,8 +5,11 @@
 .card {
 	display: block;
   width: 100%;
+  
 }
-
+.centering {
+  text-align: center;
+}
 .jobs-container {
   min-height: calc(100vh - 60px);
   position: relative;
@@ -15,7 +18,20 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+.row {
+  min-width: 1200px;
+  padding-left: 305px;
+}
 
- 
+@media only screen and (max-width: 750px) {
+  .row {
+    padding-left: 450px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .row {
+    padding-left: 550px;
+  }
 }
 
