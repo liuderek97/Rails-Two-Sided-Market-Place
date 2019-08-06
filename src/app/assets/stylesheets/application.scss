@@ -14,10 +14,12 @@
  *= require_self
  */
 
+
 @import 'materialize';
 @import "materialize/components/color-variables";
 $primary-color: #6b5b94 !default;
 $secondary-color: #d7dee1 !default;
+
 
 html {
   scroll-behavior: smooth;
