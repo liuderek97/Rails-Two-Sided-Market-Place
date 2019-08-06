@@ -11,19 +11,21 @@
 	  display: table;
 	  clear: both;
 	}
-	
+
 	.jobs-section {
 		width: 65%;
 	  float: left;
 	  padding: 15px;
 	}
-	
+
 	.bids-section {
 		width: 35%;
+		height: 1000px;
 	  float: right;
 	  padding: 15px;
+		overflow: auto;
 	}
-	
+
 	.card {
 		display: block;
 		width: 100%;
@@ -39,7 +41,7 @@
 		  border: 2px solid #2bbbad;
 			border-radius: 20px;
 		}
-	
+
 		.amount-text {
 		  border:  1px solid black;
 			border-radius: 5px;
@@ -53,7 +55,7 @@
 		height: 70px;
 	}
 
-	.functionality { 
+	.functionality {
 	  padding-top: 10px;
 		padding-bottom: 5px;
 	}
@@ -62,35 +64,35 @@
 	  border: 2px solid #2bbbad;
 		border-radius: 20px;
 	}
-  
+
 }
 
 // tablets
 
 @media (min-width:601px) and (max-width: 1024px) {
-    
+
 	.container {
 		width: 100% !important;
 	}
-	
+
 	.row:after {
 	  content: "";
 	  display: table;
 	  clear: both;
 	}
-	
+
 	.jobs-section {
 		width: 65%;
 	  float: left;
 	  padding: 15px;
 	}
-	
+
 	.bids-section {
 		width: 35%;
 	  float: right;
 	  padding: 15px;
 	}
-	
+
 	.card {
 		display: block;
 		width: 100%;
@@ -121,7 +123,7 @@
 		height: 70px;
 	}
 
-	.functionality { 
+	.functionality {
 	  padding-top: 10px;
 		padding-bottom: 5px;
 	}
@@ -135,7 +137,7 @@
 // iphones
 
 @media (min-width: 320px) and (max-width: 600px) {
-  
+
 	.card {
 		display: block;
 		width: 100%;
@@ -147,11 +149,16 @@
 	}
 
 	.amount-card {
+		.btn-flat {
+			margin-top: 20px;
+      background-color: #2bbbad;
+			color: white;
+		}
 		.card-panel {
 		  border: 2px solid #2bbbad;
 			border-radius: 20px;
 		}
-	
+
 		.amount-text {
 		  border:  1px solid black;
 			border-radius: 5px;
@@ -159,14 +166,14 @@
 			font-size: 30px;
 			color: #2bbbad;
 		}
-	
+
 	}
 
 	.detail-container {
 		height: 70px;
 	}
 
-	.functionality { 
+	.functionality {
 	  padding-top: 10px;
 		padding-bottom: 5px;
 	}
@@ -182,8 +189,8 @@
 nav ul li:hover {
   background-color: white;
 }
-	
-.card {   
+
+.card {
   text-decoration: none;
   text-align: center;
   padding: 0px;
