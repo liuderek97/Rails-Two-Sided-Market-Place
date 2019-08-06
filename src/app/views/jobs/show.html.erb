@@ -4,21 +4,21 @@
 			<div class="job-title center">
 			   <h5><%= @job.title %></h5>
 	    </div>
-		
+
 	  	<div class="divider"></div>
-			<h6>Employer:</h5>
+			<h6>Employer:</h6>
 			<%= link_to @job.employer.name, profile_path(@job.employer), class:"btn-flat" %>
 
 	  	<div class="divider"></div>
-			<h6>Location:</h5>
+			<h6>Location:</h6>
 	    <p><%= @job.address %></p>
-	
+
 			<div class="detail-container">
 				<div class="divider"></div>
-				<h6>Details:</h5>
+				<h6>Details:</h6>
 		    <p><%= @job.content %></p>
 	  	</div>
-    
+
 			<div class="divider"></div>
 			<div class="functionality">
 				<% if @job.employer_id == current_profile.id %>
@@ -52,9 +52,14 @@
 					      <div class="card-panel white center">
 								<span class="black-text">
 								<ul>
-								  <li>
+									<li>
 										<h4><%= bid.amount %></h4>
 									</li>
+									<div class="divider"></div>
+									<li>
+						    		<%= link_to bid.bartender.name, profile_path(bid.bartender), class:"btn-flat" %>
+									</li>
+								  <div class="divider"></div>
 									<li>
 										<h6><%= bid.content %></h6>
 									</li>
@@ -70,8 +75,7 @@
 			</div>
 			<% else %>
 			  <p> No bids yet! </p>
-			<% end %>		
+			<% end %>
 	  </div>
   </div>
 </div>
-
