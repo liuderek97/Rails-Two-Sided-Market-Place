@@ -3,13 +3,13 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :bids do
+  resources :jobs do
     member do
-      post :approve
+      post :call_approve
     end
   end
 
-  resources :jobs
+  resources :bids
   resources :reviews
   resources :profiles
   # /hello there
