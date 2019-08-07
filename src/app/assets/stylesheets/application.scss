@@ -17,12 +17,24 @@
 
 @import 'materialize';
 @import "materialize/components/color-variables";
-$primary-color: #6b5b94 !default;
-$secondary-color: #d7dee1 !default;
+$primary-color: #e3dac9 !default;
+$secondary-color: #e3dac9 !default;
 
 
 html {
   scroll-behavior: smooth;
 
+}
+
+.nav-wrapper{
+  background-color: #35293d;
+}
+
+.nav ul a{
+  color: #f7f7f7;
+}
+
+nav ul li:hover {
+  background-color:#e3dac9;
 }
 
