@@ -1,6 +1,6 @@
 class BidsController < ApplicationController
   before_action :authenticate_current_profile
-  before_action :set_bid, only: [:show, :edit, :update, :destroy, :approve]
+  before_action :set_bid, only: [:show, :edit, :update, :destroy]
 
   # GET /bids
   # GET /bids.json
@@ -17,7 +17,7 @@ class BidsController < ApplicationController
   def new
     @bid = Bid.new
     @bid.job_id       = params[:job_id]
-    @bid.bartender_id = current_profile.id 
+    @bid.bartender_id = current_profile.id
     @job = params[:job_id]
   end
 
@@ -30,7 +30,7 @@ class BidsController < ApplicationController
   def create
     @bid = Bid.new(bid_params)
     @job = bid_params[:job_id]
-    
+
     respond_to do |format|
       if @bid.save
         format.html { redirect_to job_path(@job), notice: 'Bid was successfully created.' }
@@ -65,19 +65,37 @@ class BidsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
+  def self.approve(job, approved_bid, email, token)
+
+    customer = Stripe::Customer.create({
+      email: email,
+      source: token,
+    })
+
+    charge = Stripe::Charge.create({
+      customer: customer.id,
+      amount: approved_bid.amount.to_i*100,
+      description: 'Rails Stripe customer',
+      currency: 'aud',
+    })
+
+    approved_bid.approved = 1
+    approved_bid.save
+
+    rescue Stripe::CardError => e
+      flash[:error] = e.message
   
-  def approve
-    @bid.approved = 1
-    @bid.save
-    redirect_to job_path
   end
-  
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_bid
       @bid = Bid.find(params[:id])
     end
-  
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def bid_params
       params.require(:bid).permit(:job_id, :bartender_id, :amount, :approved, :content)

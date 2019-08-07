@@ -65,9 +65,26 @@
 									</li>
 								</ul>
 						    </span>
-							  <% if current_user && current_profile.id == @job.employer_id %>
-				          <%= link_to "Approve Bid", approve_bid_path(bid), method: :post, class:"btn"%>
-				        <% end %>
+								<% if current_profile.id == @job.employer_id %>
+								<%= bid_price = bid.amount.to_i%>
+									<form action="jobs/call_approve" method="POST">
+										<script
+											src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+											data-key="pk_test_yoDdEqHnzqxrLDXt9PmPWgxf00NzqMLuSn"
+											data-amount=<%=bid_price*100 %>
+											data-name="GrapeVine"
+											data-description="Payment"
+											data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+											data-locale="auto"
+											data-currency="aud"
+											data-email="<%=current_user.email%>"
+											>
+										</script>
+										<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+										<%= hidden_field_tag :bid_id, bid.id %>
+										<%= hidden_field_tag :job_id, bid.job_id %>
+									</form>
+								<% end %>
 						  </div>
 						</div>
 				  <% end %>
