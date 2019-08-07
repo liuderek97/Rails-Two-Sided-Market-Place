@@ -2,6 +2,7 @@ class JobsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
   before_action :authenticate_current_profile
   before_action :set_job, only: [:show, :edit, :update, :destroy]
+  before_action :require_permission, only: [:destroy, :edit]
 
   # GET /jobs
   # GET /jobs.json
@@ -58,13 +59,13 @@ class JobsController < ApplicationController
   # DELETE /jobs/1
   # DELETE /jobs/1.json
   def destroy
-    @job.destroy
-    respond_to do |format|
-      format.html { redirect_to jobs_url, notice: 'Job was successfully destroyed.' }
-      format.json { head :no_content }
+     @job.destroy
+        respond_to do |format|
+          format.html { redirect_to jobs_url, notice: 'Job was successfully destroyed.' }
+          format.json { head :no_content }
     end
-  end
-  
+
+end
   def call_approve
     puts "---params in call approve #{params}---"
     puts "#{params[:bid_id]}"
@@ -78,6 +79,13 @@ class JobsController < ApplicationController
     redirect_to job
 
   end
+  def require_permission
+    puts "-------------------------#{params[:id]}"
+    if current_profile != Job.find(params[:id]).employer
+      puts "-------------------------#{params[:id]}"
+      redirect_to job_path(@job)
+    end
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -85,8 +93,11 @@ class JobsController < ApplicationController
       @job = Job.find(params[:id])
     end
 
+ 
+
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def job_params
-      params.require(:job).permit(:title, :amount, :content, :address, :employer_id)
+      params.require(:job).permit(:title, :amount, :content, :address, :employer_id, :job_id)
     end
 end
