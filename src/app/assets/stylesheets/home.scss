@@ -24,6 +24,17 @@
 	flex-direction: row;
 }
 
+#home-cards{
+	width:100%;
+	height:180px;
+}
+
+#home-cards li{
+	text-align: center;
+	padding: 0px;
+	margin: 0;
+}
+
 // Iphone X portrait and landscape. 
 
 @media only screen 

@@ -64,6 +64,18 @@ class JobsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def call_approve
+    puts "---params in call approve #{params}---"
+    puts "#{params[:bid_id]}"
+     
+    approved_bid = Bid.find(params[:bid_id])
+    job = Job.find(params[:job_id])
+    puts "approved bid#{approved_bid}"
+    puts "job #{job}"
+   
+    BidsController.approve(job, approved_bid, params[:stripeEmail],params[:stripeToken])
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

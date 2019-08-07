@@ -1,6 +1,6 @@
 class BidsController < ApplicationController
   before_action :authenticate_current_profile
-  before_action :set_bid, only: [:show, :edit, :update, :destroy, :approve]
+  before_action :set_bid, only: [:show, :edit, :update, :destroy]
 
   # GET /bids
   # GET /bids.json
@@ -66,10 +66,37 @@ class BidsController < ApplicationController
     end
   end
   
-  def approve
-    @bid.approved = 1
-    @bid.save
-    redirect_to job_path
+  
+  def self.approve(job, approved_bid, email, token)
+  # Amount in cents
+   puts "approover id #{approved_bid.inspect}"
+   puts "params #{email}, #{token}"
+   puts "job #{job}"
+
+    customer = Stripe::Customer.create({
+     
+      email: email,
+      source: token,
+    })
+
+    charge = Stripe::Charge.create({
+      customer: customer.id,
+      amount: approved_bid.amount.to_i*100,
+      description: 'Rails Stripe customer',
+      currency: 'aud',
+    })
+    
+    approved_bid.approved = 1
+    approved_bid.save
+    redirect_job(job)
+
+    rescue Stripe::CardError => e
+      flash[:error] = e.message
+      
+  end
+
+  def redirect_job(job)
+    redirect_to job
   end
   
   private
