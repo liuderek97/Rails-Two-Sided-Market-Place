@@ -2,8 +2,7 @@ class ReviewsController < ApplicationController
   before_action :authenticate_user!
   before_action :authenticate_current_profile
   before_action :set_review, only: [:show, :edit, :update, :destroy]
-
-
+  
   # GET /reviews
   # GET /reviews.json
   def index

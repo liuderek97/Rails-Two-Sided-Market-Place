@@ -2,6 +2,7 @@ class ProfilesController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
   before_action :authenticate_current_profile, except: [:new, :create]
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
+  before_action :require_permission, only: :edit
 
   # GET /profiles
   # GET /profiles.json
@@ -64,6 +65,12 @@ class ProfilesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to profiles_url, notice: 'Profile was successfully destroyed.' }
       format.json { head :no_content }
+    end
+  end
+
+  def require_permission
+    if current_user != Profile.find(params[:id]).user
+      redirect_to bid_path(@profile)
     end
   end
 
