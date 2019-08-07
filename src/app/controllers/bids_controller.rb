@@ -88,16 +88,12 @@ class BidsController < ApplicationController
     
     approved_bid.approved = 1
     approved_bid.save
-    redirect_job(job)
 
     rescue Stripe::CardError => e
       flash[:error] = e.message
       
   end
 
-  def redirect_job(job)
-    redirect_to job
-  end
   
   private
     # Use callbacks to share common setup or constraints between actions.

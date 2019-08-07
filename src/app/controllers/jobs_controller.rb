@@ -76,6 +76,7 @@ class JobsController < ApplicationController
    
     BidsController.approve(job, approved_bid, params[:stripeEmail],params[:stripeToken])
     redirect_to job
+
   end
 
   private
