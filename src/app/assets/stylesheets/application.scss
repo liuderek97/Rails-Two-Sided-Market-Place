@@ -24,3 +24,9 @@ $secondary-color: #d7dee1 !default;
 html {
   scroll-behavior: smooth;
 }
+
+.card-panel {
+  -webkit-box-shadow: 0 0px 0px #333;
+  	-moz-box-shadow: 0 0px 0px #333;
+  	box-shadow: 0 0px 0px #333;
+}

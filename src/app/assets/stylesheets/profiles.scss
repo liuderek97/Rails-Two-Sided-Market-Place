@@ -2,3 +2,36 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.profile-section {
+  min-height: calc(100vh - 60px);
+  position: relative;
+
+  .card {
+    min-height: calc(100vh - 90px);
+    text-align: left;
+  }
+}
+
+.reviews-section {
+  min-height: calc(100vh - 60px);
+  position: relative;
+  .review-btn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.bartenders-section {
+  min-height: calc(100vh - 60px);
+  position: relative;
+
+  .card {
+    display: block;
+    height: 100%;
+    width: auto;
+  }
+
+  img {
+    border-radius: 50%;
+  }
+}

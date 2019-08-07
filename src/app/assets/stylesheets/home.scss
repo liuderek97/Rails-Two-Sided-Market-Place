@@ -24,14 +24,14 @@
 	flex-direction: row;
 }
 
-// Iphone X portrait and landscape. 
+// Iphone X portrait and landscape.
 
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 812px)
+  and (-webkit-min-device-pixel-ratio: 3) {
   .about-content {
-		
+
 		.row {
 		  min-height: calc(100vh - 60px);
 		  position: relative;
@@ -60,7 +60,7 @@
 
 .about-body {
   max-width: 1240px;
-	padding: 0px 20px;
+	padding: 0;
 	margin: auto;
 	width: auto;
 }

@@ -14,7 +14,7 @@ class ProfilesController < ApplicationController
   def show
     @profiles   = Profile.all
     @reviews    = @profile.reviewed
-    @bartenders = @profiles
+    @bartenders = @profiles.limit(5)
   end
 
   # GET /profiles/new
@@ -45,7 +45,7 @@ class ProfilesController < ApplicationController
 
   # PATCH/PUT /profiles/1
   # PATCH/PUT /profiles/1.json
-  def update 
+  def update
     respond_to do |format|
       if @profile.update(profile_params)
         format.html { redirect_to @profile, notice: 'Profile was successfully updated.' }
@@ -66,7 +66,7 @@ class ProfilesController < ApplicationController
       format.json { head :no_content }
     end
   end
-  
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_profile
