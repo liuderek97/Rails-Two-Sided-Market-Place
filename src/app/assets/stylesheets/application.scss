@@ -20,7 +20,13 @@
 $primary-color: #6b5b94 !default;
 $secondary-color: #d7dee1 !default;
 
+.btn {
+  background-color: #3D3242;
+}
 
+.btn:hover {
+  background-color: #74438a;
+}
 html {
   scroll-behavior: smooth;
 

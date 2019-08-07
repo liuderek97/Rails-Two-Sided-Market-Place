@@ -2,7 +2,7 @@ class ProfilesController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
   before_action :authenticate_current_profile, except: [:new, :create]
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
-  before_action :require_permission, only: :edit
+  before_action :require_permission, only: [:edit, :destroy]
 
   # GET /profiles
   # GET /profiles.json

@@ -1,6 +1,31 @@
 // Place all the styles related to the Profiles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.back-button {
+  float: right;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+.edit-button {
+  float: left;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.profile-name {
+  padding-top: 10px;
+}
+
+.card-image {
+  align-items: center;
+  width: 130px;
+  height: 130px;
+  border-radius: 100%;
+  border-collapse: separate;
+  perspective: 5px;
+  overflow: hidden;
+}
 
 .profile-section {
   min-height: calc(100vh - 60px);
@@ -8,7 +33,9 @@
 
   .card {
     min-height: calc(100vh - 90px);
-    text-align: left;
+    background-color: #3D3242;
+    border: 2px dotted black;
+    width: 100%;
   }
 }
 
@@ -30,8 +57,7 @@
     height: 100%;
     width: auto;
   }
-
-  img {
+  .avatar {
     border-radius: 50%;
   }
 }

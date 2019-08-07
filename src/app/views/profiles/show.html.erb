@@ -1,12 +1,18 @@
 <div class="container">
-  <p id="notice"><%= notice %></p>
   <div class="row">
+
     <div class="profile-section">
-      <% if current_profile.id == @profile.id %>
-        <%= link_to 'Edit', edit_profile_path(@profile), class:"btn" %>
-      <% end %>
-      <div class="col s12 m12 l12">
-        <div class="card blue-grey darken-1">
+        <% if current_profile.id == @profile.id %>
+          <div class="edit-button">
+            <%= link_to 'Edit', edit_profile_path(@profile), class:"btn" %>
+          </div>
+        <% end %>
+
+        <div class="back-button">
+          <%= link_to 'Back', profiles_path, class:"btn" %>
+        </div>
+      <div class="col s12 m12 m12">
+        <div class="card">
           <div class="card-content white-text center-align">
     				<div class="card-image">
     					<%@profile.pictures.each do |avatar| %>
@@ -14,13 +20,20 @@
     					<% end %>
     				</div>
     				<span class="card-title">
-    <!-- bio place holder for designing views -->
             	<%= @profile.name %>
     			 	</span>
     			 	<% if @profile.bio %>
-    					<p><%= @profile.bio %></p>
+    	    		<p><%= @profile.bio %></p>
     			 	<% else %>
-            	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            	<p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+              do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+              irure dolor in reprehenderit in voluptate velit esse cillum
+              dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+              cupidatat non proident, sunt in culpa qui officia deserunt
+              mollit anim id est laborum.
     					</p>
     				<% end %>
     				<br>
@@ -41,7 +54,7 @@
         </div>
       </div>
     </div>
-
+      </div>
     <div class="reviews-section"
     	<div class="col s12 m12 l12">
     	  <% if @reviews.exists? %>
@@ -83,16 +96,21 @@
       <div class="bartenders-title center">
         <h5>Some other bartenders</h5>
       </div>
+      <div class="container">
       <div class="col s12 m6 l6">
         <% if @bartenders.exists? %>
           <% @bartenders.each do |bartender| %>
             <div class="col s12 m12 l12">
               <div class="card-panel white center">
               <span class="black-text">
+              <div class="card-image">
+                <% if bartender.pictures %>
+                <%bartender.pictures.each do |avatar| %>
+                  <%= image_tag avatar %>
+                <% end %>
+                <% end %>
+              </div>
               <ul>
-                <li>
-                  <img src=<%= bartender.pictures %>>
-                </li>
                 <li>
                   <h4><%= bartender.name %></h4>
                 </li>
@@ -110,14 +128,7 @@
       <% else %>
         <p> no other bartenders! </p>
       <% end %>
+      </div>
     </div>
   </div
-</div>
-
-
-<div class="profile-functionality">
-  <% if @profile.id == current_user.id %>
-    <%= link_to 'Edit', edit_profile_path(@profile) %> |
-  <% end %>
-  <%= link_to 'Back', profiles_path %>
 </div>
