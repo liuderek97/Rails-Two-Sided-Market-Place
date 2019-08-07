@@ -63,7 +63,7 @@
 }
 
 .home-body {
-  background-image: asset_url("alcohol-bar-bartender-274194.jpg");
+  background-image: asset_url("Background.jpg");
 	background-size:cover;
 	width: auto;
 	margin: auto;
@@ -78,4 +78,28 @@
 
 .job-body {
 	margin: 0px 10px;
+}
+
+#home-text{
+	width:600px;
+	margin:auto;
+	padding-left: 100px;
+}
+
+#background-text p{
+	font-size: 24px;
+}
+
+#home-bar-cards{
+	width:100%;
+	height:150px;
+	
+	
+}
+
+#home-card-action{
+	padding:0;
+	margin-bottom: 60px;
+	height:50px;
+	
 }
