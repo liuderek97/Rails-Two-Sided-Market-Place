@@ -103,7 +103,8 @@
 							</ul>
 	            </div>
 	            <div class="card-action">
-	              <a href="#">apply</a>
+				 <%= link_to job.title, job_path(job) %>
+
 	            </div>
 	          </div>
 						<% end %>
@@ -139,7 +140,7 @@
 							</ul>
 	            </div>
 	            <div class="card-action" id="home-card-action">
-	              <a href="#">offer</a>
+	              <%= link_to "My Profile", profile_path(bartender) %>
 	            </div>
 	          </div>
 						<% end %>
