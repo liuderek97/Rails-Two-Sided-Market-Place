@@ -5,5 +5,7 @@
     <%= render 'form', job: @job %>
 
     <%= link_to 'Show', @job %> |
-    <%= link_to 'Back', jobs_path %>
+    <%= link_to 'Back', jobs_path %> |
+    <%= link_to 'Delete post', job_path, method: :delete,
+                 data: { confirm: 'Are you sure?' }  %>
 </div>
