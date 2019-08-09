@@ -410,6 +410,35 @@ Khroma is an online color pallete picker that allows for users to view a number 
 * Update README.md
 * Deploy to Heroku
 
+### Day 15 Schedule 
+
+* Stripe Implementation
+* AWS upload fixed
+* Home-page styling 
+* Update README.md
+
+### Day 15 Trello
+
+<img src="screenshots/Day16.png">
+
+### Day 16 Schedule 
+
+* Fix profile picture feature 
+* Fix payment authentication 
+* Fix Heroku deployment 
+* Ability to delete job postings for the person who posted the job
+* Update READEME.md
+
+### Day 16 Trello
+
+<img src="screenshots/Day15.png">
+
+
+
+
+
+
+
 ## Sketch
 
 Sketch is a wireframing tool that was employed during the plannnig stages of the project in order to create rough and schematic layout of how the website would look. Several wireframes were created using sketch and the wireframes created were representative of how the site would look. Wireframes were created for different devices such as desktop mobile and different mobile phone models. Sketch and the creation of wireframes was imperative to the design process as it provided a scheme to follow and a reference point for the styling of the site on different devices. After the creation of the wireframes for all devices the development of the site was then commenced.
@@ -496,3 +525,8 @@ The need that will be addressed in the project is providing a platform to allow 
 
 `` 2. Identify the problem you’re trying to solve by building this particular marketplace *App*? Why is it a problem that needs solving? ``
 
+Currently there are no platforms that are available to the general that allows for people to hire a bartender for personal events and functions or for employers to hire bartenders for single shifts or fill-in shifts. The marketplace being created aims to solve that problem by providing a platform that both the general public and employers to allow for both audiences in this scenario to find and hire bartenders when needed. 
+
+``` 3.Describe the project will you be conducting and how. your App will address the needs. ``` 
+
+The Application being developed will address the needs and solve the problems described above by providing a platform that will allow people to connect with and hire bartenders for private functions and events. The application will allow for people to post jobs they need to be completed and allow for bartenders to offer their services
