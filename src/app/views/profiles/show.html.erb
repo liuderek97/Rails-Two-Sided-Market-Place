@@ -67,9 +67,11 @@
     	<div class="col s12 m12 l12">
         <br>
         <div class="divider"></div>
+        <% if current_profile.id != @profile.id %>
           <div class="review-btn center">
             <%= link_to 'Leave a review', new_review_path(:profile_id => @profile.id), class:"btn"%>
           </div>
+        <% end %>
         <div class="divider"></div>
     	  <% if @reviews.exists? %>
     	  	<h5><%= @profile.name %>'s reviews:</h5>

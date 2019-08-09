@@ -86,9 +86,8 @@ class BidsController < ApplicationController
 
     rescue Stripe::CardError => e
       flash[:error] = e.message
-  
-  end
 
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
