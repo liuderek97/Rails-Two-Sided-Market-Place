@@ -1,4 +1,4 @@
-
+<div class="container">
 <%= simple_form_for(@job) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
@@ -13,6 +13,11 @@
 
   <div class="form-actions">
      <a onclick="M.toast({html: 'Job posted!'})" ><%= f.button :submit %></a>
- 
+
   </div>
 <% end %>
+
+<%= link_to 'Delete post', job_path, method: :delete, class:"btn-flat",
+                 data: { confirm: 'Are you sure?' }  %>
+
+</div>
