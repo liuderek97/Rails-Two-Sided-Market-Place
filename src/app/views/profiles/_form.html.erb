@@ -9,9 +9,7 @@
    <%= f.input :skills2, label: 'Skill' %>
    <%= f.input :skills3, label: 'Skill' %>
    <%= f.input :bartender, wrapper_html: { class: 'm6 s12' }, label: "Are you a bartender?" %>
-   <%= f.file_field :pictures, multiple: true %>
-   <br>
-   <br>
+   <%= f.file_field :pictures, multiple: false %>
    <%= f.hidden_field :user_id %>
 	 <%= f.hidden_field :id %>
 	</div>
