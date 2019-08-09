@@ -1,19 +1,20 @@
 <%= simple_form_for(@profile) do |f| %>
 <%= f.error_notification %>
 <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-  
+
   <div class="form-inputs">
    <%= f.input :name %>
    <%= f.input :bio %>
-   <%= f.input :bartender, wrapper_html: { class: 'm6 s12' } %>
-   <%= f.file_field :pictures, multiple: true %>
+   <%= f.input :skills1, label: 'Skill' %>
+   <%= f.input :skills2, label: 'Skill' %>
+   <%= f.input :skills3, label: 'Skill' %>
+   <%= f.input :bartender, wrapper_html: { class: 'm6 s12' }, label: "Are you a bartender?" %>
+   <%= f.file_field :pictures, multiple: false %>
    <%= f.hidden_field :user_id %>
 	 <%= f.hidden_field :id %>
 	</div>
 
   <div class="form-actions">
-  <a onclick="M.toast({html: 'Profile Created'})" > <%= f.button :submit  %> </a>
-  
-
+    <a onclick="M.toast({html: 'Profile Created'})" > <%= f.button :submit  %> </a>
   </div>
 <% end %>

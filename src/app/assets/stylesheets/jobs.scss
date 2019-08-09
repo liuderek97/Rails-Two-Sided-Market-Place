@@ -38,7 +38,7 @@
 
 	.amount-card {
 		.card-panel {
-		  border: 2px solid #2bbbad;
+		  border: 2px solid #3D3242;
 			border-radius: 20px;
 		}
 
@@ -47,7 +47,7 @@
 			border-radius: 5px;
 			height: 45px;
 			font-size: 30px;
-			color: #e3dac9;
+			color: #3D3242;
 		}
 	}
 
@@ -61,10 +61,9 @@
 	}
 
 	.card-panel {
-	  border: 2px solid #e3dac9;
+	  border: 2px solid #3D3242;
 		border-radius: 20px;
 	}
-
 }
 
 // tablets
@@ -105,7 +104,7 @@
 
 	.amount-card {
 		.card-panel {
-		  border: 2px solid #2bbbad;
+		  border: 2px solid #3D3242;
 			border-radius: 20px;
 		}
 
@@ -114,9 +113,8 @@
 			border-radius: 5px;
 			height: 45px;
 			font-size: 30px;
-			color: #2bbbad;
+			color: #3D3242;
 		}
-
 	}
 
 	.detail-container {
@@ -129,7 +127,7 @@
 	}
 
 	.card-panel {
-	  border: 2px solid #2bbbad;
+	  border: 2px solid #3D3242;
 		border-radius: 20px;
 	}
 }
@@ -149,13 +147,14 @@
 	}
 
 	.amount-card {
+
 		.btn-flat {
 			margin-top: 20px;
-      background-color: #2bbbad;
+      background-color: #362e45;
 			color: white;
 		}
 		.card-panel {
-		  border: 2px solid #2bbbad;
+		  border: 2px solid #3D3242;
 			border-radius: 20px;
 		}
 
@@ -164,9 +163,8 @@
 			border-radius: 5px;
 			height: 45px;
 			font-size: 30px;
-			color: #2bbbad;
+			color: #362e45;
 		}
-
 	}
 
 	.detail-container {
@@ -179,7 +177,7 @@
 	}
 
 	.card-panel {
-	  border: 2px solid #2bbbad;
+	  border: 2px solid #362e45;
 		border-radius: 20px;
 	}
 }
@@ -194,7 +192,7 @@
 }
 
 .card .card-content {
-  padding:40px;
+  padding: 40px;
 }
 
 .jobs-container {

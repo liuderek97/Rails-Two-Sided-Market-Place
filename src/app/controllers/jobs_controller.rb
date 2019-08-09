@@ -29,7 +29,7 @@ class JobsController < ApplicationController
   def create
     @job = Job.new(job_params)
     @job.employer_id = current_profile.id
-    
+
     respond_to do |format|
       if @job.save
         format.html { redirect_to @job, notice: 'Job was successfully created.' }
@@ -64,19 +64,14 @@ class JobsController < ApplicationController
       format.json { head :no_content }
     end
   end
-  
+
   def call_approve
-    puts "---params in call approve #{params}---"
-    puts "#{params[:bid_id]}"
-     
     approved_bid = Bid.find(params[:bid_id])
     job = Job.find(params[:job_id])
-    puts "approved bid#{approved_bid}"
-    puts "job #{job}"
-   
-    BidsController.approve(job, approved_bid, params[:stripeEmail],params[:stripeToken])
-    redirect_to job
 
+    BidsController.approve(job, approved_bid, params[:stripeEmail],params[:stripeToken])
+
+    redirect_to job
   end
 
   private

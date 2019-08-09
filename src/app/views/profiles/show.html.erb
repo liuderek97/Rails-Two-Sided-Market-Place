@@ -1,98 +1,104 @@
 <div class="container">
-<p id="notice"><%= notice %></p>
 
-<div class="row">
-  <div class="col s8 m8 l12">
-    <div class="card blue-grey darken-1">
-      <div class="card-content white-text center-align">
-				<div class="card-image">
-					<%@profile.pictures.each do |avatar| %>
-						<%= image_tag avatar %>
-					<% end %>
-				</div>
-				<span class="card-title">
-<!-- bio place holder for designing views -->
-        	<%= @profile.name %>
-			 	</span>
-			 	<% if @profile.bio %>
-					<p><%= @profile.bio %></p>
-			 	<% else %>
-        	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-					</p>
-				<% end %>
-				<br>
+    <div class="profile-section">
+      <div class="col s12 m12 m12">
+        <div class="card">
+          <span class="card-title black-text profile-name">
+            <%= @profile.name %>
+          </span>
+  				<div class="card-image">
+  					<% @profile.pictures.each do |avatar| %>
+  						<%= image_tag avatar %>
+  					<% end %>
+          </div>
+          <div class="card-content black-text center-align">
+            <br>
+            <div class="divider"></div>
+            <br>
+            <span class="card-title">
+              About me:
+            </span>
+            <br>
+            <p><%= @profile.bio %></p>
+            <br>
+            <span class="card-title">
+              <div class="card-action">
+                <%= link_to 'Resume', profile_path(@profile), class:"btn-flat" %>
+              </div>
+              <div class="divider"></div>
+            </span>
+            <h4>
+              My specialties
+            </h4>
+            <div class="skills-list">
+              <ul>
+                <div class="skill">
+                  <li>
+                    <%= @profile.skills1 %>
+                  </li>
+                </div>
+                <div class="skill">
+                  <li>
+                    <%= @profile.skills2 %>
+                  </li>
+                </div>
+                <div class="skill">
+                  <li>
+                    <%= @profile.skills3 %>
+                  </li>
+                </div>
+              </ul>
+            </div>
+          </div>
+  	  	</div>
+        <% if current_profile.id == @profile.id %>
+          <div class="edit-button">
+            <%= link_to 'Edit', edit_profile_path(@profile), class:"btn" %>
+          </div>
+        <% end %>
+
+        <div class="back-button">
+          <%= link_to 'Back', profiles_path, class:"btn" %>
+        </div>
       </div>
-<!-- Specialties idea -->
-			<div class="card-content white-text">
-			<span class="card-title">My specialties</span>
-			<blockquote>
-				this is a skill of mine.
-			</blockquote>
-			<blockquote>
-				So is this.
-			</blockquote>
-		</div>
-      <div class="card-action">
-        <a href="#">Resume</a>
+    </div>
+
+    <div class="reviews-section"
+    	<div class="col s12 m12 l12">
+        <br>
+        <div class="divider"></div>
+          <div class="review-btn center">
+            <%= link_to 'Leave a review', new_review_path(:profile_id => @profile.id), class:"btn"%>
+          </div>
+        <div class="divider"></div>
+    	  <% if @reviews.exists? %>
+    	  	<h5><%= @profile.name %>'s reviews:</h5>
+    			<% @reviews.each do |review| %>
+          <div class="col s12 m12 l12">
+            <div class="card-panel white center">
+              <span class="black-text">
+              <ul>
+                <li>
+                  <p> Posted by: </p>
+                  <%= link_to review.reviewer.name, profile_path(review.reviewer), class:"btn-falt" %>
+                </li>
+                <li>
+                  <h6><%= review.star_rating %>/5</h6>
+                </li>
+                <li>
+                  <%= review.content %>
+                </li>
+              </ul>
+            </span>
+          </div>
+        </div>
+      	<% end %>
+      	<% else %>
+          <div class="center">
+          <p>No reviews yet!</p>
+          </div>
+    	  <% end %>
       </div>
     </div>
   </div>
 </div>
-
-<div class="row">
-	<div class="col s4 m6 l6">
-		<% if @reviews.exists? %>
-		<h5><%= @profile.name %>'s reviews:</h5>
-			<% @reviews.each do |review| %>
-	    <div class="col s12 m5">
-	      <div class="card-panel grey">
-				<span class="white-text">
-				<ul>
-				  <li>
-						<h4><%= review.title %></h4>
-					</li>
-					<li>
-						<h6><%= review.star_rating %>/5</h6>
-					</li>
-					<li>
-						<%= review.content %>
-					</li>
-					<li>
-						- <%= review.reviewer.name %>					
-					</li>
-				</ul>
-		    </span>
-		    </div>
-			</div>
-			<% end %>
-		<% else %>
-		  <p> No reviews yet! </p>
-		<% end %>
-	</div>
-
-<!-- possible bartenders view section -->
-	<div class="col s4 m6 l6">
-		<h1>other bartenders<h1>
-		<% if @bartenders %>
-		<% @bartenders.each do |bartender| %>
-			<% if bartender.bartender%>
-		  	<ul>
-					<li>
-				    <%= bartender.name %>
-		       	<!--Bartender picture -->
-					</li>
-				</ul>
-				<% end %>
-			<% end %>
-	 	<% else %>
-		<p> no bartenders found </p>
-		<% end %>
-	</div>
-</div>
-
-<% if current_user && @profile.id != current_user.id %>
-  <%= link_to 'Leave a review', new_review_path(:profile_id => @profile.id) %> | 
-<% elsif current_user && @profile.id == current_profile.id %>
-  <%= link_to 'Edit', edit_profile_path(@profile) %> |
-<% end %>
-<%= link_to 'Back', profiles_path %>

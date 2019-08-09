@@ -1,4 +1,175 @@
 // Place all the styles related to the Profiles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.back-button {
+  float: right;
+  padding-right: 10px;
+  padding-top: 10px;
+}
 
+.edit-button {
+  float: left;
+  padding-left: 10px;
+  padding-top: 10px;
+  width: 50%;
+}
+
+
+
+@media (min-width: 1025px) {
+  .profile-section {
+   display: flex;
+   flex-direction: column;
+
+   .card-content {
+     font-size: 20px;
+   }
+
+    .profile-name {
+      font-size: 45px !important;
+    }
+
+    .card {
+      height: 100%;
+      width: 100%;
+    }
+
+    .card-image {
+      flex-direction: row;
+      justify-content: center;
+      margin: 0 auto;
+      width: 200px;
+      height: 200px;
+      border-radius: 100%;
+      border-collapse: separate;
+      perspective: 5px;
+      overflow: hidden;
+      border: 5px inset #362E45;
+    }
+
+    .skills-list {
+       text-align: center;
+       font-size: 27px;
+    }
+
+    .profile-name {
+      padding-top: 10px;
+    }
+
+    .skill {
+      margin-top: 6px;
+      width: 100%;
+      float: center;
+    }
+  }
+
+  .reviews-section {
+    min-height: calc(100vh - 60px);
+    position: relative;
+
+    .review-btn {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .card-panel {
+      border-radius: 40px;
+    }
+  }
+}
+
+// tablets
+
+@media (min-width:601px) and (max-width: 1024px) {
+  .profile-section {
+   display: flex;
+   flex-direction: column;
+
+   .card-content {
+     font-size: 20px;
+   }
+
+    .profile-name {
+      font-size: 45px !important;
+    }
+
+    .card {
+      height: 100%;
+      width: 100%;
+    }
+
+    .card-image {
+      flex-direction: row;
+      justify-content: center;
+      margin: 0 auto;
+      width: 200px;
+      height: 200px;
+      border-radius: 100%;
+      border-collapse: separate;
+      perspective: 5px;
+      overflow: hidden;
+      border: 5px inset #362E45;
+    }
+  }
+
+  .reviews-section {
+    min-height: calc(100vh - 60px);
+    position: relative;
+
+    .review-btn {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .card-panel {
+      border-radius: 40px;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
+  .profile-section {
+   display: flex;
+   flex-direction: column;
+
+   .card-content {
+     font-size: 20px;
+   }
+
+    .profile-name {
+      font-size: 45px !important;
+    }
+
+    .card {
+      height: 100%;
+      width: 100%;
+    }
+
+    .card-image {
+      flex-direction: row;
+      justify-content: center;
+      margin: 0 auto;
+      width: 200px;
+      height: 200px;
+      border-radius: 100%;
+      border-collapse: separate;
+      perspective: 5px;
+      overflow: hidden;
+      border: 5px inset #362E45;
+    }
+  }
+
+  .reviews-section {
+    min-height: calc(100vh - 60px);
+    position: relative;
+
+    .review-btn {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .card-panel {
+      border-radius: 40px;
+    }
+  }
+}
