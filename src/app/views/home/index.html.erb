@@ -82,8 +82,8 @@
 	</div>
 </div>
 
-<div class="row">
-	<div class="col s12 m4 l4">
+<div class="row top-row">
+	<div class="col s12 m12 l12">
 		<div class="container vlaign-wrapper" id="job-section">
 		  <div class="job-body">
 			  <a name="jobs"></a>
@@ -99,16 +99,21 @@
 	            <div class="card-content">
 					  	<ul>
 								<li>
+									<h6><%= job.title %></h6>
+								<li>
                   <%= job.content %>
 								</li>
+								<br>
+								<div class="divider"></div>
+								<br>
 								<li>
                   <p>$<%= job.amount %>/hr</p>
 								</li>
 							</ul>
 	            </div>
 	            <div class="card-action">
-				 <%= link_to job.title, job_path(job) %>
-
+								<h6>Think you're qualified?</h6>
+			       	  <%= link_to "Bid on this job", job_path(job), class:"btn" %>
 	            </div>
 	          </div>
 						<% end %>
@@ -136,15 +141,20 @@
 	            <div class="card-content">
 					  	<ul>
 								<li>
-                  <%= bartender.name %>
+                  <h4><%= bartender.name %></h4>
 								</li>
+								<br>
+								<div class="divider"></div>
+								<br>
 								<li>
-                  <%= bartender.bio %>
+									<h6>Bio Preview:</h6>
+                  <%= bartender.bio.first(150) %>
 								</li>
 							</ul>
 	            </div>
+
 	            <div class="card-action" id="home-card-action">
-	              <%= link_to "My Profile", profile_path(bartender) %>
+	              <%= link_to "Visit #{bartender.name}'s Profile'", profile_path(bartender), class:"btn-flat" %>
 	            </div>
 	          </div>
 						<% end %>

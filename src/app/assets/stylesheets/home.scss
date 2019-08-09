@@ -2,6 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 // Media Query Ranges
+
+.job-content {
+	height: 2000px;
+
+	.col {
+		width: 1320px;
+	}
+
+	.card {
+		border-radius: 50px;
+		height: 100%;
+	}
+}
+
+.home-container {
+	padding-left: 10px;
+}
+
 .container {
 	width: 90% !important;
 }
@@ -16,11 +34,12 @@
   position: relative;
 	display: flex;
 	flex-direction: row;
+
 }
 
 #home-cards{
 	width:100%;
-	height:180px;
+	height:100%;
 }
 
 #home-cards li{
@@ -30,7 +49,8 @@
 }
 
 #job-section {
-  min-height: calc(100vh - 60px);
+  max-height: 400px;
+	width: 100% !important;
   position: relative;
 }
 
@@ -50,8 +70,7 @@
 }
 
 #home-bar-cards{
-	width:100%;
-	height:170px;
+  border-radius: 50px;
 }
 
 #home-card-action{
@@ -61,11 +80,37 @@
 
 // Desktops
 @media (min-width: 1025px) {
+	.job-content {
+		height: 2000px;
 
+	  .col {
+			width: 1320px;
+		}
+
+		.card {
+			border-radius: 50px;
+			height: 100%;
+		}
+	}
+
+	.top-row {
+		height: 1400px;
+	}
 }
 
 // tablets
 @media (min-width:601px) and (max-width: 993px) {
+	.job-content {
+		height: 2000px;
+		.col {
+			width: 1320px;
+		}
+
+		.card {
+			border-radius: 50px;
+		}
+	}
+
 	.about-body {
 	  width: 100%;
 		padding: 0;
@@ -110,6 +155,22 @@
 
 // Mobile
 @media (min-width: 320px) and (max-width: 600px) {
+	.job-content {
+		height: 2000px;
+
+		.col {
+			width: 1320px;
+		}
+
+		.card {
+			border-radius: 50px;
+			height: 100%;
+		}
+	}
+
+	.top-row {
+		height: 1400px;
+	}
 	.about-body {
 	  width: 100%;
 		padding: 0;
