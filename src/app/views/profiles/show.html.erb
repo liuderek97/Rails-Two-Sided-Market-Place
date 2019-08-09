@@ -1,7 +1,56 @@
 <div class="container">
-  <div class="row">
 
     <div class="profile-section">
+      <div class="col s12 m12 m12">
+        <div class="card">
+          <span class="card-title black-text profile-name">
+            <%= @profile.name %>
+          </span>
+  				<div class="card-image">
+  					<% @profile.pictures.each do |avatar| %>
+  						<%= image_tag avatar %>
+  					<% end %>
+          </div>
+          <div class="card-content black-text center-align">
+            <br>
+            <div class="divider"></div>
+            <br>
+            <span class="card-title">
+              About me:
+            </span>
+            <br>
+            <p><%= @profile.bio %></p>
+            <br>
+            <span class="card-title">
+              <div class="card-action">
+                <%= link_to 'Resume', profile_path(@profile), class:"btn-flat" %>
+              </div>
+              <div class="divider"></div>
+            </span>
+            <h4>
+              My specialties
+            </h4>
+            <div class="skills-list">
+              <ul>
+                <div class="skill">
+                  <li>
+                    <%= @profile.skills1 %>
+                  </li>
+                </div>
+                <div class="skill">
+                  <li>
+                    <%= @profile.skills2 %>
+                  </li>
+                </div>
+                <div class="skill">
+                  <li>
+                    <%= @profile.skills3 %>
+                  </li>
+                </div>
+              </ul>
+            </div>
+          </div>
+  	  	</div>
         <% if current_profile.id == @profile.id %>
           <div class="edit-button">
             <%= link_to 'Edit', edit_profile_path(@profile), class:"btn" %>
@@ -11,52 +60,17 @@
         <div class="back-button">
           <%= link_to 'Back', profiles_path, class:"btn" %>
         </div>
-      <div class="col s12 m12 m12">
-        <div class="card">
-          <div class="card-content white-text center-align">
-    				<div class="card-image">
-    					<%@profile.pictures.each do |avatar| %>
-    						<%= image_tag avatar %>
-    					<% end %>
-    				</div>
-    				<span class="card-title">
-            	<%= @profile.name %>
-    			 	</span>
-    			 	<% if @profile.bio %>
-    	    		<p><%= @profile.bio %></p>
-    			 	<% else %>
-            	<p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-              do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              ut enim ad minim veniam, quis nostrud exercitation ullamco
-              laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-              irure dolor in reprehenderit in voluptate velit esse cillum
-              dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt
-              mollit anim id est laborum.
-    					</p>
-    				<% end %>
-    				<br>
-          </div>
-    <!-- Specialties idea -->
-    			<div class="card-content white-text">
-    			<span class="card-title">My specialties</span>
-    			<blockquote>
-    				this is a skill of mine.
-    			</blockquote>
-    			<blockquote>
-    				So is this.
-    			</blockquote>
-    		</div>
-          <div class="card-action">
-            <a href="#">Resume</a>
-          </div>
-        </div>
       </div>
     </div>
-      </div>
+
     <div class="reviews-section"
     	<div class="col s12 m12 l12">
+        <br>
+        <div class="divider"></div>
+          <div class="review-btn center">
+            <%= link_to 'Leave a review', new_review_path(:profile_id => @profile.id), class:"btn"%>
+          </div>
+        <div class="divider"></div>
     	  <% if @reviews.exists? %>
     	  	<h5><%= @profile.name %>'s reviews:</h5>
     			<% @reviews.each do |review| %>
@@ -91,44 +105,5 @@
     	  <% end %>
       </div>
     </div>
-
-    <div class="bartenders-section">
-      <div class="bartenders-title center">
-        <h5>Some other bartenders</h5>
-      </div>
-      <div class="container">
-      <div class="col s12 m6 l6">
-        <% if @bartenders.exists? %>
-          <% @bartenders.each do |bartender| %>
-            <div class="col s12 m12 l12">
-              <div class="card-panel white center">
-              <span class="black-text">
-              <div class="card-image">
-                <% if bartender.pictures %>
-                <%bartender.pictures.each do |avatar| %>
-                  <%= image_tag avatar %>
-                <% end %>
-                <% end %>
-              </div>
-              <ul>
-                <li>
-                  <h4><%= bartender.name %></h4>
-                </li>
-                <div class="divider"></div>
-                <li>
-                  <%= link_to bartender.name, profile_path(bartender), class:"btn-flat" %>
-                </li>
-                <div class="divider"></div>
-              </ul>
-              </span>
-            </div>
-          </div>
-        <% end %>
-      </div>
-      <% else %>
-        <p> no other bartenders! </p>
-      <% end %>
-      </div>
-    </div>
-  </div
+  </div>
 </div>

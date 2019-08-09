@@ -70,6 +70,7 @@ class JobsController < ApplicationController
     job = Job.find(params[:job_id])
 
     BidsController.approve(job, approved_bid, params[:stripeEmail],params[:stripeToken])
+
     redirect_to job
   end
 
