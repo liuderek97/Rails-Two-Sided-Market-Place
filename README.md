@@ -17,11 +17,11 @@ Things you may want to cover:
 - Deployment instructions
 - ...
 
-# Grapevine 
+# Grapevine
 
 **GitHub repository link:** https://github.com/liuderek97/Rails-Two-Sided-Market-Place
 
-## Project Description 
+## Project Description
 
 This project is a two sided marketplace which allows individuals or businesses to hire bartenders for private functions or different types of employment. There is a growing market of individuals who are looking to hire bartenders, and this web application will assist in providing a platform for Bartenders to be able to advertise themselves, and allow individuals or business to find bartenders that are looking for work.
 
@@ -31,10 +31,10 @@ This project is a two sided marketplace which allows individuals or businesses t
 - Users who are bartenders will be able to view the jobs posted by normal non bartender user and comment on the job offering their services, bidding to win the job.
 - Users will be able to view the bartenders who have bided for the job and will be able to choose the bartender that they like.
 - After the job has been completed users will be able to review the bartender that they employed.
-- Bartenders will be able to create an account and list all the skills they have 
+- Bartenders will be able to create an account and list all the skills they have
 - Users will be able to view a bartenders profile and direct message them offering them jobs for various events
 
-### 
+###
 
 ## Two Way Marketplace Proposed Ideas/SWOT Analysis
 
@@ -44,7 +44,7 @@ Scooter rental system that allows users to rent scooters and bikes in close prox
 
 #### FEATURES:
 
-- Users will be able to login to the app and input their current location. 
+- Users will be able to login to the app and input their current location.
 - After logging in an putting in their current location users will then be able to view the bikes in their area that are within close proximity to themselves.
 - Users can then choose which bike they would like to hire and the app will show them the route to their chosen bike and reserve the bike for the user.
 - Upon reaching the bike users can then pay for the bike and user it for duration of the allocated hire time
@@ -52,7 +52,7 @@ Scooter rental system that allows users to rent scooters and bikes in close prox
 
 #### STRENGTHS:
 
-- Interesting google maps api integration ideas 
+- Interesting google maps api integration ideas
 - Interesting topic for a two sided marketplace.
 
 #### WEAKNESSES:
@@ -62,15 +62,15 @@ Scooter rental system that allows users to rent scooters and bikes in close prox
 
 #### OPPORTUNITIES:
 
-- Expand into a market in which there are very little competition. 
+- Expand into a market in which there are very little competition.
 
 #### THREATS:
 
 - Difficult to expand into a market which has very little room for new establishments
 - Risk of people getting robbed when collecting bike/scooter
-- Risk of application pointing user to a damaged bike/scooter 
+- Risk of application pointing user to a damaged bike/scooter
 
-## Bartender Hire 
+## Bartender Hire
 
 Allow people to hire bartenders for private functions. Bartenders will be able to advertise themselves, Consumers will post a job including details  (price TBD). The Job will be listed on the main page and bartenders will be able to leave comments on the job making offers on their services.  The consumer who posted the job will then be able to choose from the list of bartenders who have offered their services.
 
@@ -80,7 +80,7 @@ Allow people to hire bartenders for private functions. Bartenders will be able t
 - Users who are bartenders will be able to view the jobs posted by normal non bartender user and comment on the job offering their services, bidding to win the job.
 - Users will be able to view the bartenders who have bided for the job and will be able to choose the bartender that they like.
 - After the job has been completed users will be able to review the bartender that they employed.
-- Bartenders will be able to create an account and list all the skills they have 
+- Bartenders will be able to create an account and list all the skills they have
 - Users will be able to view a bartenders profile and direct message them offering them jobs for various events
 
 
@@ -114,7 +114,7 @@ Users will be able to list dog walking jobs. Walkers will be able to list themse
 - Users will be able to create an account and login to their respective account. After creating an account and logging users will be able to input their location and gain insight on all the different dog-walkers in the area.
 - Users will be able to book appointments with different dog-walkers allowing them to get their dogs walked.
 - When the dog-walker picks up the users pet, the user will be able to see the route the walker is taking and be able to track their dog during their walk.
-- Users will also be able to leave a review about the walker that they employed 
+- Users will also be able to leave a review about the walker that they employed
 
 #### STRENGTHS:
 
@@ -267,7 +267,7 @@ Khroma is an online color pallete picker that allows for users to view a number 
 - Update README.md
 - Implement required gems to start project
 
-  
+
 
 
 
@@ -280,7 +280,7 @@ Khroma is an online color pallete picker that allows for users to view a number 
 ### Day 3 Schedule
 
 * Laydown the base scaffolds and models
-* Setup the home-page and nav-bar using Materializecss 
+* Setup the home-page and nav-bar using Materializecss
 * Setup self-joins for models
 * Laydown the foundation for the basic functions of the site
 * Deployment to heroku
@@ -292,7 +292,7 @@ Khroma is an online color pallete picker that allows for users to view a number 
 
 <img src="screenshots/Trello Day 3.png">
 
-### Day 4 Schedule 
+### Day 4 Schedule
 
 * Create basic bidding system allowing users to bid on a particular job
 * Stylistic improvements fo rnavbar and pages present on the site
@@ -325,7 +325,7 @@ Khroma is an online color pallete picker that allows for users to view a number 
 
 * Create function user to create a bid for a job
 
-* Modify simples forms to allow for better user experience 
+* Modify simples forms to allow for better user experience
 
 * Conditional routing checking if the user is logged in when trying to access certain functions
 
@@ -339,7 +339,7 @@ Khroma is an online color pallete picker that allows for users to view a number 
 
 * Deploy to Heroku
 
-  
+
 
 ### Trello Board Day 8
 
@@ -362,7 +362,7 @@ Khroma is an online color pallete picker that allows for users to view a number 
 
 
 
-### Day 10 Schedule 
+### Day 10 Schedule
 
 * Add styling and cards to the home page
 * Change colour scheme
@@ -379,7 +379,7 @@ Khroma is an online color pallete picker that allows for users to view a number 
 
 
 
-### Day 11 Schedule 
+### Day 11 Schedule
 
 - Start stack home cards when resizing for mobile
 - Fix edit profile system
@@ -388,7 +388,7 @@ Khroma is an online color pallete picker that allows for users to view a number 
 - Update README.md
 - Deploy to Heroku
 
-### Day 12 Schedule 
+### Day 12 Schedule
 
 * Basic home display jobs section
 * Finish stack home cards when resizing for mobile
@@ -410,22 +410,22 @@ Khroma is an online color pallete picker that allows for users to view a number 
 * Update README.md
 * Deploy to Heroku
 
-### Day 15 Schedule 
+### Day 15 Schedule
 
 * Stripe Implementation
 * AWS upload fixed
-* Home-page styling 
+* Home-page styling
 * Update README.md
 
 ### Day 15 Trello
 
 <img src="screenshots/Day16.png">
 
-### Day 16 Schedule 
+### Day 16 Schedule
 
-* Fix profile picture feature 
-* Fix payment authentication 
-* Fix Heroku deployment 
+* Fix profile picture feature
+* Fix payment authentication
+* Fix Heroku deployment
 * Ability to delete job postings for the person who posted the job
 * Update READEME.md
 
@@ -433,11 +433,19 @@ Khroma is an online color pallete picker that allows for users to view a number 
 
 <img src="screenshots/Day15.png">
 
+* Finish profile show
+* Form responsiveness
+* Home cards responsiveness
+* Responsive Preview some jobs section
+* Fix overlap of text on cards in “Meet some of our bartenders” section
+* Bids and reviews validations and views for owners
+* Update readme
 
+## Day 17 Schedule
 
-
-
-
+* Current bid on Job looks ugly, improve it.
+* Profile show, show profile's bids.
+* Profile show, show profile's reviews.
 
 ## Sketch
 
@@ -501,7 +509,7 @@ RSpec gives us an API to write assertions for tests, while Factory Bot gives us 
 
 
 
-## DB Designer 
+## DB Designer
 
 DB designer is an online database entity relationship diagram designer which allows for users to visually design databases online. DB Designer was used to create a visualisation of the models and associations that would be created and used for the project. There were several versions of the ERD created in order to reflect the changes that were made when creating the application.
 
@@ -525,8 +533,8 @@ The need that will be addressed in the project is providing a platform to allow 
 
 `` 2. Identify the problem you’re trying to solve by building this particular marketplace *App*? Why is it a problem that needs solving? ``
 
-Currently there are no platforms that are available to the general that allows for people to hire a bartender for personal events and functions or for employers to hire bartenders for single shifts or fill-in shifts. The marketplace being created aims to solve that problem by providing a platform that both the general public and employers to allow for both audiences in this scenario to find and hire bartenders when needed. 
+Currently there are no platforms that are available to the general that allows for people to hire a bartender for personal events and functions or for employers to hire bartenders for single shifts or fill-in shifts. The marketplace being created aims to solve that problem by providing a platform that both the general public and employers to allow for both audiences in this scenario to find and hire bartenders when needed.
 
-``` 3.Describe the project will you be conducting and how. your App will address the needs. ``` 
+``` 3.Describe the project will you be conducting and how. your App will address the needs. ```
 
 The Application being developed will address the needs and solve the problems described above by providing a platform that will allow people to connect with and hire bartenders for private functions and events. The application will allow for people to post jobs they need to be completed and allow for bartenders to offer their services
