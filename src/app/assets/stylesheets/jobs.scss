@@ -145,6 +145,19 @@
 	  border: 2px solid #3D3242;
 		border-radius: 20px;
 	}
+	.jobs-container{
+		background-image: asset_url("Barwork.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		
+	}
+
+	.Jobs-header{
+		width:100%;
+		text-align: center;
+		padding-bottom: 150px;
+	}
+
 }
 
 // iphones
@@ -199,6 +212,19 @@
 	  border: 2px solid #362e45;
 		border-radius: 20px;
 	}
+	.jobs-container{
+		background-image: asset_url("Barwork.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		
+	}
+
+	.Jobs-header{
+		width:100%;
+		text-align: center;
+		padding-bottom: 150px;
+	}
+
 }
 
 // jobs index styling
