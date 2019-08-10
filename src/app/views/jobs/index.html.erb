@@ -2,6 +2,9 @@
 
 	<h1>Jobs</h1>
 	<div class="row">
+		<%= link_to "My jobs", jobs_path(filter: "my_jobs"), class:"btn" %>
+		<%= link_to "Jobs I've bid on", jobs_path(filter: "jobs_ive_bid_on"), class:"btn" %>
+		<%= link_to "All", jobs_path, class:"btn" %>
 		<div class="col s12 l12 m12" id="card-holder" style="padding: 10px">
 	<% @jobs.each do |job| %>
 			<div class="col s10 l10 m10" id="card-container" style="padding:10px">

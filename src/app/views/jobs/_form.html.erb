@@ -1,18 +1,21 @@
+<div class="container">
+  <%= simple_form_for(@job) do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-<%= simple_form_for(@job) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+    <div class="form-inputs">
+      <%= f.input :title %>
+      <%= f.input :amount %>
+      <%= f.input :content %>
+      <%= f.input :address %>
+      <%= f.hidden_field :employer_id, value: current_profile.id %>
+    </div>
 
-  <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.input :amount %>
-    <%= f.input :content %>
-    <%= f.input :address %>
-    <%= f.hidden_field :employer_id, value: current_profile.id %>
-  </div>
+    <div class="form-actions">
+       <a onclick="M.toast({html: 'Job posted!'})" ><%= f.button :submit %></a>
 
-  <div class="form-actions">
-     <a onclick="M.toast({html: 'Job posted!'})" ><%= f.button :submit %></a>
- 
-  </div>
-<% end %>
+    </div>
+    <%= link_to 'Delete post', jobs_path, method: :delete, class:"btn-flat",
+                     data: { confirm: 'Are you sure?' }  %>
+  <% end %>
+</div>

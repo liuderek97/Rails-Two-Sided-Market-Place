@@ -6,7 +6,18 @@ class JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.json
   def index
-    @jobs = Job.all
+    if params[:filter]
+      if params[:filter] == "my_jobs"
+        @jobs = Job.where(employer_id: current_profile.id)
+      else
+        @jobs = []
+        Job.all.each do |job|
+          @jobs << job if job.bids.where(bartender_id: current_profile.id).count > 0
+        end
+      end
+    else
+      @jobs = Job.all
+    end
   end
 
   # GET /jobs/1
