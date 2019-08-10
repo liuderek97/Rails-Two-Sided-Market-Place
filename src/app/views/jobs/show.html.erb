@@ -68,7 +68,7 @@
 								</ul>
 						    </span>
 								<% if current_profile.id == @job.employer_id %>
-								<%= bid_price = bid.amount.to_i%>
+								<% bid_price = bid.amount.to_i%>
 									<form action="jobs/call_approve" method="POST">
 										<script
 											src="https://checkout.stripe.com/checkout.js" class="stripe-button"
