@@ -14,9 +14,10 @@
      <%= f.hidden_field :user_id %>
   	 <%= f.hidden_field :id %>
   	</div>
-
+    <br>
     <div class="form-actions">
       <a onclick="M.toast({html: 'Profile Created'})" > <%= f.button :submit  %> </a>
+      <%= link_to 'Back', @profile, class:"btn", style:"float:right;" %>
     </div>
   <% end %>
 </div>
