@@ -529,4 +529,25 @@ Currently there are no platforms that are available to the general that allows f
 
 ``` 3.Describe the project will you be conducting and how. your App will address the needs. ``` 
 
-The Application being developed will address the needs and solve the problems described above by providing a platform that will allow people to connect with and hire bartenders for private functions and events. The application will allow for people to post jobs they need to be completed and allow for bartenders to offer their services
+The Application being developed will address the needs and solve the problems described above by providing a platform that will allow people to connect with and hire bartenders for private functions and events. The application will allow for people to post jobs they need to be completed and allow for bartenders to offer their services bid on different jobs. Users who posted the jobs will then be able to view the various bartenders that have made bids on their post and choose the bartender that they like.
+
+```  4. Describe the network infrastructure the App may be based on. ```
+
+
+
+
+
+```5. Identify and describe the software to be used in your App.```
+
+
+
+```6. Identify the database to be used in your App and provide a justification for your choice.```
+
+```7. Identify and describe the production database setup (i.e. postgres instance).```
+
+```8. Describe the architecture of your App.```
+
+```9. Explain the different high-level components (abstractions) in your App.```
+
+
+
