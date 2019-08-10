@@ -4,13 +4,19 @@
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
     <div class="form-inputs">
-      <%= f.input :amount %>
-      <%= f.input :content %>
-  		<%= f.hidden_field :job_id %>
-  		<%= f.hidden_field :bartender_id %>
+      <div class="field"><br />
+        <%=f.label :amount, label:"Your bid price", style:"font-size:20px;" %><br />
+        <%= f.input_field :amount, autofocus: true%>
+    </div>
+    <div class="field"><br />
+      <%= f.label :content, label:"Services you can provide/Skills you have", style:"font-size:20px;"%>
+      <%= f.input_field :content %>
+    </div>
+      <%= f.hidden_field :job_id %>
+      <%= f.hidden_field :bartender_id %>
   		<%= f.hidden_field :approved, value: false %>
     </div>
-
+    <br />
     <div class="form-actions">
       <%= f.button :submit %>
     </div>

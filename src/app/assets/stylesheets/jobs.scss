@@ -66,6 +66,19 @@
 		border-radius: 20px;
 	}
 
+	.jobs-container{
+		background-image: asset_url("Barwork.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		
+	}
+
+	.Jobs-header{
+		width:800px;
+		text-align: center;
+		padding-bottom: 150px;
+	}
+
 }
 
 // tablets

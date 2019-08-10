@@ -4,20 +4,27 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
     <div class="form-inputs">
-     <%= f.input :name %>
-     <%= f.input :bio %>
-     <%= f.input :skills1, label: 'Skill' %>
-     <%= f.input :skills2, label: 'Skill' %>
-     <%= f.input :skills3, label: 'Skill' %>
-     <%= f.input :bartender, wrapper_html: { class: 'm6 s12' }, label: "Are you a bartender?" %>
-     <%= f.file_field :pictures, multiple: false %>
-     <%= f.hidden_field :user_id %>
-  	 <%= f.hidden_field :id %>
+      <div class="field">
+        <%= f.label :name, label:"Full Name", style:"font-size:20px;"%><br />
+        <%= f.input_field :name%>
+      </div>
+      <div class="field">
+        <%= f.label :bio, label:"Short bio about you", style:"font-size:20px;"%><br />
+        <%= f.input_field :bio%>
+      </div>
+      <div class="field">
+        <%= f.input :bartender, wrapper_html: { class: 'm6 s12'}, label: "Are you a bartender?", style:"font-size:20px"%><br />
+      </div>
+      <div class="field">
+        <%= f.file_field :pictures, multiple: false %>
+      </div>
+      <%= f.hidden_field :user_id %>
+  	  <%= f.hidden_field :id %>
   	</div>
     <br>
     <div class="form-actions">
-      <a onclick="M.toast({html: 'Profile Created'})" > <%= f.button :submit  %> </a>
-      <%= link_to 'Back', @profile, class:"btn", style:"float:right;" %>
+      <a onclick="M.toast({html: 'Profile Created'})" > <%= f.button :submit, style:"float:right;"  %> </a>
+      <%= link_to 'Back', @profile, class:"btn", style:"float:left;" %>
     </div>
   <% end %>
 </div>
