@@ -49,6 +49,7 @@
 			font-size: 30px;
 			color: #3D3242;
 		}
+
 	}
 
 	.detail-container {
@@ -64,6 +65,28 @@
 	  border: 2px solid #3D3242;
 		border-radius: 20px;
 	}
+
+	.jobs-container{
+		background-image: asset_url("Barwork.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		
+	}
+
+	.Jobs-header{
+		width:800px;
+		text-align: center;
+		padding-bottom: 150px;
+	}
+
+	.btn-holder{
+		display: flex;
+	}
+
+	#last-link{
+		float: right;
+	}
+ 
 }
 
 // tablets
@@ -94,7 +117,7 @@
 
 	.card {
 		display: block;
-		width: 100%;
+		width: 400px;
 	}
 
 	.jobs-container {
@@ -130,6 +153,19 @@
 	  border: 2px solid #3D3242;
 		border-radius: 20px;
 	}
+	.jobs-container{
+		background-image: asset_url("Barwork.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		
+	}
+
+	.Jobs-header{
+		width:100%;
+		text-align: center;
+		padding-bottom: 150px;
+	}
+
 }
 
 // iphones
@@ -165,6 +201,10 @@
 			font-size: 30px;
 			color: #362e45;
 		}
+
+		#card-holder{
+			width:100%;
+		}
 	}
 
 	.detail-container {
@@ -180,6 +220,21 @@
 	  border: 2px solid #362e45;
 		border-radius: 20px;
 	}
+	.jobs-container{
+		background-image: asset_url("Barwork.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		
+	}
+
+	.Jobs-header{
+		width:100%;
+		text-align: center;
+		padding-bottom: 150px;
+	}
+
+
+
 }
 
 // jobs index styling

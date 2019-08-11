@@ -4,9 +4,18 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <%= f.input :star_rating %>
-    <%= f.input :title %>
-    <%= f.input :content %>
+    <div class="field">
+      <%= f.label :star_rating, label:"Rating out of 5", style:"font-size:20px;"%>
+      <%= f.input_field :star_rating, autofocus:true  %>
+    </div>
+    <div class="field">
+      <%= f.label :title, label:"Review Title", style:"font-size:20px;" %>
+      <%= f.input_field :title %>
+    </div>
+    <div class="field">
+      <%= f.label :content, label: "How was your experience employing or working with this bartender?", style:"font-size:20px;"%>
+      <%= f.input_field :content %>
+    </div>
   	<%= f.hidden_field :reviewed_id, value: @review.reviewed_id %>
   	<%= f.hidden_field :reviewer_id, value: @review.reviewer_id %>
   </div>

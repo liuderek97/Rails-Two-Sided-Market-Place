@@ -4,18 +4,34 @@
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
     <div class="form-inputs">
-      <%= f.input :title %>
-      <%= f.input :amount %>
-      <%= f.input :content %>
-      <%= f.input :address %>
+      <div class="field">
+        <%= f.label :title, label:"Job Title" %>
+        <%= f.input_field :title, autofocus: true%>
+      </div>
+
+      <div class="field">
+        <%= f.label :amount, label:"Job Amount" %>
+        <%= f.input_field :amount %>
+      </div>
+
+      <div class="field">
+        <%= f.label :content, label:"Job Description"%>
+        <%= f.input_field :content%>
+      </div>
+
+      <div class="field">
+        <%= f.label :address, label:"Job Address" %>
+        <%= f.input_field :address%>
+      </div>
+      
       <%= f.hidden_field :employer_id, value: current_profile.id %>
     </div>
 
     <div class="form-actions">
-       <a onclick="M.toast({html: 'Job posted!'})" ><%= f.button :submit %></a>
+        <%= link_to 'Delete post', jobs_path, class:"btn", style:"float:left;",
+        data: { confirm: 'Are you sure?' } %>
 
-    </div>
-    <%= link_to 'Delete post', jobs_path, method: :delete, class:"btn-flat",
-                     data: { confirm: 'Are you sure?' }  %>
+       <a onclick="M.toast({html: 'Job posted!'})" ><%= f.button :submit, style:"float:right;"%></a>
+    </div>                     
   <% end %>
 </div>
