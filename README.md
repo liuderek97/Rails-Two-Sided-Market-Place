@@ -34,7 +34,9 @@ This project is a two sided marketplace which allows individuals or businesses t
 - Bartenders will be able to create an account and list all the skills they have
 - Users will be able to view a bartenders profile and direct message them offering them jobs for various events
 
-##
+## Set-up Instructions
+
+For local user of the application 
 
 ## Two Way Marketplace Proposed Ideas/SWOT Analysis
 
@@ -243,6 +245,8 @@ Khroma is an online color pallete picker that allows for users to view a number 
 
 
 ### Trello Board and Schedule
+
+In order to keep on top of the Project a Trello board was created to ensure that each member of the project had tasks delegated to them and knew the deadline for each assigned task. When a task was created, a deadline and team member was assigned to the specific task, the individual team member assigned to the task would be responsible for the management of that task on Trello; updating the status of the task and adding any necessary comments or descriptions and ensuring that the task is completed before the deadline.
 
 ### Day 1 Schedule
 
@@ -541,17 +545,13 @@ Currently there are no platforms that are available to the general that allows f
 
 The Application being developed will address the needs and solve the problems described above by providing a platform that will allow people to connect with and hire bartenders for private functions and events. The application will allow for people to post jobs they need to be completed and allow for bartenders to offer their services bid on different jobs. Users who posted the jobs will then be able to view the various bartenders that have made bids on their post and choose the bartender that they like.
 
-```
-4. Describe the network infrastructure the App may be based on.
-```
+```4. Describe the network infrastructure the App may be based on.```
 
 
 
 
 
-```
-5. Identify and describe the software to be used in your App.
-```
+```5. Identify and describe the software to be used in your App.```
 
 Grapevine was built using Ruby on Rails, and the platform that it was deployed to was heroku. During the creation a number of gems were also used for convenience and to streamline production. The gems used to assist in the creation of the application were:
 
@@ -561,22 +561,16 @@ Grapevine was built using Ruby on Rails, and the platform that it was deployed t
 * <a href="https://materializecss.com/">Materialize CSS Release 1.0.0</a> : Front end styling
 * <a href="https://stripe.com/au">Stripe  4.16</a> : Payments handling 
 
-```
-6. Identify the database to be used in your App and provide a justification for your choice.
-```
+```6. Identify the database to be used in your App and provide a justification for your choice.```
 
 The database being utilsied in the application is PostgresSQL. PostrgesSQL was the chosen database as it is the most advanced and largest open source database allowing for a large number of development possibilities. Another advantage of PostgresSQL is that it is scalable and can handle large amounts of data and is designed for high volume environments. Furthermore PostgresSQL is ACID(Atomicity, Consistency, Isolation, Durability) which is s a set of properties of database transactions intended to guarantee validity even in the event of errors. Furthermore there are a number of Graphical User Interfaces that are compatible with PostgresSQL allowing for greater convenience when dealing with tables in the database and easier visualisation of relationships that tables and models have with eachother in the database.  
 
 
-```
-7. Identify and describe the production database setup (i.e. postgres instance).
-```
+```7. Identify and describe the production database setup (i.e. postgres instance).```
 
 
 
-```
-8. Describe the architecture of your App.
-```
+```8. Describe the architecture of your App.```
 
 The application was developed using Ruby on Rails and therefore follows the Model-View-Controller (MVC) architectural pattern. The MVC architectual pattern allows for a clean separation of concerns, in the way that it keeps the business logic separated from HTML views. The Model layer is responsible for storing all the logic of the application and the rules to manipulate the data. In Ruby on Rails the models are used to manage interactions in the database as well as represent the information in the database and complete the appropriate validations. The application has several models that are responsible for storing different data types and categories that is used in the application, and that have several assocciations with one another  
 
@@ -584,9 +578,7 @@ The Views layer is the front-end of the  application representing the user inter
 
 Finally the controller layer is the layer that interacts with the models layer and views layer. The controller is responsible handling the incoming requests from the browsers and processes the data from the models and passes it to the views to be displayed to the user.
 
-```
-9. Explain the different high-level components (abstractions) in your App.
-```
+```9. Explain the different high-level components (abstractions) in your App.```
 
 
 
@@ -651,3 +643,34 @@ Lastly we have a Reviews table, using the self joins we simply relate that table
 
 Wireframes were provided earlier in the documentation. [Go to Wireframes](#Wireframes)
 
+```17. Describe the way tasks are allocated and tracked in your project.```
+
+In order to keep on top of the Project a Trello board was created to ensure that each member of the project had tasks delegated to them and knew the deadline for each assigned task. Tasks were allocated to each member in a way that took into account the strengths and weakness of each member. When allocating a task the members skills and capabilities were taken into account to ensure that tasks beinf allocated to a certain indivual could actually completed by that team member effectively ensuring an efficient workflow and allowing for members to be able to complete any tasks allocated to them When a task was created, a deadline and team member was assigned to the specific task, the individual team member assigned to the task would be responsible for the management of that task on Trello; updating the status of the task and adding any necessary comments or descriptions and ensuring that the task is completed before the deadline.
+
+
+
+```18. Discuss how Agile methodology is being implemented in your project.```
+
+
+
+```19. Provide an overview and description of your Source control process.```
+
+Github was the chosen platform for application source control. Github was chosen due to the fact that it would allow for the code to be available on multiple devices. Any changes made to the code would be documented during the committing stage. This allowed anyone working on the project to constantly be aware of any major changes to the code and keep up to date with the latest revisions of the project. In order to ensure there were no breakdowns cause by the merging of new code into the etablished code base a git work flow was established at the beginning of the project, and each team member would adhere closely to the git work flow. The GitHub repository was setup with a master branch where the final product would be pushed after rigorous testing and ensuring that the site is working as intended with no bugs. A staging branch which was the main branch where testing would take place before pushing the final product to master, and individual branches created by each team member when adding a feature of fixing an issue. Whenever a team member would want to work on the project, they would pull from the staging branch and checkout into a new branch with the branch name describing the function they were adding, or the issue that they would be resolving. Upon completion of their individual task the team member would then push their code to GitHub on their individual branch and create a pull request on GitHub to merge the feature branch into the staging branch. Each time a pull request would be created the team member responsible for the creation of the branch would be required to request reviewers by the other team members to ensure that all team members were kept up to date with new features and to ensure working and quality code was being merged into the testing/staging branch.
+
+
+
+```20. Provide an overview and description of your Testing process.```
+
+
+
+
+
+```21. Discuss and analyse requirements related to information system security.```
+
+
+
+```22. Discuss methods you will use to protect information and data.```
+
+
+
+```23. Research what your legal obligations are in relation to handling user data.```
