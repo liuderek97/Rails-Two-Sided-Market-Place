@@ -26,3 +26,10 @@ document.addEventListener('DOMContentLoaded', function() {
 $(document).ready(function(){
   $('.sidenav').sidenav();
 });
+
+$(function(){
+  $('a[data-reload="true"').on('click', function(e) {
+      window.location = $(e.target).attr('href');
+      window.location.reload(true);
+  });
+});
