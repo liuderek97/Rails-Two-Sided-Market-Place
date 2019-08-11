@@ -22,7 +22,7 @@
 			<%= link_to "My jobs", jobs_path(filter: "my_jobs"), class:"btn" %>
 			<%= link_to "Jobs I've bid on", jobs_path(filter: "jobs_ive_bid_on"), class:"btn" %>
 			<%= link_to "All", jobs_path, class:"btn" %>
-			<%= link_to 'New Job', new_job_path, class:"btn" %>
+			<%= link_to 'New Job', new_job_path, class:"btn", id:"last-link"%>
 		</div>
 	</div>
 	
@@ -30,15 +30,15 @@
 	<% @jobs.each do |job| %>
 			<div class="col s12 m12 l4" id="cards">
 	      <div class="card" id="card-group">
-					<div class="card-title" style="padding-top: 10px; padding-bottom:10px;"><%= job.title %></div>
+					<div class="card-title" style="padding-top: 10px; padding-bottom:10px;"><b><%= job.title %></b></div>
 					<div class="divider"></div>
 				<br/>
 	        <div class="card-content" id="card-content" style="padding-bottom: 30px">
-							<%= job.amount %>
-							<br />
-							<%= job.content %>
-							<br />
-							<br />
+						<%= job.content %>	
+						<br />
+						<p>$<%= job.amount %></p>
+						<br />
+						<br />
 	          <%= link_to 'Show', job,  class:"btn"%>
 	        </div>
 				</div>
