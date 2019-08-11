@@ -34,7 +34,7 @@ This project is a two sided marketplace which allows individuals or businesses t
 - Bartenders will be able to create an account and list all the skills they have
 - Users will be able to view a bartenders profile and direct message them offering them jobs for various events
 
-###
+##
 
 ## Two Way Marketplace Proposed Ideas/SWOT Analysis
 
@@ -451,6 +451,8 @@ Khroma is an online color pallete picker that allows for users to view a number 
 
 Sketch is a wireframing tool that was employed during the plannnig stages of the project in order to create rough and schematic layout of how the website would look. Several wireframes were created using sketch and the wireframes created were representative of how the site would look. Wireframes were created for different devices such as desktop mobile and different mobile phone models. Sketch and the creation of wireframes was imperative to the design process as it provided a scheme to follow and a reference point for the styling of the site on different devices. After the creation of the wireframes for all devices the development of the site was then commenced.
 
+# Wireframes
+
 ### Mobile Wireframe
 
 <img src="screenshots/Mobile Wireframe.png">
@@ -551,13 +553,19 @@ The Application being developed will address the needs and solve the problems de
 5. Identify and describe the software to be used in your App.
 ```
 
+Grapevine was built using Ruby on Rails, and the platform that it was deployed to was heroku. During the creation a number of gems were also used for convenience and to streamline production. The gems used to assist in the creation of the application were:
 
+* <a href="https://github.com/plataformatec/devise">Devise V4.6.0</a>: User authentication and login
+* <a href="https://aws.amazon.com/s3/">Amazon AWS S3</a> : Cloud hosting service for image uploading
+* <a href="https://github.com/plataformatec/simple_form">Simple Form</a> : Rails forms styling 
+* <a href="https://materializecss.com/">Materialize CSS Release 1.0.0</a> : Front end styling
+* <a href="https://stripe.com/au">Stripe  4.16</a> : Payments handling 
 
 ```
 6. Identify the database to be used in your App and provide a justification for your choice.
 ```
 
-
+The database being utilsied in the application is PostgresSQL. PostrgesSQL was the chosen database as it is the most advanced and largest open source database allowing for a large number of development possibilities. Another advantage of PostgresSQL is that it is scalable and can handle large amounts of data and is designed for high volume environments. Furthermore PostgresSQL is ACID(Atomicity, Consistency, Isolation, Durability) which is s a set of properties of database transactions intended to guarantee validity even in the event of errors. Furthermore there are a number of Graphical User Interfaces that are compatible with PostgresSQL allowing for greater convenience when dealing with tables in the database and easier visualisation of relationships that tables and models have with eachother in the database.  
 
 
 ```
@@ -570,8 +578,76 @@ The Application being developed will address the needs and solve the problems de
 8. Describe the architecture of your App.
 ```
 
+The application was developed using Ruby on Rails and therefore follows the Model-View-Controller (MVC) architectural pattern. The MVC architectual pattern allows for a clean separation of concerns, in the way that it keeps the business logic separated from HTML views. The Model layer is responsible for storing all the logic of the application and the rules to manipulate the data. In Ruby on Rails the models are used to manage interactions in the database as well as represent the information in the database and complete the appropriate validations. The application has several models that are responsible for storing different data types and categories that is used in the application, and that have several assocciations with one another  
 
+The Views layer is the front-end of the  application representing the user interface. The views in ruby on rails are HTML files with embedded Ruby code. Views are utilised to provide the data to the browsers that requested the web pages, thus displaying the necessary information that is stored in the application and provide a medium in which the user can interact with the application.
+
+Finally the controller layer is the layer that interacts with the models layer and views layer. The controller is responsible handling the incoming requests from the browsers and processes the data from the models and passes it to the views to be displayed to the user.
 
 ```
 9. Explain the different high-level components (abstractions) in your App.
 ```
+
+
+
+`` 10. Detail any third party services that your App will use. ``
+
+The Application that was developed employed a number of third party services during the development process  Amazon AWS S3 was utiltised for image hosting and uploading to allow for users to upload profile pictures in comparison to storing them locally. Stripe was also used to handle any payments that were made between users, in order to ensure that payments were processed securely. Finally Heroku was user to deploy a live version of the application wihch is a cloud platform that has a built in puma server and Postgres database instance
+
+```11. Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb).```
+
+The marketplace applications that mostly resemble the application that the team has developed are Airtasker and Fiverr. The data structure of the application developed by the team is very similar to Airtasker and Fiverr as users are able to post jobs or tasks they need completed.  Furthermore upon posting a job users will be able to bid on any jobs posted in order to win work. Both the developed application and the similar marketplaces mentioned also allow for user profile creation and viewing,  with profiles containing personal information in relation to the user, as well as any skills that the user has which may provide them a competitive advantage in winnning work. Users of the developed application will also be able to leave reviews of people that they have hired to complete tasks, this feature is present on both Airtasker and Fiverr and assist users in choosing users they are looking to employ.
+
+```12. Discuss the database relations to be implemented.```
+
+
+
+
+
+```13. Describe your project’s models in terms of the relationships (active record associations) they have with each other.```
+
+### Users 
+
+For the User model the Devise gem was implemented due to ease of use, password encryption, and the group members comfortability using this gem.
+
+### Profiles 
+
+We wanted the maximum amount of customisation for our Users, so we created a Profile model.
+
+The Profile model is linked to the Users via user_id Employers & Bartenders Using the Profiles model, we can implement Rails self joins to differentiate employers and bartenders. Self joins allow us to have these different “Profile types” without creating unnecessary models.
+
+### Posts
+
+A post belongs to the employer who created the post.
+
+### Bids 
+
+The Bids model, belongs to a post, and a bartender.
+
+The bid will have a post_id, and bartender_id.
+
+We needed a way to have a “winning bid.” Initially we have an empty employer_id field, once this 
+
+field has a value, specified by the post creator, that bid has “won.”
+
+### Reviews 
+
+Lastly we have a Reviews table, using the self joins we simply relate that table to a Profile with the fields bartender_id, and employer_id.
+
+
+
+```15. Provide User stories for your App.```
+
+- **As a bartender, I want to create an account, so that I can find paid contracting work.**
+- **As a bartender, I want to show my personality through my profile details, so that I can get suitable work.**
+- **As a bartender, I want to be able to show my portfolio, by adding previous work experience, skills that I’ve acquired, and certifications.**
+- **As a bartender, I want to be able to expand my portfolio, by getting short term work from real businesses and private employers.**
+- **As an Event planner, I want to create an account, so that I can create an advertisement to find an exceptional Bartender for my event.**
+- **As a business in need of extra staff for a big event, I want the ability to hire bartenders in the area.**
+- **As a business I want the ability to view and employ bartenders,  based on their reliability, capability, and skillset.**
+- **As a business I want to leave a review on the bartenders that I have employed, recommending or warning other potential employers.**
+
+```16. Provide Wireframes for your App.```
+
+Wireframes were provided earlier in the documentation. [Go to Wireframes](#Wireframes)
+
