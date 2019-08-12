@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_07_093610) do
+ActiveRecord::Schema.define(version: 2019_08_12_002653) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,9 +64,6 @@ ActiveRecord::Schema.define(version: 2019_08_07_093610) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "bartender"
-    t.string "skills1"
-    t.string "skills2"
-    t.string "skills3"
     t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
