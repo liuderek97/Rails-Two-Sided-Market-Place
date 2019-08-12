@@ -1,3 +1,40 @@
 <h1>New Job</h1>
 
-<%= render 'form', job: @job %>
+<div class="container">
+    <%= simple_form_for(@job) do |f| %>
+      <%= f.error_notification %>
+      <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+  
+      <div class="form-inputs">
+        <div class="field">
+          <%= f.label :title, label:"Job Title" %>
+          <%= f.input_field :title, autofocus: true%>
+        </div>
+  
+        <div class="field">
+          <%= f.label :amount, label:"Job Amount" %>
+          <%= f.input_field :amount %>
+        </div>
+  
+        <div class="field">
+          <%= f.label :content, label:"Job Description"%>
+          <%= f.input_field :content%>
+        </div>
+  
+        <div class="field">
+          <%= f.label :address, label:"Job Address" %>
+          <%= f.input_field :address%>
+        </div>
+        
+        <%= f.hidden_field :employer_id, value: current_profile.id %>
+      </div>
+  
+      <div class="form-actions">
+          <%= link_to 'Back', jobs_path, class:"btn", style:"float:left;",
+          data: { confirm: 'Are you sure?' } %>
+  
+         <a onclick="M.toast({html: 'Job posted!'})" ><%= f.button :submit, style:"float:right;"%></a>
+      </div>                     
+    <% end %>
+  </div>
+  
