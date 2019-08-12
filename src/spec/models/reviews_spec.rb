@@ -4,8 +4,10 @@ describe Review, type: :model do
   # whats stored in subject is the result of building a review setting the reviewed_id
   # field and the revieer_id field
   subject { build(:review, reviewed_id: reviewed.id, reviewer_id: reviewer.id) }
-  let(:reviewer) { create(:profile) }
-  let(:reviewed) { create(:profile) }
+  let(:mary)     { create(:user, email: 'mary@gmail.com') }
+  let(:john)     { create(:user, email: 'john@gmail.com') }
+  let(:reviewer) { create(:profile, user_id: mary.id) }
+  let(:reviewed) { create(:profile, user_id: john.id) }
 
   # this describes validations for subject
   describe 'validations' do
