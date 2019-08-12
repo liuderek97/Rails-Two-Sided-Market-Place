@@ -22,33 +22,6 @@
             <p><%= @profile.bio %></p>
             <br>
             <span class="card-title">
-              <div class="card-action">
-                <%= link_to 'Resume', profile_path(@profile), class:"btn-flat" %>
-              </div>
-              <div class="divider"></div>
-            </span>
-            <h4>
-              My specialties
-            </h4>
-            <div class="skills-list">
-              <ul>
-                <div class="skill">
-                  <li>
-                   <p>Skill1</p>
-                  </li>
-                </div>
-                <div class="skill">
-                  <li>
-                   <p>Skill2</p>
-                  </li>
-                </div>
-                <div class="skill">
-                  <li>
-                   <p>Skill3</p>
-                  </li>
-                </div>
-              </ul>
-            </div>
           </div>
   	  	</div>
         <% if current_profile.id == @profile.id %>
