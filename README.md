@@ -1,27 +1,8 @@
-# Rails-Two-Sided-Market-Place
-
-README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-- Ruby version
-- System dependencies
-- Configuration
-- Database creation
-- Database initialization
-- How to run the test suite
-- Services (job queues, cache servers, search engines, etc.)
-- Deployment instructions
-- ...
-
 # Grapevine
 
 **GitHub repository link:** https://github.com/liuderek97/Rails-Two-Sided-Market-Place
 
-
+**Grapevine Live App**:https://grapevine-inc.herokuapp.com/
 
 ## Project Description
 
@@ -35,6 +16,28 @@ This project is a two sided marketplace which allows individuals or businesses t
 - After the job has been completed users will be able to review the bartender that they employed.
 - Bartenders will be able to create an account and list all the skills they have
 - Users will be able to view a bartenders profile and direct message them offering them jobs for various events
+
+## Screenshots
+
+### Home/Landing Page
+
+<img src="screenshots/Home1.png">
+
+<img src="screenshots/Home2.png">
+
+<img src="screenshots/Home3.png">
+
+<img src="screenshots/Home4.png">
+
+## Jobs Index
+
+<img src="screenshots/Jobs1.png">
+
+<img src="screenshots/Jobs2.png">
+
+## Profile Page
+
+<img src="screenshots/Profile.png">
 
 ## Set-up Instructions
 
@@ -728,7 +731,8 @@ Github was the chosen platform for application source control. Github was chosen
 
 ```20. Provide an overview and description of your Testing process.```
 
-
+First factory_bot, and RSpec were installed. factory_bot was used to create the test data. The first test were for the model validations. Model validation tests went smoothly, due to validations being relatively simple. We created feature tests for: Making sure the landing page exists, several scenarios for browsing jobs, including all filter options and ensuring “Post a Job” was leading to theright path, and for posting a job. We can now run these automated tests, and assuming everything is working
+as expected, get passing results.
 
 
 
