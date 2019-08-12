@@ -487,33 +487,33 @@ In order to keep on top of the Project a Trello board was created to ensure that
 
 <img src="screenshots/trello17.png">
 
-###Day 18 Schedule 
+###Day 18 Schedule
 
-* Add photos used on the site into assets folder 
+* Add photos used on the site into assets folder
 * Make home cards responsive
 * Responsive Preview some jobs section
 * Fix overlap of text on cards in “Meet some of our bartenders” section
 * Bids and reviews validations and views for owners
 
-### Day 19 Schedule 
+### Day 19 Schedule
 
-* Added toasts where applicable 
+* Added toasts where applicable
 * Added more photos into assets
 * Fixed routing on home page
 * When uploading another photo, purges first photo if photo exists
 * Responsive cards for  browse job section
-* More work to make cards on home page more aesthetic 
+* More work to make cards on home page more aesthetic
 
-### Day 20 Schedule 
+### Day 20 Schedule
 
 * Remake on browse jobs section, added a filter option to filter out jobs you own and jobs you have bidded on
 * Anchor fix to filter links on home page
 * More minor styling fixes to whole website
 * Readme update
 
-### Day 21 Schedule 
+### Day 21 Schedule
 
-* Readme update 
+* Readme update
 * Short answers
 * Added footer
 * Rspec testing and spreadsheet testing
@@ -623,9 +623,9 @@ Grapevine was built using Ruby on Rails, and the platform that it was deployed t
 
 * <a href="https://github.com/plataformatec/devise">Devise V4.6.0</a>: User authentication and login
 * <a href="https://aws.amazon.com/s3/">Amazon AWS S3</a> : Cloud hosting service for image uploading
-* <a href="https://github.com/plataformatec/simple_form">Simple Form</a> : Rails forms styling 
+* <a href="https://github.com/plataformatec/simple_form">Simple Form</a> : Rails forms styling
 * <a href="https://materializecss.com/">Materialize CSS Release 1.0.0</a> : Front end styling
-* <a href="https://stripe.com/au">Stripe  4.16</a> : Payments handling 
+* <a href="https://stripe.com/au">Stripe  4.16</a> : Payments handling
 
 ```6. Identify the database to be used in your App and provide a justification for your choice.```
 
@@ -663,11 +663,11 @@ As a team we talked through how our database would be setup and what would make 
 
 ```13. Describe your project’s models in terms of the relationships (active record associations) they have with each other.```
 
-### Users 
+### Users
 
 For the User model the Devise gem was implemented due to ease of use, password encryption, and the group members comfortability using this gem.
 
-### Profiles 
+### Profiles
 
 We wanted the maximum amount of customisation for our Users, so we created a Profile model.
 
@@ -677,17 +677,17 @@ The Profile model is linked to the Users via user_id Employers & Bartenders Usin
 
 A post belongs to the employer who created the post.
 
-### Bids 
+### Bids
 
 The Bids model, belongs to a post, and a bartender.
 
 The bid will have a post_id, and bartender_id.
 
-We needed a way to have a “winning bid.” Initially we have an empty employer_id field, once this 
+We needed a way to have a “winning bid.” Initially we have an empty employer_id field, once this
 
 field has a value, specified by the post creator, that bid has “won.”
 
-### Reviews 
+### Reviews
 
 Lastly we have a Reviews table, using the self joins we simply relate that table to a Profile with the fields bartender_id, and employer_id.
 
@@ -727,10 +727,12 @@ Github was the chosen platform for application source control. Github was chosen
 
 
 ```20. Provide an overview and description of your Testing process.```
-
-
-
-
+First factory_bot, and RSpec were installed. factory_bot was used to create the test data. The first tests
+were for the model validations. Model validation tests went smoothly, due to validations being relatively simple.
+We created feature tests for: Making sure the landing page exists,
+several scenarios for browsing jobs, including all filter options and ensuring "Post a Job" was leading to the
+right path, and for posting a job. We can now run these automated tests, and assuming everything is working
+as expected, get passing results.
 
 ```21. Discuss and analyse requirements related to information system security.```
 
@@ -754,9 +756,13 @@ Stripe:
 
 ```23. Research what your legal obligations are in relation to handling user data.```
 
+<<<<<<< HEAD
+```23. Research what your legal obligations are in relation to handling user data.```
+=======
 Australian Privacy Act tells us our legal obligations to handling user data are:- Correcting user’s personal information if it is incorrect
 - Allow users access to their personal information
 - Alert users of data breaches and respond in a timely manner
 - Information on how the user’s data is being used and who can have access to this information
 - Prevent misuse and loss of personal information
 - That personal information is encrypted in a way that it can’t be easily understood by unauthorised individuals
+>>>>>>> fbddf3bd7f514633d1633973ee14bdb5c14cca4a
