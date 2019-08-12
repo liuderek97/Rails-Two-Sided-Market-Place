@@ -66,8 +66,8 @@ class BidsController < ApplicationController
     end
   end
 
-
-  def self.approve(job, approved_bid, email, token)
+  #approve method for stripe.
+  def self.approve(approved_bid, email, token)
 
     customer = Stripe::Customer.create({
       email: email,
@@ -80,7 +80,7 @@ class BidsController < ApplicationController
       description: 'Rails Stripe customer',
       currency: 'aud',
     })
-
+    # approving the bid.
     approved_bid.approved = 1
     approved_bid.save
 

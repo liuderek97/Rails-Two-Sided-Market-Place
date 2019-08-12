@@ -6,6 +6,6 @@ class Profile < ApplicationRecord
   has_many :reviewed, class_name: "Review", foreign_key: "reviewed_id"
   has_many_attached :pictures
 
-  validates :name, presence: true, length: {maximum: 14}
+  validates :name, presence: true
   validates :user, uniqueness: true
 end

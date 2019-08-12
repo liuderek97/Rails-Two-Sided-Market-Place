@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  # post method call_approve member for jobs to get the path.
   resources :jobs do
     member do
       post :call_approve
