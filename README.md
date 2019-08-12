@@ -758,9 +758,6 @@ Stripe:
 
 ```23. Research what your legal obligations are in relation to handling user data.```
 
-
-```23. Research what your legal obligations are in relation to handling user data.```
-
 Australian Privacy Act tells us our legal obligations to handling user data are:- Correcting user’s personal information if it is incorrect
 - Allow users access to their personal information
 - Alert users of data breaches and respond in a timely manner
