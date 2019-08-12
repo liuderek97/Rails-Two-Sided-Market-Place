@@ -28,9 +28,8 @@
     </div>
 
     <div class="form-actions">
-        <%= link_to 'Delete post', jobs_path, class:"btn", style:"float:left;",
-        data: { confirm: 'Are you sure?' } %>
-
+        <%= link_to 'Delete post', job_path, method: :delete,
+                 data: { confirm: 'Are you sure?' }, class:"btn" %>
        <a onclick="M.toast({html: 'Job posted!'})" ><%= f.button :submit, style:"float:right;"%></a>
     </div>                     
   <% end %>

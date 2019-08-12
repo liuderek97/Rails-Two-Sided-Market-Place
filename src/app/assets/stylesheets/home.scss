@@ -4,9 +4,11 @@
 // Media Query Ranges
 
 
+
 .job-content {
 	height: 
 	200px;
+
 	.col {
 		width: 1320px;
 	}
@@ -83,7 +85,9 @@
 // Desktops
 @media (min-width: 1025px) {
 	.job-content {
+
 		height: 200px;
+
 	  .col {
 			width: 1320px;
 		}
@@ -102,7 +106,6 @@
 // tablets
 @media (min-width:601px) and (max-width: 993px) {
 	.job-content {
-		
 		.col {
 			width: 1320px;
 		}
