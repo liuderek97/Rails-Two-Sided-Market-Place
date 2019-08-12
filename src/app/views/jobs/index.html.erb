@@ -7,7 +7,7 @@
 										<p>Get started today find all available jobs now on Grapevine </p>
 						</div>
 									<div class="card-action">
-										<span class="btn"><a href="#jobs" style="color: white;">Get Started</a></span>
+										<span class="btn"><a href="#jobs" style="color: white; id:"get-started">Get Started</a></span>
 									</div>
 					</div>
 				</div>
@@ -21,7 +21,7 @@
 			<a href="#jobs">
 			<%= link_to "My jobs", jobs_path(filter: "my_jobs", anchor:"jobs"), class:"btn", :data => { :reload => true } %>
 			<%= link_to "Jobs I've bid on", jobs_path(filter: "jobs_ive_bid_on", anchor:"jobs"), class:"btn", :data => { :reload => true }%>
-			<%= link_to "All", jobs_path(anchor:"jobs"), class:"btn", class:"btn", :data => { :reload => true }%> 
+			<%= link_to "All", jobs_path(anchor:"jobs"), class:"btn", class:"btn", :data => { :reload => true }%>
 			<%= link_to 'Post Job', new_job_path, class:"btn", id:"last-link"%>
 		</a>
 		</div>
@@ -35,7 +35,7 @@
 					<div class="divider"></div>
 				<br/>
 	        <div class="card-content" id="card-content" style="padding-bottom: 30px">
-						<%= job.content %>	
+						<%= job.content %>
 						<br />
 						<p>$<%= job.amount %></p>
 						<br />
