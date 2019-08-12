@@ -13,9 +13,9 @@
 //= require rails-ujs
 //= require activestorage
 //= require_tree 
-//= require materialize-form
+//= require materialize
 //= require jquery
-//= require materialize-sprockets
+
 	
 
 
