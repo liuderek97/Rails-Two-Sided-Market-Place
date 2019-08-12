@@ -11,6 +11,7 @@ class Review < ApplicationRecord
   validates :reviewed_id, presence: true
   validate  :prohibits_review
 
+  # stops review from being set on review creator's own profile.
   def prohibits_review
     if reviewer_id == reviewed_id
       errors.add(:review, "cannot leave a review on your own Profile")

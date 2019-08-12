@@ -7,8 +7,12 @@
             <%= @profile.name %>
           </span>
   				<div class="card-image">
+            <% if @profile.pictures.present? %>
   					<% @profile.pictures.each do |avatar| %>
   						<%= image_tag avatar %>
+                <% end %>
+              <% else %>
+             <%= image_tag "profile-picture.png" %>
   					<% end %>
           </div>
           <div class="card-content black-text center-align">
@@ -22,11 +26,6 @@
             <p><%= @profile.bio %></p>
             <br>
             <span class="card-title">
-              <div class="card-action">
-                <%= link_to 'Resume', profile_path(@profile), class:"btn-flat" %>
-              </div>
-              <div class="divider"></div>
-            </span>
           </div>
   	  	</div>
         <% if current_profile.id == @profile.id %>
@@ -36,7 +35,7 @@
         <% end %>
 
         <div class="back-button">
-          <%= link_to 'Back', :back, class:"btn" %>
+          <%= link_to 'Back', root_path, class:"btn" %>
         </div>
       </div>
     </div>
@@ -82,3 +81,6 @@
     </div>
   </div>
 </div>
+  <footer>
+        <%= render 'partials/footer'%>
+  </footer>

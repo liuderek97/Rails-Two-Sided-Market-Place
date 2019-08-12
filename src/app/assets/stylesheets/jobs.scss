@@ -54,7 +54,9 @@
 	}
 
 	.detail-container {
-		height: 70px;
+		
+		overflow: auto;
+		overflow-x: auto;
 	}
 
 	.functionality {
@@ -146,7 +148,7 @@
 	}
 
 	.detail-container {
-		height: 70px;
+	
 	}
 
 	.functionality {
@@ -213,7 +215,7 @@
 	}
 
 	.detail-container {
-		height: 70px;
+		
 	}
 
 	.functionality {
