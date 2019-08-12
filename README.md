@@ -174,6 +174,10 @@ Users will be able to list dog walking jobs. Walkers will be able to list themse
 ### Nuclino
 In order to establish an agile methodolgy and establish a git workflow that all team members adhere to  a nuclino workspace was created. The nuclino workspace detailed what agile methodolgy was and described the sprint planning sessions that would take place at the beginnig of each day when the team was face to face. The Nuclino board also went into details about daily standups, presenting and showcasing features and the git workflow that would be used during the project duration.
 
+<a href="https://app.nuclino.com/Rails-Two-sided-Market/Rails-Project/Methodology-f10ab373-605b-424e-b0dd-e6ddc1e3f169">Link to Nuclino Workspace</a>
+
+
+
 ### Nuclino Workspace Screenshots
 <img src="screenshots/Nuclino Screenshot1.png" >
 
@@ -611,9 +615,7 @@ The Application being developed will address the needs and solve the problems de
 
 ```4. Describe the network infrastructure the App may be based on.```
 
-
-
-
+Grapevine has been deployed through heroku, a cloud hosting platform. Heroku allows Grapevine to quickly deploy the working application. Heroku works in conjunction with puma which is a rails gem we use to deploy a local server for our app. Puma provides fast, accurate HTTP protocol. It’s designed for running Rack apps only. Rack is what sits between your web application and the web server. It deals with all the server-specific API calls, HTTP requests.
 
 ```5. Identify and describe the software to be used in your App.```
 
@@ -629,10 +631,9 @@ Grapevine was built using Ruby on Rails, and the platform that it was deployed t
 
 The database being utilsied in the application is PostgresSQL. PostrgesSQL was the chosen database as it is the most advanced and largest open source database allowing for a large number of development possibilities. Another advantage of PostgresSQL is that it is scalable and can handle large amounts of data and is designed for high volume environments. Furthermore PostgresSQL is ACID(Atomicity, Consistency, Isolation, Durability) which is s a set of properties of database transactions intended to guarantee validity even in the event of errors. Furthermore there are a number of Graphical User Interfaces that are compatible with PostgresSQL allowing for greater convenience when dealing with tables in the database and easier visualisation of relationships that tables and models have with eachother in the database.  
 
-
 ```7. Identify and describe the production database setup (i.e. postgres instance).```
 
-
+The application utilises a PostgresSQL database for local development and testing, while Heroku postgres is used for the live production. Heroku postgres database provides continuous protection by providing logs and tracking every change that is made to the application thus allowing for a contingency in case of a failure. Furthermore Heroku Postgres performs automated health checks to ensure the database is fully functional. If a health check fails automated processes are allow heroku to restore the database to full functionality.
 
 ```8. Describe the architecture of your App.```
 
@@ -644,7 +645,7 @@ Finally the controller layer is the layer that interacts with the models layer a
 
 ```9. Explain the different high-level components (abstractions) in your App.```
 
-
+When creating the application the main goal in mind was to establish a platform that could connect general members of the public to bartenders looking for work. In relation to high-level abstractions the application performs a series of actions based around the CRUD (creating, reading, updating and deleting) functionality. Grapevine allows users to input information about themselves and their needs into a user-table. The data is then presented in a way that allows users or bartenders to connect to  one another and find employement or fill any required roles. What is presented to the user is initially processed by the controller which is then rendered to the user in the browser. Users can update their profiles, update and delete job postings.
 
 `` 10. Detail any third party services that your App will use. ``
 
@@ -656,7 +657,7 @@ The marketplace applications that mostly resemble the application that the team 
 
 ```12. Discuss the database relations to be implemented.```
 
-
+As a team we talked through how our database would be setup and what would make our app unique from others. Grapevine’s standout is the bidding model, which allows users(bartenders) to bid on posted jobs depending on what they think the job or their worth per hour is. Grapevines other interesting implement is the use of self-joining tables. As seen in our ERD instead of using joining-tables self-joins are used. Self-joins allow you to join a table to itself, it is used where any relationship between rows is stored in the same table.
 
 
 
@@ -715,7 +716,9 @@ In order to keep on top of the Project a Trello board was created to ensure that
 
 ```18. Discuss how Agile methodology is being implemented in your project.```
 
+Agile methdology was implemented at the beginning project in order to establish an efficent and effective  development process. Agile methodology was implemented  by conducting daily stand up meetings providing story-focused status updates on what each member did the day before, what they're doing today, and any troubles that they're encountering. By having daily standups it allows for members of the team to be on the same page in relation to the development process. The stand ups were conducted at the beginning of each day and would limited to 15 minutes. Furthermore an agile manifesto was also established outlining the main values in relation to the development process. The agile manifesto established outlined the importance of working software over comprehensive documentation, and having the ability to respond to changes rather than following a strict plan. Lastly the application was developed in sprints allowing for incremental and iterative changes over a short period of time.
 
+ 
 
 ```19. Provide an overview and description of your Source control process.```
 
@@ -731,14 +734,29 @@ Github was the chosen platform for application source control. Github was chosen
 
 ```21. Discuss and analyse requirements related to information system security.```
 
+* Authentication: Users of the site should not be able to access features of parts of the site that they are not authorised to access. User information should only be accessible once their credentials are authenticated and should not be able to access sensitive data in relation to other users
 
+* Storage of sensitive information: User passwords should only be known to the user, and should be encrypted. User payments should also be encrypted so that information in relation to user payment methods are not accessible to anyone else
 
-
+  
 
 ```22. Discuss methods you will use to protect information and data.```
 
+Devise:
 
+* Grapevine is using devise for user authentication, with the use of some of their modules. Such as database authenticatable, recoverable, validatable. Use of user_signed_in? on certain pages to confirm that users who aren’t signed up can not access these main pages. Grapevine relies on Devise for user password encryption.Cross Site Request Forgery:Using rails CSRF meta-tag which is built into the framework, this verifies requests coming into the servers from users logged in. When clients submit forms, it must send both tokens to the server. The token is a impossible to guess number that the website will generate for you, and it is different everytime on any page to anybody. Attackers will not be able to guess the token therefore they can’t create a valid request and being refused by Grapevine.
+
+Stripe:
+
+* Stripe is handle our payments means that none of the users sensitive data is being held by Grapevine’s database. It also encrypts card numbers, and stores the keys on seperate machines making stripe a strong protection app to implement to Grapevine that has no holes, comparatively to making our own payment system.
 
 
 
 ```23. Research what your legal obligations are in relation to handling user data.```
+
+Australian Privacy Act tells us our legal obligations to handling user data are:- Correcting user’s personal information if it is incorrect
+- Allow users access to their personal information
+- Alert users of data breaches and respond in a timely manner
+- Information on how the user’s data is being used and who can have access to this information
+- Prevent misuse and loss of personal information
+- That personal information is encrypted in a way that it can’t be easily understood by unauthorised individuals
