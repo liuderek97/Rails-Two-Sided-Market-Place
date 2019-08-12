@@ -3,7 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 // Media Query Ranges
 
+
+
 .job-content {
+	height: 
+	200px;
+
 	.col {
 		width: 1320px;
 	}
@@ -80,6 +85,9 @@
 // Desktops
 @media (min-width: 1025px) {
 	.job-content {
+
+		height: 200px;
+
 	  .col {
 			width: 1320px;
 		}
@@ -152,7 +160,7 @@
 // Mobile
 @media (min-width: 320px) and (max-width: 600px) {
 	.job-content {
-		height: 2000px;
+		height: 200px;
 
 		.col {
 			width: 1320px;
