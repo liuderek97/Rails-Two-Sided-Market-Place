@@ -12,7 +12,7 @@
   						<%= image_tag avatar %>
                 <% end %>
               <% else %>
-             <% image_tag "/assets/profile.picture.png" %>
+             <%= image_tag "profile-picture.png" %>
   					<% end %>
           </div>
           <div class="card-content black-text center-align">
@@ -35,7 +35,7 @@
         <% end %>
 
         <div class="back-button">
-          <%= link_to 'Back', :back, class:"btn" %>
+          <%= link_to 'Back', root_path, class:"btn" %>
         </div>
       </div>
     </div>
