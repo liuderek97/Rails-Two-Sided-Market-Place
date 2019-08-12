@@ -13,9 +13,9 @@
 //= require rails-ujs
 //= require activestorage
 //= require_tree 
-//= require materialize
+//= require materialize-form
 //= require jquery
-
+//= require materialize-sprockets
 	
 
 
@@ -33,6 +33,5 @@ $(function(){
       window.location.reload(true);
   });
 });
-
 
 
