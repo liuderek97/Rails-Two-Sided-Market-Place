@@ -6,6 +6,7 @@ class Bid < ApplicationRecord
   validates :content, presence: true
   validate  :prohibits_bid
 
+  # stops bid from being set if bid creator is the same as job creator.
   def prohibits_bid
     if bartender_id == job.employer_id
       errors.add(:bid, "cannot leave a bid on your own listing")

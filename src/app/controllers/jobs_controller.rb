@@ -10,12 +10,16 @@ class JobsController < ApplicationController
       if params[:filter] == "my_jobs"
         @jobs = Job.where(employer_id: current_profile.id)
       else
+        # else case for where user has a bid on jobs
         @jobs = []
         Job.all.each do |job|
           @jobs << job if job.bids.where(bartender_id: current_profile.id).count > 0
+          # if a job has a bid where bartender_id is equal to the current_profile.id
+          # push that job to the @jobs variable.
         end
       end
     else
+      #else or ALL show all jobs as usual.
       @jobs = Job.all
     end
   end
@@ -75,11 +79,13 @@ class JobsController < ApplicationController
     end
   end
 
+  # for stripe: The method is actually called on a bid despite being in jobs show,
+  # so call_approve is used in this controller.
   def call_approve
     approved_bid = Bid.find(params[:bid_id])
     job = Job.find(params[:job_id])
 
-    BidsController.approve(job, approved_bid, params[:stripeEmail],params[:stripeToken])
+    BidsController.approve(approved_bid, params[:stripeEmail],params[:stripeToken])
 
     redirect_to job
   end
