@@ -21,6 +21,8 @@ Things you may want to cover:
 
 **GitHub repository link:** https://github.com/liuderek97/Rails-Two-Sided-Market-Place
 
+
+
 ## Project Description
 
 This project is a two sided marketplace which allows individuals or businesses to hire bartenders for private functions or different types of employment. There is a growing market of individuals who are looking to hire bartenders, and this web application will assist in providing a platform for Bartenders to be able to advertise themselves, and allow individuals or business to find bartenders that are looking for work.
@@ -36,7 +38,35 @@ This project is a two sided marketplace which allows individuals or businesses t
 
 ## Set-up Instructions
 
-For local user of the application 
+For local user of the applications perform the following in the CLI:
+
+1. Clone the git repository :
+
+``` git clone https://github.com/liuderek97/Rails-Two-Sided-Market-Place.git ```
+
+2. CD into the directory:
+
+   ``` cd Rails-Two-Sided-Market-Place```
+
+3. Install gems:
+
+   ```bundle install```
+
+4. Initialise the PostgresSQL database:
+
+   ``` rails db:create ```
+
+5. Run database migrations:
+
+   ``` rails db:migrate```
+
+6. Open up the browser and go to http://localhost:3000
+
+
+
+## Tech Stack
+
+<img src="screenshots/tech stack.png">
 
 ## Two Way Marketplace Proposed Ideas/SWOT Analysis
 
@@ -437,19 +467,53 @@ In order to keep on top of the Project a Trello board was created to ensure that
 
 <img src="screenshots/Day15.png">
 
+
+
+### Day 17 Schedule
+
+* Improve styling for bid on jobs section
+* Implement filter on jobs index page showing all the jobs the user has bid on
+* Improve styling for reviews section on profiles
+* Update README.md
 * Finish profile show
-* Form responsiveness
-* Home cards responsiveness
+* Improve form responsiveness
+* Update README.md
+
+### Day 17 trello board
+
+<img src="screenshots/trello17.png">
+
+###Day 18 Schedule 
+
+* Add photos used on the site into assets folder 
+* Make home cards responsive
 * Responsive Preview some jobs section
 * Fix overlap of text on cards in “Meet some of our bartenders” section
 * Bids and reviews validations and views for owners
-* Update readme
 
-## Day 17 Schedule
+### Day 19 Schedule 
 
-* Current bid on Job looks ugly, improve it.
-* Profile show, show profile's bids.
-* Profile show, show profile's reviews.
+* Added toasts where applicable 
+* Added more photos into assets
+* Fixed routing on home page
+* When uploading another photo, purges first photo if photo exists
+* Responsive cards for  browse job section
+* More work to make cards on home page more aesthetic 
+
+### Day 20 Schedule 
+
+* Remake on browse jobs section, added a filter option to filter out jobs you own and jobs you have bidded on
+* Anchor fix to filter links on home page
+* More minor styling fixes to whole website
+* Readme update
+
+### Day 21 Schedule 
+
+* Readme update 
+* Short answers
+* Added footer
+* Rspec testing and spreadsheet testing
+* Styling fixes
 
 ## Sketch
 
@@ -669,7 +733,11 @@ Github was the chosen platform for application source control. Github was chosen
 
 
 
+
+
 ```22. Discuss methods you will use to protect information and data.```
+
+
 
 
 
