@@ -13,25 +13,19 @@
 //= require rails-ujs
 //= require activestorage
 //= require_tree 
-//= require materialize-form
 //= require jquery
-//= require materialize-sprockets
 	
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('.sidenav');
-  var instances = M.Sidenav.init(elems, options);
-});
-$(document).ready(function(){
-  $('.sidenav').sidenav();
+    M.AutoInit();
 });
 
 $(function(){
-  $('a[data-reload="true"').on('click', function(e) {
-      window.location = $(e.target).attr('href');
-      window.location.reload(true);
-  });
+    $('a[data-reload="true"').on('click', function(e) {
+        window.location = $(e.target).attr('href');
+        window.location.reload(true);
+    });
 });
 
 
